@@ -1,4 +1,6 @@
+import classNames from "classnames";
 import Link, { LinkProps } from "next/link";
+import { useRouter } from "next/router";
 
 const navigation = [
   {
@@ -14,8 +16,8 @@ const navigation = [
     href: "/sellers",
   },
   {
-    title: "Carrers",
-    href: "/carrers",
+    title: "Careers",
+    href: "/careers",
   },
   {
     title: "Contact",
@@ -25,17 +27,26 @@ const navigation = [
 
 type NavLinkProps = LinkProps & {
   title: string;
+  active?: boolean;
 };
 
-const NavLink = ({ href, title, ...props }: NavLinkProps) => (
-  <Link
-    href={href}
-    {...props}
-    className="py-2 px-4 text-gray-700 hover:text-red-500 focus:text-red-500 transition-all ease-in-out duration-200"
-  >
-    {title}
-  </Link>
-);
+const NavLink = ({ href, title, active, ...props }: NavLinkProps) => {
+  const router = useRouter();
+  return (
+    <Link
+      href={href}
+      {...props}
+      className={classNames(
+        "py-2 px-4 transition-all ease-in-out duration-200",
+        router.pathname === href
+          ? "text-red-500 hover:text-red-600 focus:text-red-600"
+          : "text-gray-700 hover:text-red-500 focus:text-red-500",
+      )}
+    >
+      {title}
+    </Link>
+  );
+};
 
 const Navigation = () => {
   return (

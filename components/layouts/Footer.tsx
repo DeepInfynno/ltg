@@ -1,5 +1,6 @@
 import Link, { LinkProps } from "next/link";
 import { SiInstagram, SiLinkedin } from "react-icons/si";
+import ContactForm from "./ContactForm";
 
 const navigation = [
   {
@@ -56,6 +57,7 @@ const NavLink = ({ href, title, ...props }: NavLinkProps) => (
 const Footer = () => {
   return (
     <div>
+      <ContactForm />
       <div className="bg-gray-900">
         <div className="max-w-xl mx-auto px-4 py-8 md:py-16 text-white text-center">
           <h3 className="text-4xl font-medium">Seller Login</h3>

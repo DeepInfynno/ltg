@@ -1,4 +1,3 @@
-import ContactForm from "@components/ContactForm";
 import { Layout } from "@components/layouts";
 import { NextPageWithLayout } from "./_app";
 import { TbHandClick } from "react-icons/tb";
@@ -73,7 +72,6 @@ const Sellers: NextPageWithLayout = () => {
           Start Selling
         </button>
       </div>
-      <ContactForm />
     </div>
   );
 };
