@@ -19,12 +19,13 @@ type AppPropsWithLayout = AppProps & {
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   const [queryClient] = React.useState(() => new QueryClient());
+  const getLayout = Component.getLayout ?? ((page) => page);
 
   return (
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
         <ReactQueryDevtools initialIsOpen={false} />
-        <Component {...pageProps} />
+        {getLayout(<Component {...pageProps} />)}
       </Hydrate>
     </QueryClientProvider>
   );

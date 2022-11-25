@@ -1,11 +1,17 @@
 import { ReactNode } from "react";
+import Navigation from "./Navigation";
 
 type LayoutProps = {
   children: ReactNode;
 };
 
 const Layout = ({ children }: LayoutProps) => {
-  return <div>{children}</div>;
+  return (
+    <div>
+      <Navigation />
+      {children}
+    </div>
+  );
 };
 
 export default Layout;
