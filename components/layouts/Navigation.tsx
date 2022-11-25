@@ -70,7 +70,7 @@ const Navigation = () => {
             Sign Up
           </Link>
           <Link
-            href="/signup"
+            href="/login"
             className="px-6 py-2 bg-gray-900 text-white rounded-full hover:bg-red-500 focus:bg-red-500 transition-all ease-in-out duration-200"
           >
             Login

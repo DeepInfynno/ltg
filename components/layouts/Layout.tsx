@@ -4,14 +4,15 @@ import Navigation from "./Navigation";
 
 type LayoutProps = {
   children: ReactNode;
+  hideContact?: boolean;
 };
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ hideContact, children }: LayoutProps) => {
   return (
     <div>
       <Navigation />
       {children}
-      <Footer />
+      <Footer hideContact={hideContact} />
     </div>
   );
 };
