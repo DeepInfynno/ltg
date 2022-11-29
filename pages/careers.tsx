@@ -3,6 +3,7 @@ import { NextPageWithLayout } from "./_app";
 import { Layout } from "@components/layouts";
 import Offices from "@components/Offices";
 import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
+import Analytics from "@components/Analytics";
 
 const believes = [
   {
@@ -51,10 +52,18 @@ const benefits = [
 ];
 
 const openRoles = [
-  { title: "Accounting", description: "Accounting" },
-  { title: "Analytics", description: "Analytics" },
-  { title: "Service", description: "Service" },
-  { title: "Product Owner", description: "Product Owner" },
+  { title: "Accounting", description: "Accounting", component: <Analytics /> },
+  {
+    title: "Analytics",
+    description: "Sr. Business Analyst, Gaming",
+    component: <Analytics />,
+  },
+  { title: "Service", description: "Service", component: <Analytics /> },
+  {
+    title: "Product Owner",
+    description: "Product Owner",
+    component: <Analytics />,
+  },
 ];
 
 const Careers: NextPageWithLayout = () => {
@@ -120,7 +129,17 @@ const Careers: NextPageWithLayout = () => {
       </div>
       <div className="max-w-6xl mx-auto px-4 py-8">
         <h3 className="uppercase text-gray-700">Work with us</h3>
-        <h1 className="text-3xl font-semibold py-6">Open roles.</h1>
+        <div className="md:flex justify-between py-6 block">
+          <h1 className="text-3xl font-semibold  items-start">Open roles.</h1>
+          <div className="flex gap-2 mt-4 md:mt-0">
+            <select className="w-[200px] rounded-md">
+              <option value="all-departments">All Departments</option>
+            </select>
+            <select className="w-[200px] rounded-md">
+              <option value="all-locations">All Locations</option>
+            </select>
+          </div>
+        </div>
         <div>
           {openRoles.map((role, i) => (
             <div key={i} className="border-gray-300 border-b">
@@ -132,7 +151,13 @@ const Careers: NextPageWithLayout = () => {
                     : setOpenAccordian(i)
                 }
               >
-                <div className="font-medium">{role.title}</div>
+                <div
+                  className={`font-medium ${
+                    i === openAccordian && "text-red-500"
+                  }`}
+                >
+                  {role.title}
+                </div>
                 <div>
                   {openAccordian === i ? (
                     <RiArrowUpSLine className="h-6 w-6 text-gray-700" />
@@ -142,8 +167,11 @@ const Careers: NextPageWithLayout = () => {
                 </div>
               </div>
               {openAccordian === i && (
-                <div className="p-4 transition ease-in-out duration-1000 text-gray-700">
-                  {role.description}
+                <div className="p-4">
+                  <div className="transition ease-in-out duration-1000 text-gray-700">
+                    {role.description}
+                  </div>
+                  <div>{role.component}</div>
                 </div>
               )}
             </div>
