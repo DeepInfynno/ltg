@@ -9,6 +9,9 @@ import {
 import "@styles/globals.css";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: React.ReactElement) => React.ReactNode;
 };

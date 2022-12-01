@@ -1,7 +1,8 @@
 import classNames from "classnames";
+import Image from "next/image";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
-
+import Logo1 from "@assets/images/logo-1.svg";
 const navigation = [
   {
     title: "About",
@@ -37,9 +38,9 @@ const NavLink = ({ href, title, active, ...props }: NavLinkProps) => {
       href={href}
       {...props}
       className={classNames(
-        "py-2 px-4 transition-all ease-in-out duration-200",
+        "py-2 px-4 transition-all ease-in-out duration-200 text-lg",
         router.pathname === href
-          ? "text-red-500 hover:text-red-600 focus:text-red-600"
+          ? "font-bold hover:text-red-600 focus:text-red-600  underline decoration-4"
           : "text-gray-700 hover:text-red-500 focus:text-red-500",
       )}
     >
@@ -50,12 +51,16 @@ const NavLink = ({ href, title, active, ...props }: NavLinkProps) => {
 
 const Navigation = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4">
+    <div className="container mx-auto px-4 py-8">
       <div className="flex items-center justify-between">
-        <Link href="/" className="py-8 text-2xl font-semibold">
-          <span>live</span>
-          <span className="text-red-500">ticket</span>
-          <span>group</span>
+        <Link href="/" className="text-2xl font-semibold">
+          <Image
+            src={Logo1}
+            width={260}
+            className="sm:h-[40px] sm:w-[260px] h-8 w-[200px]"
+            height={40}
+            alt="logo-1"
+          />
         </Link>
         <div className="flex items-center">
           <div className="hidden md:flex items-center">
@@ -63,15 +68,10 @@ const Navigation = () => {
               <NavLink key={i} href={item.href} title={item.title} />
             ))}
           </div>
-          <Link
-            href="/signup"
-            className="hidden md:block px-6 py-2 text-gray-700 hover:text-red-500 focus:text-red-500 transition-all ease-in-out duration-200"
-          >
-            Sign Up
-          </Link>
+
           <Link
             href="/login"
-            className="px-6 py-2 bg-gray-900 text-white rounded-full hover:bg-red-500 focus:bg-red-500 transition-all ease-in-out duration-200"
+            className="px-10 py-2 bg-[#EA0000 ] text-lg text-white rounded-full hover:bg-red-500 focus:bg-red-500 transition-all ease-in-out duration-200 uppercase font-bold"
           >
             Login
           </Link>

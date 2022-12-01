@@ -4,7 +4,34 @@ import { Layout } from "@components/layouts";
 import Offices from "@components/Offices";
 import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
 import Analytics from "@components/Analytics";
+import Madrid from "@assets/images/madrid.jpg";
+import Amsterdam from "@assets/images/amsterdam.jpg";
+import SanFrancisco from "@assets/images/san-francisco.jpg";
+import Image from "next/image";
+import SliderComponenet from "@components/Slider";
 
+const imagesArray = [
+  {
+    id: 1,
+    image: Madrid,
+    title: "madrid",
+  },
+  {
+    id: 2,
+    image: Amsterdam,
+    title: "amsterdam",
+  },
+  {
+    id: 3,
+    image: SanFrancisco,
+    title: "san",
+  },
+  {
+    id: 4,
+    image: Amsterdam,
+    title: "amsterdam",
+  },
+];
 const believes = [
   {
     title: "We Raise the Bar",
@@ -67,6 +94,7 @@ const openRoles = [
 ];
 
 const Careers: NextPageWithLayout = () => {
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [openAccordian, setOpenAccordian] = useState<number | null>(null);
 
   return (
@@ -114,6 +142,25 @@ const Careers: NextPageWithLayout = () => {
           ))}
         </div>
       </div>
+      <SliderComponenet
+        setCurrentIndex={setCurrentIndex}
+        componenetData={imagesArray.map((data, index) => {
+          return (
+            <div
+              className={`relative w-full h-[600px] ${
+                index === currentIndex ? "opacity-100" : "opacity-40"
+              }`}
+            >
+              <Image
+                src={data.image}
+                alt={data.title}
+                layout="fill"
+                className="rounded-lg w-2 h-2"
+              />
+            </div>
+          );
+        })}
+      />
       {/* Benefits */}
       <div className="max-w-6xl mx-auto px-4 py-8">
         <h3 className="uppercase text-gray-700">Care and Convenience</h3>
