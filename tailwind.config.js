@@ -16,6 +16,7 @@ module.exports = {
         helvetica: ["Helvetica Neue", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
+        careerBg: "url('../assets/images/careerbg.svg')",
         pieroHuerto: "url('../assets/images/piero-huerto.svg')",
         pieroHuertoResponsive:
           "url('../assets/images/piero-huerto-responsive.svg.svg')",
