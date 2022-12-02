@@ -33,7 +33,7 @@ const ContactForm = () => {
                 rows={5}
               />
               <div className="flex justify-center lg:justify-start">
-                <button className="bg-[#EA0000] text-white hover:bg-red-600 px-10 py-2 rounded-full transition-all ease-in-out duration-200 font-bold uppercase">
+                <button className="bg-[#EA0000] text-white hover:bg-red-400 px-10 py-2 rounded-full transition-all ease-in-out duration-200 font-bold uppercase">
                   Say hi!
                 </button>
               </div>

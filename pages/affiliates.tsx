@@ -72,7 +72,7 @@ const Affiliate: NextPageWithLayout = () => {
             When you market more, you’ll earn more.
           </h1>
           <div>
-            <button className="mt-12 lg:mt-24 bg-[#EA0000] text-white font-bold text-base hover:bg-red-600 px-8 py-2 rounded-full transition-all ease-in-out duration-200 uppercase ">
+            <button className="mt-12 lg:mt-24 bg-[#EA0000] text-white font-bold text-base hover:bg-red-400 focus:bg-red-400 px-8 py-2 rounded-full transition-all ease-in-out duration-200 uppercase ">
               Become an affiliate
             </button>
           </div>
@@ -99,7 +99,7 @@ const Affiliate: NextPageWithLayout = () => {
             inventory, real-time reporting, and account management.
           </p>
           <div className="flex flex-row justify-center lg:justify-start">
-            <button className="mt-12 lg:mt-24 bg-[#EA0000] text-white font-bold text-lg hover:bg-red-600 px-8 py-2 rounded-full transition-all ease-in-out duration-200 uppercase ">
+            <button className="mt-12 lg:mt-24 bg-[#EA0000] text-white font-bold text-lg hover:bg-red-400 focus:bg-red-400 px-8 py-2 rounded-full transition-all ease-in-out duration-200 uppercase ">
               Become an affiliate
             </button>
           </div>
@@ -152,7 +152,7 @@ const Affiliate: NextPageWithLayout = () => {
               affiliates.
             </p>
             <div className="flex justify-center lg:justify-start">
-              <button className="bg-transparent text-white text-lg rounded-full border border-white w-max px-4 py-2 uppercase font-bold mt-3 ">
+              <button className="bg-transparent text-white text-lg rounded-full hover:bg-red-400 focus:bg-red-400  border border-white w-max px-4 py-2 uppercase font-bold mt-3 ">
                 Learn more
               </button>
             </div>
@@ -225,7 +225,7 @@ const Affiliate: NextPageWithLayout = () => {
                 supports each other –our unity gives us the.
               </p>
               <div className="flex justify-center lg:justify-start">
-                <button className="bg-[#EA0000] text-white text-lg rounded-full border border-white w-max px-4 py-2 uppercase font-bold mt-3">
+                <button className="bg-[#EA0000] text-white text-lg rounded-full border hover:bg-red-400 focus:bg-red-400 border-white w-max px-4 py-2 uppercase font-bold mt-3">
                   Learn more
                 </button>
               </div>
