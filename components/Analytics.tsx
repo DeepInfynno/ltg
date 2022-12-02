@@ -2,16 +2,18 @@ const Analytics = () => {
   return (
     <div className="flex flex-col gap-6 mt-4">
       <div>
-        <p className="text-base font-semibold">
+        <p className=" font-bold lg:text-xl md:text-lg text-base">
           Location:
-          <span className="font-normal text-gray-700">
+          <span className="font-normal text-black">
             &nbsp; Amsterdam, NL (Remote)
           </span>
         </p>
       </div>
-      <div className="text-base">
-        <h1 className="font-semibold text-gray-700">The Opportunity:</h1>
-        <h1>
+      <div>
+        <h1 className="font-bold text-black text-lg lg:text-xl">
+          The Opportunity:
+        </h1>
+        <p className="text-lg lg:text-xl lg:leading-[30px] leading-7 md:leading-8">
           As a Sr. Business Analyst you will own key customer metrics, reporting
           and analytics for Vivid Picks. You will serve as the analytical guru
           working closely with Product, Marketing and the Vivid Picks team to
@@ -25,40 +27,42 @@ const Analytics = () => {
           visibility with business leaders. The ideal candidate is both data
           savvy, utilizing SQL and various BI tools to gather and organize data,
           as well as adept at modeling and analyzing new ideas.
-        </h1>
+        </p>
       </div>
       <div className="text-base">
-        <h1 className="font-semibold text-gray-700">What You’ll Bring:</h1>
-        <li>
+        <h1 className="font-semibold text-black text-lg lg:text-xl">
+          What You’ll Bring:
+        </h1>
+        <li className="text-lg lg:text-xl lg:leading-[30px] leading-7 md:leading-8">
           Programming skills in SQL required. Must have the ability to write
           complex, highly-optimized queries across multiple tables, data sources
           , and granularities of detail.
         </li>
-        <li>
+        <li className="text-lg lg:text-xl lg:leading-[30px] leading-7 md:leading-8">
           Experience working with BI tools (Looker, Tableau, PowerBI, Cognos,
           etc.) to create efficient and accurate reporting and dashboards.
         </li>
-        <li>
+        <li className="text-lg lg:text-xl lg:leading-[30px] leading-7 md:leading-8">
           Ability to translate complex business concepts into new SQL
           tables/definitions used to support both regular reporting and ad hoc
           requests.
         </li>
-        <li>
+        <li className="text-lg lg:text-xl lg:leading-[30px] leading-7 md:leading-8">
           Excellent analytical skills, ability to build models and findings into
           actionable next steps with an understanding of Customer LTV, CAC,
           customer modeling and cohorting.
         </li>
-        <li>
+        <li className="text-lg lg:text-xl lg:leading-[30px] leading-7 md:leading-8">
           Eye for detail and demonstrated ability to solve problems logically
           and systemically while ensuring information is accurate and consistent
           across reporting.
         </li>
-        <li>
+        <li className="text-lg lg:text-xl lg:leading-[30px] leading-7 md:leading-8">
           Strong written and verbal communication skills to effectively present
           complex information to stakeholders in an easy-to-understand manner.
         </li>
       </div>
-      <button className="text-sm rounded-full bg-red-500 text-white w-max px-4 py-2 mt-4">
+      <button className=" my-4 lg:mt-8 rounded-full bg-[#EA0000] text-white font-bold text-lg px-8 py-2 hover:bg-red-400 focus:bg-red-400 w-max   transition-all ease-in-out duration-200 uppercase ">
         Apply now
       </button>
     </div>
