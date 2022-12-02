@@ -63,7 +63,7 @@ const Affiliate: NextPageWithLayout = () => {
         />
       </div>
       <div className="bg-black text-white text-center md:text-left">
-        <div className="container mx-auto px-4 md:px-8 lg:px-12 py-24 lg:py-48 max">
+        <div className="container mx-auto px-4 md:px-8 lg:px-8  py-24 lg:py-48 max">
           <h1 className="text-2xl md:text-3xl lg:text-6xl xl:text-8xl font-semibold md:leading-[1.1] w-full">
             Live<span className="text-red-500">ticket</span>group Affiliate
             Programm
@@ -72,7 +72,7 @@ const Affiliate: NextPageWithLayout = () => {
             When you market more, you’ll earn more.
           </h1>
           <div>
-            <button className="lg:mt-28 md:mt-20 mt-10 bg-[#EA0000] text-white font-bold lg:text-lg md:text-base text-sm hover:bg-red-600 px-7 py-2 rounded-full transition-all ease-in-out duration-200 uppercase">
+            <button className="mt-12 lg:mt-24 bg-[#EA0000] text-white font-bold text-base hover:bg-red-600 px-8 py-2 rounded-full transition-all ease-in-out duration-200 uppercase ">
               Become an affiliate
             </button>
           </div>
@@ -107,7 +107,7 @@ const Affiliate: NextPageWithLayout = () => {
       </div>
       {/* what we belive */}
       <div className="mt-12 container mx-auto sm:px-4 px-9">
-        <h1 className="text-xl font-normal">WHAT WE BELIEVE</h1>
+        <h1 className="text-xl font-normal ml-0.5">WHAT WE BELIEVE</h1>
         <h1 className="mt-10 text-4xl font-bold"> What’s in it for you.</h1>
         <div className="lg:py-20 md:py-16 md:pb-16 pb-12">
           <SliderComponenet
@@ -142,13 +142,13 @@ const Affiliate: NextPageWithLayout = () => {
       {/* T&c */}
       <div className="container mx-auto px-4">
         <div className="bg-[#EA0000] flex flex-col lg:flex-row gap-1 lg:gap-10 rounded-md justify-center items-center md:py-16 py-10">
-          <div className="flex flex-col gap-9 lg:w-1/2 w-full md:px-24 px-12 ">
+          <div className="flex flex-col gap-9 lg:w-1/2 w-full md:px-24 px-6 ">
             <h1 className="text-3xl text-white font-bold text-center lg:text-left">
               Affiliates T&Cs
             </h1>
             <p className="text-xl text-white leading-9">
               We want to deliver quality service to our customers - every time.
-              Our terms & conditions protect us, our customers and our
+              Our terms & conditions protect us , our customers and our
               affiliates.
             </p>
             <div className="flex justify-center lg:justify-start">
@@ -171,8 +171,8 @@ const Affiliate: NextPageWithLayout = () => {
       {/* what we belive */}
 
       <div className="relative lg:pt-32 ">
-        <div className="container mx-auto px-4 mt-12 z-50 ">
-          <h1 className="text-xl font-normal">WHAT WE BELIEVE</h1>
+        <div className="container mx-auto sm:px-4 px-9 mt-12 z-50 ">
+          <h1 className="text-xl font-normal ml-0.5">WHAT WE BELIEVE</h1>
           <h1 className="mt-10 text-4xl font-bold"> What’s in it for you.</h1>
           <div className="absolute  right-0 h-[1450px]">
             <Image
@@ -216,7 +216,7 @@ const Affiliate: NextPageWithLayout = () => {
         {/* api docs */}
         <div className="container mx-auto px-4 ">
           <div className="bg-[#F8F8F8] flex flex-col lg:flex-row gap-1 lg:gap-10 rounded-md justify-center items-center md:py-16 py-10">
-            <div className="flex flex-col gap-9 lg:w-1/2 w-full md:px-24 px-12 ">
+            <div className="flex flex-col gap-9 lg:w-1/2 w-full md:px-24 px-6 ">
               <h1 className="text-3xl text-black font-bold text-center lg:text-left">
                 API Documentation
               </h1>

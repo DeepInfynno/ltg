@@ -58,13 +58,13 @@ const Navigation = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const router = useRouter();
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className=" px-4 xl:px-24 lg:px-16 md:px-6 py-8">
       <div className="flex items-center justify-between">
         <Link href="/" className="text-2xl font-semibold">
           <Image
             src={Logo1}
             width={260}
-            className="sm:h-[40px] sm:w-[260px] h-8 w-[200px]"
+            className="sm:h-[40px] sm:w-[260px] h-8 w-[200px]   "
             height={40}
             alt="logo-1"
           />

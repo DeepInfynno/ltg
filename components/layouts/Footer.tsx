@@ -52,7 +52,7 @@ const NavLink = ({ href, title, ...props }: NavLinkProps) => (
   <Link
     href={href}
     {...props}
-    className="block  py-3 md:py-2 md:px-4 text-black text-lg hover:text-red-500 focus:text-red-500 transition-all ease-in-out duration-200"
+    className="block py-3 md:py-2 md:px-4 text-black font-bold md:font-normal text-lg hover:text-red-500 focus:text-red-500 transition-all ease-in-out duration-200"
   >
     {title}
   </Link>
@@ -70,13 +70,13 @@ const Footer = ({ hideContact }: FooterProps) => {
         <div className="bg-black">
           <div className="bg-pieroHuerto h-[600px] w-full opacity-20"></div>
         </div>
-        <div className="max-w-xl mx-auto px-8 sm:px-4 py-8 md:py-16 text-white text-center absolute xl:left-[35%] lg:left-[28%] md:left-[22%] sm:left-[6%] sm:top-[2%] top-[1%] left-[0%]">
+        <div className="max-w-xl mx-auto px-8 sm:px-4 py-8 md:py-16 text-white text-center absolute xl:left-[35%] lg:left-[28%] md:left-[22%] sm:left-[6%] md:top-[2%] top-[6%] left-[0%]">
           <h3 className="lg:text-4xl  text-3xl font-bold">Seller Login</h3>
-          <p className="mt-12 text-center text-xl leading-9 lg:leading-8">
+          <p className="mt-8 md:mt-12 text-center text-lg md:text-xl leading-9 lg:leading-8">
             We&apos;re passoniate fans, just loke you. We believe in the magic
             of live events and the power they have to unite us.
           </p>
-          <form className="mt-14">
+          <form className="mt-10 md:mt-14">
             <div className="space-y-4 flex flex-col ">
               <input
                 type="email"
@@ -106,17 +106,17 @@ const Footer = ({ hideContact }: FooterProps) => {
       </div>
       <div className="container mx-auto px-9 sm:px-4 py-8 md:py-16 mt-16 ">
         <div className="block md:grid grid-cols-4 gap-8">
-          <div className="col-span-2">
-            <Link href="/" className="py-8 text-4xl font-semibold">
+          <div className="col-span-2 ">
+            <Link href="/" className="py-8 text-4xl font-semibold ">
               <Image
                 src={Logo1}
                 width={260}
-                className="sm:h-[40px] sm:w-[260px] h-8 w-[200px]"
+                className="sm:h-[40px] sm:w-[260px] h-8 w-[200px] pr-4"
                 height={40}
                 alt="logo-1"
               />
             </Link>
-            <p className="mt-4 text-[#9D9D9D] text-lg w-[70%] md:w-full">
+            <p className="mt-6 md:mt-10 text-[#9D9D9D] text-lg w-[70%] md:w-full">
               &copy; 2022 liveticketgroup. All rights reserved.
             </p>
           </div>
