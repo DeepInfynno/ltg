@@ -100,7 +100,7 @@ const Careers: NextPageWithLayout = () => {
 
   return (
     <div className="relative w-full max-w-[1920px] overflow-hidden">
-      <div className="bg-careerBg h-[300px] md:h-[400px] xl:h-[500px] 2xl:h-[830px] flex justify-center items-center w-full text-white">
+      <div className="bg-careerBg bg-cover h-[300px] md:h-[400px] xl:h-[500px] 2xl:h-[830px] flex justify-center items-center w-full text-white">
         <div className="max-w-xl 2xl:max-w-5xl w-full flex flex-col md:gap-4 lg:gap-5 xl:gap-10 2xl:gap-20">
           <h1 className="px-[16px] text-3xl md:text-5xl 2xl:text-8xl md:max-w-5xl font-semibold leading-snug text-center">
             Come create <span className="text-red-500">live</span> experiences
@@ -142,7 +142,7 @@ const Careers: NextPageWithLayout = () => {
               <h3 className="text-xl xl:text-2xl 2xl:text-4xl w-full max-w-[674px] font-semibold">
                 {believe.title}
               </h3>
-              <p className="mt-5 2xl:mt-8 text-base xl:text-lg 2xl:text-xl">
+              <p className="mt-5 2xl:mt-8 font-normal font-helvetica text-base xl:text-lg 2xl:text-xl">
                 {believe.description}
               </p>
             </div>
@@ -177,7 +177,7 @@ const Careers: NextPageWithLayout = () => {
         <h1 className="text-xl xl:text-2xl 2xl:text-4xl font-semibold pt-5 2xl:pt-10">
           Our benefits.
         </h1>
-        <div className="block md:grid grid-cols-2 md:gap-16 xl:gap-20 2xl:gap-24 py-8 lg:py-16 2xl:py-28 space-y-8 md:space-y-0">
+        <div className="block md:grid grid-cols-2 md:gap-16 xl:gap-20 2xl:gap-24 py-8 lg:py-16 2xl:py-28 2xl:pb-0 space-y-8 md:space-y-0">
           {benefits.map((benefit, i) => (
             <div key={i}>
               <h3 className="text-xl xl:text-2xl 2xl:text-4xl w-full max-w-[674px] font-semibold">
@@ -244,7 +244,7 @@ const Careers: NextPageWithLayout = () => {
             </div>
           ))}
         </div>
-        <p className="py-10 2xl:py-16 text-base 2xl:text-xl">
+        <p className="py-10 2xl:pt-16 2xl:pb-0 text-base 2xl:text-xl">
           LiveTicketGroup is proud to be an equal opportunity employer. We do
           not discriminate based upon race, color, religion, national origin,
           sex, sexual orientation, gender identity, physical or mental
