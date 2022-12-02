@@ -10,9 +10,11 @@ const SliderComponenet = ({
 }) => {
   const settings = {
     speed: 500,
-    className: "slider variable-width",
-    centerMode: true,
-    slidesToShow: 2,
+    // className: "slider variable-width",
+    // centerMode: true,
+    // variableWidth: false,
+    // leftPadding: "60px",
+    slidesToShow: 2.1,
     slidesToScroll: 1,
     onSwipe: function () {},
     afterChange: function (index: number) {

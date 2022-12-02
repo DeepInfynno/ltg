@@ -174,16 +174,30 @@ const Careers: NextPageWithLayout = () => {
           ))}
         </div>
       </div>
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        <h3 className="uppercase text-gray-700">Work with us</h3>
+      <div className="container mx-auto px-6 md:pl-4 py-8">
+        <h3 className="uppercase text-gray-700 lg:text-2xl md:text-xl text-lg">
+          Work with us
+        </h3>
         <div className="md:flex justify-between py-6 block">
-          <h1 className="text-3xl font-semibold  items-start">Open roles.</h1>
+          <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold  items-start">
+            Open roles.
+          </h1>
           <div className="flex gap-2 mt-4 md:mt-0">
-            <select className="w-[200px] rounded-md">
-              <option value="all-departments">All Departments</option>
+            <select className="w-[150px] sm:w-[200px] text-sm sm:text-lg rounded-md font-bold">
+              <option
+                value="all-departments"
+                className="text-[#EA0000] lg:text-2xl md:text-xl text-lg"
+              >
+                All Departments
+              </option>
             </select>
-            <select className="w-[200px] rounded-md">
-              <option value="all-locations">All Locations</option>
+            <select className="w-[150px] sm:w-[200px] text-sm sm:text-lg rounded-md font-bold">
+              <option
+                value="all-locations"
+                className="text-[#EA0000] lg:text-2xl md:text-xl text-lg"
+              >
+                All Locations
+              </option>
             </select>
           </div>
         </div>
@@ -199,8 +213,8 @@ const Careers: NextPageWithLayout = () => {
                 }
               >
                 <div
-                  className={`font-medium ${
-                    i === openAccordian && "text-red-500"
+                  className={`font-bold lg:text-2xl md:text-xl text-lg    ${
+                    i === openAccordian && "text-[#EA0000]"
                   }`}
                 >
                   {role.title}
@@ -215,7 +229,7 @@ const Careers: NextPageWithLayout = () => {
               </div>
               {openAccordian === i && (
                 <div className="p-4">
-                  <div className="transition ease-in-out duration-1000 text-gray-700">
+                  <div className="transition ease-in-out duration-1000 text-gray-700 lg:text-xl md:text-lg text-base">
                     {role.description}
                   </div>
                   <div>{role.component}</div>
@@ -224,7 +238,7 @@ const Careers: NextPageWithLayout = () => {
             </div>
           ))}
         </div>
-        <p className="py-16">
+        <p className="py-8 lg:py-16 text-lg lg:text-xl lg:leading-[30px] leading-9">
           LiveTicketGroup is proud to be an equal opportunity employer. We do
           not discriminate based upon race, color, religion, national origin,
           sex, sexual orientation, gender identity, physical or mental
