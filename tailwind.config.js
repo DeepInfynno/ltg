@@ -13,7 +13,8 @@ module.exports = {
         helvetica: ["Helvetica Neue", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
-        pieroHuerto: "url('/assets/images/amsterdam.jpg')",
+        pieroHuerto: "url('../assets/images/amsterdam.jpg')",
+        careerBg: "url('../assets/images/careerbg.svg')",
       },
     },
   },

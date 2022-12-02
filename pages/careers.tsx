@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { NextPageWithLayout } from "./_app";
-import { Layout } from "@components/layouts";
+import { ContactForm, Layout } from "@components/layouts";
 import Offices from "@components/Offices";
 import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
 import Analytics from "@components/Analytics";
 import Madrid from "@assets/images/madrid.jpg";
+import Circle from "@assets/images/Circle.svg";
 import Amsterdam from "@assets/images/amsterdam.jpg";
 import SanFrancisco from "@assets/images/san-francisco.jpg";
 import Image from "next/image";
@@ -98,22 +99,22 @@ const Careers: NextPageWithLayout = () => {
   const [openAccordian, setOpenAccordian] = useState<number | null>(null);
 
   return (
-    <div>
-      <div className="bg-gray-900 text-white">
-        <div className="max-w-2xl mx-auto px-4 py-24 md:py-48">
-          <h1 className="text-3xl md:text-6xl font-semibold leading-snug text-center">
+    <div className="relative w-full max-w-[1920px] overflow-hidden">
+      <div className="bg-careerBg h-[300px] md:h-[400px] xl:h-[500px] 2xl:h-[830px] flex justify-center items-center w-full text-white">
+        <div className="max-w-xl 2xl:max-w-5xl w-full flex flex-col md:gap-4 lg:gap-5 xl:gap-10 2xl:gap-20">
+          <h1 className="px-[16px] text-3xl md:text-5xl 2xl:text-8xl md:max-w-5xl font-semibold leading-snug text-center">
             Come create <span className="text-red-500">live</span> experiences
             with us
           </h1>
-          <div className="text-center">
-            <button className="mt-8 bg-red-500 text-white hover:bg-red-600 px-10 py-4 rounded-full transition-all ease-in-out duration-200">
+          <div className="flex justify-center items-center w-full">
+            <button className="mt-8 uppercase bg-[#EA0000] text-white hover:bg-red-600 px-5 py-2 md:px-10 md:py-4 rounded-full transition-all ease-in-out duration-200">
               View Opeanings
             </button>
           </div>
         </div>
       </div>
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="py-24">
+      <div className="max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto my-10 md:my-14 lg:my-18 xl:my-26 2xl:my-28">
+        <div className="md:text-lg 2xl:text-xl">
           <p>
             At LiveTicketGroup, people are encouraged to explore and learn about
             all aspects of our business as part of their career development
@@ -121,23 +122,29 @@ const Careers: NextPageWithLayout = () => {
             much exposure as possible so you can choose where to focus and how
             to grow your skills.
           </p>
-          <p className="mt-4 font-semibold">
+          <p className="mt-6 font-semibold">
             We are a growing company and would love for you to join us on our
             journey!
           </p>
         </div>
       </div>
       {/* Beleives */}
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        <h3 className="uppercase text-gray-700">What we believe</h3>
-        <h1 className="text-3xl font-semibold py-6">
+      <div className="max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto">
+        <h3 className="uppercase text-base xl:text-lg 2xl:text-xl text-gray-700">
+          What we believe
+        </h3>
+        <h1 className="text-xl xl:text-2xl 2xl:text-4xl font-semibold my-3 xl:my-6 2xl:my-10">
           Culture and core values.
         </h1>
-        <div className="block md:grid grid-cols-2 gap-24 py-16 space-y-8 md:space-y-0">
+        <div className="block md:grid grid-cols-2 md:gap-16 xl:gap-20 2xl:gap-24 py-8 lg:py-16 2xl:py-28 space-y-8 md:space-y-0">
           {believes.map((believe, i) => (
             <div key={i}>
-              <h3 className="text-2xl font-semibold">{believe.title}</h3>
-              <p className="mt-8">{believe.description}</p>
+              <h3 className="text-xl xl:text-2xl 2xl:text-4xl w-full max-w-[674px] font-semibold">
+                {believe.title}
+              </h3>
+              <p className="mt-5 2xl:mt-8 text-base xl:text-lg 2xl:text-xl">
+                {believe.description}
+              </p>
             </div>
           ))}
         </div>
@@ -147,6 +154,7 @@ const Careers: NextPageWithLayout = () => {
         componenetData={imagesArray.map((data, index) => {
           return (
             <div
+              key={data.id}
               className={`relative w-full h-[600px] ${
                 index === currentIndex ? "opacity-100" : "opacity-40"
               }`}
@@ -162,32 +170,44 @@ const Careers: NextPageWithLayout = () => {
         })}
       />
       {/* Benefits */}
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        <h3 className="uppercase text-gray-700">Care and Convenience</h3>
-        <h1 className="text-3xl font-semibold py-6">Our benefits.</h1>
-        <div className="block md:grid grid-cols-2 gap-24 py-16 space-y-8 md:space-y-0">
+      <div className="max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto py-8 lg:py-16 2xl:py-28">
+        <h3 className="uppercase text-base xl:text-lg 2xl:text-xl text-gray-700">
+          Care and Convenience
+        </h3>
+        <h1 className="text-xl xl:text-2xl 2xl:text-4xl font-semibold pt-5 2xl:pt-10">
+          Our benefits.
+        </h1>
+        <div className="block md:grid grid-cols-2 md:gap-16 xl:gap-20 2xl:gap-24 py-8 lg:py-16 2xl:py-28 space-y-8 md:space-y-0">
           {benefits.map((benefit, i) => (
             <div key={i}>
-              <h3 className="text-2xl font-semibold">{benefit.title}</h3>
-              <p className="mt-8">{benefit.description}</p>
+              <h3 className="text-xl xl:text-2xl 2xl:text-4xl w-full max-w-[674px] font-semibold">
+                {benefit.title}
+              </h3>
+              <p className="mt-5 2xl:mt-8 text-base xl:text-lg 2xl:text-xl">
+                {benefit.description}
+              </p>
             </div>
           ))}
         </div>
       </div>
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        <h3 className="uppercase text-gray-700">Work with us</h3>
-        <div className="md:flex justify-between py-6 block">
-          <h1 className="text-3xl font-semibold  items-start">Open roles.</h1>
-          <div className="flex gap-2 mt-4 md:mt-0">
-            <select className="w-[200px] rounded-md">
+      <div className="max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto">
+        <h3 className="uppercase text-base xl:text-lg 2xl:text-xl text-gray-700">
+          Work with us
+        </h3>
+        <div className="md:flex justify-between items-center w-full pt-5 2xl:pt-10 block">
+          <h1 className="text-xl xl:text-2xl 2xl:text-4xl font-semibold items-start">
+            Open roles.
+          </h1>
+          <div className="flex w-max gap-2 my-8 md:my-0 md:mt-0">
+            <select className="w-[160px] xl:w-[200px] 2xl:w-[260px] text-black font-bold text-base xl:text-lg 2xl:text-2xl rounded-md">
               <option value="all-departments">All Departments</option>
             </select>
-            <select className="w-[200px] rounded-md">
+            <select className="w-[160px] xl:w-[200px] 2xl:w-[260px] text-black font-bold text-base xl:text-lg 2xl:text-2xl rounded-md">
               <option value="all-locations">All Locations</option>
             </select>
           </div>
         </div>
-        <div>
+        <div className="md:mt-10 2xl:mt-[100px]">
           {openRoles.map((role, i) => (
             <div key={i} className="border-gray-300 border-b">
               <div
@@ -199,7 +219,7 @@ const Careers: NextPageWithLayout = () => {
                 }
               >
                 <div
-                  className={`font-medium ${
+                  className={`font-bold text-lg 2xl:text-2xl ${
                     i === openAccordian && "text-red-500"
                   }`}
                 >
@@ -224,7 +244,7 @@ const Careers: NextPageWithLayout = () => {
             </div>
           ))}
         </div>
-        <p className="py-16">
+        <p className="py-10 2xl:py-16 text-base 2xl:text-xl">
           LiveTicketGroup is proud to be an equal opportunity employer. We do
           not discriminate based upon race, color, religion, national origin,
           sex, sexual orientation, gender identity, physical or mental
@@ -233,7 +253,15 @@ const Careers: NextPageWithLayout = () => {
           perspectives bring to our organization.
         </p>
       </div>
-      <Offices />
+      <div className="mt-10 2xl:mt-[151px]">
+        <Offices />
+      </div>
+      <div className="mt-24 2xl:mt-[191px]">
+        <ContactForm />
+      </div>
+      <div className="absolute -right-[450px] 2xl:-right-[250px] bottom-[800px] md:bottom-[200px] 2xl:bottom-[400px] -z-10">
+        <Image src={Circle} alt="image" />
+      </div>
     </div>
   );
 };
