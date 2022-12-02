@@ -8,13 +8,18 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    // screens: {
+    //   xs: "375px",
+    // },
     extend: {
       fontFamily: {
         helvetica: ["Helvetica Neue", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
-        pieroHuerto: "url('../assets/images/amsterdam.jpg')",
         careerBg: "url('../assets/images/careerbg.svg')",
+        pieroHuerto: "url('../assets/images/piero-huerto.svg')",
+        pieroHuertoResponsive:
+          "url('../assets/images/piero-huerto-responsive.svg.svg')",
       },
     },
   },

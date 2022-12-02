@@ -219,8 +219,8 @@ const Careers: NextPageWithLayout = () => {
                 }
               >
                 <div
-                  className={`font-bold text-lg 2xl:text-2xl ${
-                    i === openAccordian && "text-red-500"
+                  className={`font-bold lg:text-2xl md:text-xl text-lg    ${
+                    i === openAccordian && "text-[#EA0000]"
                   }`}
                 >
                   {role.title}
@@ -235,7 +235,7 @@ const Careers: NextPageWithLayout = () => {
               </div>
               {openAccordian === i && (
                 <div className="p-4">
-                  <div className="transition ease-in-out duration-1000 text-gray-700">
+                  <div className="transition ease-in-out duration-1000 text-gray-700 lg:text-xl md:text-lg text-base">
                     {role.description}
                   </div>
                   <div>{role.component}</div>
@@ -244,7 +244,7 @@ const Careers: NextPageWithLayout = () => {
             </div>
           ))}
         </div>
-        <p className="py-10 2xl:pt-16 2xl:pb-0 text-base 2xl:text-xl">
+        <p className="py-8 lg:py-16 text-lg lg:text-xl lg:leading-[30px] leading-9">
           LiveTicketGroup is proud to be an equal opportunity employer. We do
           not discriminate based upon race, color, religion, national origin,
           sex, sexual orientation, gender identity, physical or mental

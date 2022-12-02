@@ -41,7 +41,7 @@ const Offices = () => {
           Our Offices.
         </h1>
       </div>
-      <div className="max-w-xs lg:max-w-[900px] xl:max-w-[1080px] 2xl:max-w-[1650px] mt-11 2xl:mt-[88px] mx-auto">
+      <div className="max-w-xs md:max-w-2xl lg:max-w-[900px] xl:max-w-[1080px] 2xl:max-w-[1650px] mt-11 2xl:mt-[88px] mx-auto">
         <div className="block space-y-8 md:space-y-0 md:grid grid-cols-3 gap-4">
           {offices.map((office, i) => (
             <div key={i}>
