@@ -14,7 +14,7 @@ const SliderComponenet = ({
     // centerMode: true,
     // variableWidth: false,
     // leftPadding: "60px",
-    slidesToShow: 2.1,
+    slidesToShow: 2.05,
     slidesToScroll: 1,
     onSwipe: function () {},
     afterChange: function (index: number) {
@@ -24,28 +24,28 @@ const SliderComponenet = ({
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 2.05,
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 750,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1.05,
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1.05,
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1.05,
           slidesToScroll: 1,
         },
       },

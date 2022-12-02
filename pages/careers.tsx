@@ -155,7 +155,7 @@ const Careers: NextPageWithLayout = () => {
           return (
             <div
               key={data.id}
-              className={`relative w-full h-[600px] ${
+              className={`relative w-full lg:h-[500px] xl:h-[600px] h-[300px] ${
                 index === currentIndex ? "opacity-100" : "opacity-40"
               }`}
             >
