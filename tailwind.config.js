@@ -8,10 +8,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    // screens: {
-    //   xs: "375px",
-    // },
     extend: {
+      screens: {
+        xs: "375px",
+        "2xl": "1537px",
+      },
       fontFamily: {
         helvetica: ["Helvetica Neue", ...defaultTheme.fontFamily.sans],
       },
