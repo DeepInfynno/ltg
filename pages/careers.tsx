@@ -152,6 +152,7 @@ const Careers: NextPageWithLayout = () => {
         </div>
         <SliderComponenet
           setCurrentIndex={setCurrentIndex}
+          sliderFor={"careers"}
           componenetData={imagesArray.map((data, index) => {
             return (
               <div
