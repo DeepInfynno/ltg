@@ -3,7 +3,10 @@ import Image from "next/image";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
 import Logo1 from "@assets/images/logo-1.svg";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import HeaderCircle from "@assets/images/HeaderCircle.svg";
+import { navbar } from "@material-tailwind/react";
+
 const navigation = [
   {
     title: "About",
@@ -62,8 +65,9 @@ const Navigation = () => {
     setShowSidebar(false);
   }, [router.pathname]);
 
+  
   return (
-    <div className=" px-4 xl:px-24 lg:px-16 md:px-6 py-8">
+    <div className="sticky top-0 shadow-[0px_2px_7px_1px_#0002]  z-50 bg-white px-4 xl:px-24 lg:px-16 md:px-6 py-8">
       <div className="flex items-center justify-between">
         <Link href="/" className="text-2xl font-semibold">
           <Image
