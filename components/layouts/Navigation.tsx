@@ -2,7 +2,7 @@ import classNames from "classnames";
 import Image from "next/image";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
-import Logo1 from "@assets/images/logo-1.svg";
+import Logo1 from "@assets/images/logo-invert.svg";
 import { useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
 const navigation = [
@@ -46,7 +46,7 @@ const NavLink = ({ href, title, active, ...props }: NavLinkProps) => {
       className={classNames(
         "py-2 px-4 transition-all ease-in-out duration-200 text-lg",
         router.pathname === href
-          ? "font-bold hover:text-red-600 focus:text-red-600  underline decoration-4"
+          ? "font-bold hover:text-red-600 focus:text-red-600 text-red-600  underline decoration-4"
           : "text-gray-700 hover:text-red-500 focus:text-red-500",
       )}
     >
@@ -64,7 +64,7 @@ const Navigation = () => {
   }, [router.pathname]);
 
   return (
-    <div className=" px-4 xl:px-24 lg:px-16 md:px-6 py-8 bg-opacity-5">
+    <div className="sticky top-0 shadow-[0px_2px_7px_1px_#0002]  z-50 bg-white px-4 xl:px-24 lg:px-16 md:px-6 py-8">
       <div className="flex items-center justify-between">
         <Link href="/" className="text-2xl font-semibold">
           <Image
