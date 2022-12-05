@@ -2,11 +2,8 @@ import classNames from "classnames";
 import Image from "next/image";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
-import Logo1 from "@assets/images/logo-1.svg";
-import { useEffect, useRef, useState } from "react";
-import HeaderCircle from "@assets/images/HeaderCircle.svg";
-import { navbar } from "@material-tailwind/react";
-
+import Logo1 from "@assets/images/logo-invert.svg";
+import { useEffect, useState } from "react";
 const navigation = [
   {
     title: "About",
@@ -48,7 +45,7 @@ const NavLink = ({ href, title, active, ...props }: NavLinkProps) => {
       className={classNames(
         "py-2 px-4 transition-all ease-in-out duration-200 text-lg",
         router.pathname === href
-          ? "font-bold hover:text-red-600 focus:text-red-600  underline decoration-4"
+          ? "font-bold hover:text-red-600 focus:text-red-600 text-red-600  underline decoration-4"
           : "text-gray-700 hover:text-red-500 focus:text-red-500",
       )}
     >

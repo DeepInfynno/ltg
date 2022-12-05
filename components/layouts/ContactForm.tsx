@@ -1,8 +1,8 @@
 const ContactForm = () => {
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto md:px-4">
       <div className="bg-gray-100 rounded-xl my-16">
-        <div className="flex flex-col lg:flex-row items-center lg:p-20 p-10">
+        <div className="flex flex-col lg:flex-row items-center lg:p-20 md:p-10 p-4">
           <div className="lg:w-2/5 mb-10 lg:px-0 md:px-12">
             <h3 className="text-4xl font-semibold mb-4 text-center lg:text-left">
               Get in Touch!

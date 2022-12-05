@@ -16,9 +16,28 @@ const Home: NextPageWithLayout = () => {
   const [showVideo, setShowVideo] = useState(false);
   return (
     <>
-      <div className="mt-[153px] xl:mt-0 -top-[108px] max-w-[1920px] mx-auto w-screen overflow-hidden relative">
-        <div className="absolute -top-[193px] -right-[386px] xl:-right-[30px] xl:-top-[264px] -z-10">
-          <Image src={Circle} alt="circle" />
+    <div className="mt-[153px] xl:mt-0 max-w-[1920px] mx-auto w-screen overflow-hidden relative">
+      <div className="absolute -top-[193px] -right-[386px] xl:-right-[30px] xl:-top-[255px] -z-10">
+        <Image
+          src={Circle}
+          alt="circle"
+        />
+      </div>
+      <div className="hidden lg:block absolute rotate-180 -left-[0px] -bottom-[811px] -z-10">
+        <Image
+          src={Circle}
+          alt="circle"
+        />
+      </div>
+      <div className="flex items-start max-w-[80vw] md:max-w-none md:items-center flex-col md:flex-row mx-auto w-full justify-end md:pr-[44px]">
+        <div className="md:translate-x-[69px]" >
+          <h2 className="text-black max-w-[712px] text-[58px] leading-[67px] md:text-[98px] md:leading-[113px] font-bold">Experience<br />it <span className="text-[#EA0000]">Live</span>.</h2>
+          <p className="hidden md:block text-[22px] mt-[66px] font-bold mb-[89px] leading-[26px] text-[#696969] max-w-[536px]">Curating unforgettable moments for<br /> fans worldwide.</p>
+          <p className="md:hidden text-[16px] mt-[55px] font-bold mb-[89px] leading-[18px] text-[#696969] max-w-[322px]">
+            Building lifetime memories, giving fans access to unforgettable live events.
+          </p>
+          <button className="relative z-10 py-[10px] w-[260px] text-[#EA0000] before:content-[''] before:h-full before:w-[156px] before:absolute before:top-0 before:left-0 before:z-0 before:rounded-[10px_0px_0px_10px] before:bg-[#EA000045]">
+            <span className="block leading-[21px] font-bold text-[18px]">BECOME A SELLER</span></button>
         </div>
         <div className="hidden lg:block absolute rotate-180 -left-[0px] -bottom-[811px] -z-10">
           <Image src={Circle} alt="circle" />
@@ -73,6 +92,7 @@ const Home: NextPageWithLayout = () => {
           <Newsletter />
         </div>
       </div>
+    </div>
       {showVideo && (
         <div className="md:hidden fixed overflow-hidden top-0 left-0 h-screen w-screen z-[999] flex items-center justify-center bg-black">
           <div

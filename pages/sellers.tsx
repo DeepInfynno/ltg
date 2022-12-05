@@ -45,7 +45,7 @@ const Sellers: NextPageWithLayout = () => {
             superior ticketing, marketing and service solutions for buyers and
             sellers.
           </p>
-          <button className="mt-8 bg-red-500 text-white hover:bg-red-600 px-10 py-2 rounded-full transition-all ease-in-out duration-200">
+          <button className="mt-8 bg-red-500 text-white hover:bg-red-400 px-10 py-2 rounded-full transition-all ease-in-out duration-200">
             Start Selling
           </button>
         </div>
@@ -68,7 +68,7 @@ const Sellers: NextPageWithLayout = () => {
         </div>
       </div>
       <div className="text-center">
-        <button className="mt-8 bg-red-500 text-white hover:bg-red-600 px-10 py-2 rounded-full transition-all ease-in-out duration-200">
+        <button className="mt-8 bg-red-500 text-white hover:bg-red-400 px-10 py-2 rounded-full transition-all ease-in-out duration-200">
           Start Selling
         </button>
       </div>

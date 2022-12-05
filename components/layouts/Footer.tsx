@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 import PieroHuerto from "@assets/images/piero-huerto.svg";
 import PieroHuertoResponsive from "@assets/images/piero-huerto-responsive.svg";
 import Image from "next/image";
-import Logo1 from "@assets/images/logo-1.svg";
+import Logo1 from "@assets/images/logo-invert.svg";
 
 const navigation = [
   {
@@ -70,9 +70,9 @@ const Footer = ({ hideContact }: FooterProps) => {
         <div className="bg-black">
           <div className="bg-pieroHuerto h-[600px] w-full opacity-20"></div>
         </div>
-        <div className="max-w-xl mx-auto px-8 sm:px-4 py-8 md:py-16 text-white text-center absolute  md:top-[2%] top-[6%] md:left-[20%] md:right-[20%] left-[5%] right-[5%]">
-          <h3 className="lg:text-4xl   md:text-3xl text-[22px] font-bold">Seller Login</h3>
-          <p className="mt-8 md:mt-12 text-center text-base md:text-xl leading-9 lg:leading-8">
+        <div className="max-w-xl mx-auto px-8 sm:px-4 py-8 md:py-16 text-white text-center absolute xl:left-[35%] lg:left-[28%] md:left-[22%] sm:left-[6%] md:top-[2%] top-[6%] left-[0%]">
+          <h3 className="lg:text-4xl  text-3xl font-bold">Seller Login</h3>
+          <p className="mt-8 md:mt-12 text-center text-lg md:text-xl leading-9 lg:leading-8">
             We&apos;re passoniate fans, just loke you. We believe in the magic
             of live events and the power they have to unite us.
           </p>
@@ -81,16 +81,14 @@ const Footer = ({ hideContact }: FooterProps) => {
               <input
                 type="email"
                 name="email"
-                id="inputID"
                 placeholder="Your Email Address"
-                className="border-none w-full rounded-lg px-4 py-2 placeholder:text-gray-400"
+                className="border-none w-full rounded-lg px-4 py-2 text-black placeholder:text-gray-400"
               />
               <input
                 type="password"
                 name="password"
-                id="inputID"
                 placeholder="Password"
-                className="border-none w-full rounded-lg px-4 py-2 placeholder:text-gray-400"
+                className="border-none w-full rounded-lg px-4 py-2 text-black placeholder:text-gray-400"
               />
               <div className="flex flex-row items-center gap-4 pt-3 text-xl justify-center lg:justify-start">
                 <input
