@@ -15,8 +15,7 @@
   top: 0;
   left: 0;
 }
-.slick-list,
-.slick-slider,
+
 .slick-track {
   display: flex !important;
   flex-direction: row !important;
@@ -27,14 +26,13 @@
   display: none !important;
 }
 
-.slick-list {
-  padding: 0 20% 0 0 !important;
-}
-
 .highlight-slider .slick-initialized .slick-slide {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+#inputID::placeholder {
+  text-align: center;
 }
 @media only screen and (max-width: 600px) {
   .highlight-slider .slick-list {
