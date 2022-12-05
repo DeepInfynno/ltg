@@ -47,9 +47,9 @@ const Stats = () => {
     <div className="mb-[76px] md:mb-[170px] sm:px-5">
       <div className="max-w-[863px] mx-auto px-[35px] md:px-0">
         <h3 className="uppercase text-black text-[20px] leading-[23px]">SOME NUMBERS</h3>
-        <h1 className="mt-[41px] font-bold text-[35px] leading-[30px] text-black">Our Highlight Reel.</h1>
+        <h1 className="md:mt-[41px] mt-[36px] font-bold  md:text-[35px] text-[22px] leading-[30px] text-black">Our Highlight Reel.</h1>
       </div>
-      <div className="mt-[73px] highlight-slider md:max-w-[1640px] w-full max-w-[322px] mx-auto sm:max-w-none">
+      <div className="md:mt-[73px] mt-[46px] highlight-slider md:max-w-[1640px] w-full max-w-[322px] mx-auto sm:max-w-none">
         <Slider {...settings}>
           {data.map((d, i) => (
             <div
