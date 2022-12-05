@@ -37,7 +37,7 @@ const Offices = () => {
         <h3 className="uppercase text-base xl:text-lg 2xl:text-xl text-gray-700">
           Where you can find us
         </h3>
-        <h1 className="text-[22px] xl:text-2xl 2xl:text-4xl font-semibold pt-5 2xl:pt-10">
+        <h1 className="text-xl xl:text-2xl 2xl:text-4xl font-semibold pt-5 2xl:pt-10">
           Our Offices.
         </h1>
       </div>

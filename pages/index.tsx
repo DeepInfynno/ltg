@@ -20,7 +20,7 @@ const Home: NextPageWithLayout = () => {
           alt="circle"
         />
       </div>
-      <div className="hidden lg:block absolute rotate-180 -left-[0px] -bottom-[950px] -z-10">
+      <div className="hidden lg:block absolute rotate-180 -left-[0px] -bottom-[811px] -z-10">
         <Image
           src={Circle}
           alt="circle"
@@ -61,7 +61,7 @@ const Home: NextPageWithLayout = () => {
       <div className="mb-[88px]">
         <Offices />
         <div className="hidden md:block text-center mt-[99px]">
-          <button className="bg-[#EA0000] text-white hover:bg-red-400 py-2 px-4   rounded-full transition-all ease-in-out duration-200 uppercase">
+          <button className="bg-[#EA0000] text-white hover:bg-red-600 px-5 pt-2 pb-[11px]  rounded-full transition-all ease-in-out duration-200 uppercase">
             <span className="text-[18px] leading-[21px] text-white">
             CONTACT US
             </span>

@@ -36,9 +36,6 @@
   flex-direction: column;
   gap: 16px;
 }
-#inputID::placeholder {
-   text-align: center;
-}
 @media only screen and (max-width: 600px) {
   .highlight-slider .slick-list {
     width: 90vw;
