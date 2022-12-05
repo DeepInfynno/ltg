@@ -1,3 +1,7 @@
+import Image from "next/image";
+import CardCircle from '@assets/images/Card_Circle.svg';
+import Slider from "react-slick";
+
 const data = [
   { title: "Tickets sold", count: "1M+", time: "As of December 2022" },
   {
@@ -12,27 +16,61 @@ const data = [
 ];
 
 const Stats = () => {
+  const settings = {
+		rows: 2,
+		dots: false,
+		arrows: true,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+    responsive : [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          rows: 1,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ]
+}
+
   return (
-    <div>
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        <h3 className="uppercase text-gray-700">Some Numbers</h3>
-        <h1 className="text-3xl font-semibold py-6">Our Highlight Reel.</h1>
+    <div className="mb-[76px] md:mb-[170px] sm:px-5">
+      <div className="max-w-[863px] mx-auto px-[35px] md:px-0">
+        <h3 className="uppercase text-black text-[20px] leading-[23px]">SOME NUMBERS</h3>
+        <h1 className="mt-[41px] font-bold text-[35px] leading-[30px] text-black">Our Highlight Reel.</h1>
       </div>
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="md:grid grid-cols-3 gap-4">
+      <div className="mt-[73px] highlight-slider md:max-w-[1640px] w-full max-w-[322px] mx-auto sm:max-w-none">
+        <Slider {...settings}>
           {data.map((d, i) => (
             <div
               key={i}
-              className="bg-gray-100 p-8 rounded-lg h-56 flex flex-col my-4 md:my-0"
+              className="overflow-hidden bg-gray-100 w-full box-border p-6 md:p-10 max-w-[536px] rounded-[10px] h-[237px] md:h-[287px] !flex flex-col relative"
             >
-              <div className="font-medium text-lg flex-1">{d.title}</div>
+              <div className="absolute h-full -right-[120px] md:right-0 top-0">
+                <Image 
+                  src={CardCircle}
+                  alt="card circle"
+                  className="h-full"
+                />
+              </div>
+              <div className="font-bold text-black max-w-[280px] text-[18px] md:text-2xl leading-[30px] flex-1">{d.title}</div>
               <div>
-                <h3 className="text-4xl font-medium">{d.count}</h3>
-                <p className="text-gray-700 text-sm mt-2">{d.time}</p>
+                <h3 className="text-[44px] md:text-[54px] leading-[49px] md:leading-[60px] text-black font-bold">{d.count}</h3>
+                <p className="text-base md:text-xl text-black font-light leading-[23px] mt-[14px]">{d.time}</p>
               </div>
             </div>
           ))}
-        </div>
+        </Slider>
       </div>
     </div>
   );
