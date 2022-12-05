@@ -99,9 +99,9 @@ const Careers: NextPageWithLayout = () => {
   const [openAccordian, setOpenAccordian] = useState<number | null>(null);
 
   return (
-    <div className="relative w-full max-w-[1920px] overflow-hidden">
-      <div className="bg-careerBg bg-cover h-[300px] md:h-[400px] xl:h-[500px] 2xl:h-[830px] flex justify-center items-center w-full text-white">
-        <div className="max-w-xl 2xl:max-w-5xl w-full flex flex-col md:gap-4 lg:gap-5 xl:gap-10 2xl:gap-20">
+    <>
+      <div className="bg-careerBg bg-fixed bg-cover h-[300px] md:h-[400px] xl:h-[500px] 2xl:h-[830px] flex justify-center items-center w-full text-white">
+        <div className="max-w-xl  2xl:max-w-5xl w-full flex flex-col md:gap-4 lg:gap-5 xl:gap-10 2xl:gap-20">
           <h1 className="px-[16px] text-3xl md:text-5xl 2xl:text-8xl md:max-w-5xl font-semibold leading-snug text-center">
             Come create <span className="text-red-500">live</span> experiences
             with us
@@ -113,156 +113,158 @@ const Careers: NextPageWithLayout = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto my-10 md:my-14 lg:my-18 xl:my-26 2xl:my-28">
-        <div className="md:text-lg 2xl:text-xl">
-          <p>
-            At LiveTicketGroup, people are encouraged to explore and learn about
-            all aspects of our business as part of their career development
-            journey. When it comes to your growth, we believe you should have as
-            much exposure as possible so you can choose where to focus and how
-            to grow your skills.
-          </p>
-          <p className="mt-6 font-semibold">
-            We are a growing company and would love for you to join us on our
-            journey!
-          </p>
-        </div>
-      </div>
-      {/* Beleives */}
-      <div className="max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto">
-        <h3 className="uppercase text-base xl:text-lg 2xl:text-xl text-gray-700">
-          What we believe
-        </h3>
-        <h1 className="text-xl xl:text-2xl 2xl:text-4xl font-semibold my-3 xl:my-6 2xl:my-10">
-          Culture and core values.
-        </h1>
-        <div className="block md:grid grid-cols-2 md:gap-16 xl:gap-20 2xl:gap-24 py-8 lg:py-16 2xl:py-28 space-y-8 md:space-y-0">
-          {believes.map((believe, i) => (
-            <div key={i}>
-              <h3 className="text-xl xl:text-2xl 2xl:text-4xl w-full max-w-[674px] font-semibold">
-                {believe.title}
-              </h3>
-              <p className="mt-5 2xl:mt-8 font-normal font-helvetica text-base xl:text-lg 2xl:text-xl">
-                {believe.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-      <SliderComponenet
-        setCurrentIndex={setCurrentIndex}
-        componenetData={imagesArray.map((data, index) => {
-          return (
-            <div
-              key={data.id}
-              className={`relative w-full h-[600px] ${
-                index === currentIndex ? "opacity-100" : "opacity-40"
-              }`}
-            >
-              <Image
-                src={data.image}
-                alt={data.title}
-                layout="fill"
-                className="rounded-lg w-2 h-2"
-              />
-            </div>
-          );
-        })}
-      />
-      {/* Benefits */}
-      <div className="max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto py-8 lg:py-16 2xl:py-28">
-        <h3 className="uppercase text-base xl:text-lg 2xl:text-xl text-gray-700">
-          Care and Convenience
-        </h3>
-        <h1 className="text-xl xl:text-2xl 2xl:text-4xl font-semibold pt-5 2xl:pt-10">
-          Our benefits.
-        </h1>
-        <div className="block md:grid grid-cols-2 md:gap-16 xl:gap-20 2xl:gap-24 py-8 lg:py-16 2xl:py-28 2xl:pb-0 space-y-8 md:space-y-0">
-          {benefits.map((benefit, i) => (
-            <div key={i}>
-              <h3 className="text-xl xl:text-2xl 2xl:text-4xl w-full max-w-[674px] font-semibold">
-                {benefit.title}
-              </h3>
-              <p className="mt-5 2xl:mt-8 text-base xl:text-lg 2xl:text-xl">
-                {benefit.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto">
-        <h3 className="uppercase text-base xl:text-lg 2xl:text-xl text-gray-700">
-          Work with us
-        </h3>
-        <div className="md:flex justify-between items-center w-full pt-5 2xl:pt-10 block">
-          <h1 className="text-xl xl:text-2xl 2xl:text-4xl font-semibold items-start">
-            Open roles.
-          </h1>
-          <div className="flex w-max gap-2 my-8 md:my-0 md:mt-0">
-            <select className="w-[160px] xl:w-[200px] 2xl:w-[260px] text-black font-bold text-base xl:text-lg 2xl:text-2xl rounded-md">
-              <option value="all-departments">All Departments</option>
-            </select>
-            <select className="w-[160px] xl:w-[200px] 2xl:w-[260px] text-black font-bold text-base xl:text-lg 2xl:text-2xl rounded-md">
-              <option value="all-locations">All Locations</option>
-            </select>
+      <div className="relative w-full max-w-[1920px] overflow-hidden">
+        <div className="max-w-[280px] xs:max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto my-10 md:my-14 lg:my-18 xl:my-26 2xl:my-28">
+          <div className="md:text-lg 2xl:text-xl">
+            <p>
+              At LiveTicketGroup, people are encouraged to explore and learn
+              about all aspects of our business as part of their career
+              development journey. When it comes to your growth, we believe you
+              should have as much exposure as possible so you can choose where
+              to focus and how to grow your skills.
+            </p>
+            <p className="mt-6 font-semibold">
+              We are a growing company and would love for you to join us on our
+              journey!
+            </p>
           </div>
         </div>
-        <div className="md:mt-10 2xl:mt-[100px]">
-          {openRoles.map((role, i) => (
-            <div key={i} className="border-gray-300 border-b">
-              <div
-                className="flex items-center justify-between cursor-pointer py-4 px-2"
-                onClick={() =>
-                  openAccordian !== null && openAccordian === i
-                    ? setOpenAccordian(null)
-                    : setOpenAccordian(i)
-                }
-              >
-                <div
-                  className={`font-bold lg:text-2xl md:text-xl text-lg    ${
-                    i === openAccordian && "text-[#EA0000]"
-                  }`}
-                >
-                  {role.title}
-                </div>
-                <div>
-                  {openAccordian === i ? (
-                    <RiArrowUpSLine className="h-6 w-6 text-gray-700" />
-                  ) : (
-                    <RiArrowDownSLine className="h-6 w-6 text-gray-700" />
-                  )}
-                </div>
+        {/* Beleives */}
+        <div className="max-w-[280px] xs:max-w-xs  sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto">
+          <h3 className="uppercase text-base xl:text-lg 2xl:text-xl text-gray-700">
+            What we believe
+          </h3>
+          <h1 className="text-xl xl:text-2xl 2xl:text-4xl font-semibold my-3 xl:my-6 2xl:my-10">
+            Culture and core values.
+          </h1>
+          <div className="block md:grid grid-cols-2 md:gap-16 xl:gap-20 2xl:gap-24 py-8 lg:py-16 2xl:py-28 space-y-8 md:space-y-0">
+            {believes.map((believe, i) => (
+              <div key={i}>
+                <h3 className="text-xl xl:text-2xl 2xl:text-4xl w-full max-w-[674px] font-semibold">
+                  {believe.title}
+                </h3>
+                <p className="mt-5 2xl:mt-8 font-normal font-helvetica text-base xl:text-lg 2xl:text-xl">
+                  {believe.description}
+                </p>
               </div>
-              {openAccordian === i && (
-                <div className="p-4">
-                  <div className="transition ease-in-out duration-1000 text-gray-700 lg:text-xl md:text-lg text-base">
-                    {role.description}
-                  </div>
-                  <div>{role.component}</div>
-                </div>
-              )}
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-        <p className="py-8 lg:py-16 text-lg lg:text-xl lg:leading-[30px] leading-9">
-          LiveTicketGroup is proud to be an equal opportunity employer. We do
-          not discriminate based upon race, color, religion, national origin,
-          sex, sexual orientation, gender identity, physical or mental
-          disability, veteran status, or age. We celebrate diversity, equality,
-          and inclusion and value the impact that different backgrounds and
-          perspectives bring to our organization.
-        </p>
+        <SliderComponenet
+          setCurrentIndex={setCurrentIndex}
+          componenetData={imagesArray.map((data, index) => {
+            return (
+              <div
+                key={data.id}
+                className={`relative w-full h-[200px] md:h-[300px] lg:h-[400px] xl:h-[500px] 2xl:h-[600px] ${
+                  index === currentIndex ? "opacity-100" : "opacity-40"
+                }`}
+              >
+                <Image
+                  src={data.image}
+                  alt={data.title}
+                  layout="fill"
+                  className="rounded-lg w-2 h-2"
+                />
+              </div>
+            );
+          })}
+        />
+        {/* Benefits */}
+        <div className="max-w-[280px] xs:max-w-xs  sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto py-8 lg:py-16 2xl:py-28">
+          <h3 className="uppercase text-base xl:text-lg 2xl:text-xl text-gray-700">
+            Care and Convenience
+          </h3>
+          <h1 className="text-xl xl:text-2xl 2xl:text-4xl font-semibold pt-5 2xl:pt-10">
+            Our benefits.
+          </h1>
+          <div className="block md:grid grid-cols-2 md:gap-16 xl:gap-20 2xl:gap-24 py-8 lg:py-16 2xl:py-28 2xl:pb-0 space-y-8 md:space-y-0">
+            {benefits.map((benefit, i) => (
+              <div key={i}>
+                <h3 className="text-xl xl:text-2xl 2xl:text-4xl w-full max-w-[674px] font-semibold">
+                  {benefit.title}
+                </h3>
+                <p className="mt-5 2xl:mt-8 text-base xl:text-lg 2xl:text-xl">
+                  {benefit.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="max-w-[280px] xs:max-w-xs  sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto">
+          <h3 className="uppercase text-base xl:text-lg 2xl:text-xl text-gray-700">
+            Work with us
+          </h3>
+          <div className="md:flex justify-between items-center w-full pt-5 2xl:pt-10 block">
+            <h1 className="text-xl xl:text-2xl 2xl:text-4xl font-semibold items-start">
+              Open roles.
+            </h1>
+            <div className="flex w-max gap-2 my-8 md:my-0 md:mt-0">
+              <select className="w-[160px] xl:w-[200px] 2xl:w-[260px] text-black font-bold text-base xl:text-lg 2xl:text-2xl rounded-md">
+                <option value="all-departments">All Departments</option>
+              </select>
+              <select className="w-[160px] xl:w-[200px] 2xl:w-[260px] text-black font-bold text-base xl:text-lg 2xl:text-2xl rounded-md">
+                <option value="all-locations">All Locations</option>
+              </select>
+            </div>
+          </div>
+          <div className="md:mt-10 2xl:mt-[100px]">
+            {openRoles.map((role, i) => (
+              <div key={i} className="border-gray-300 border-b">
+                <div
+                  className="flex items-center justify-between cursor-pointer py-4 px-2"
+                  onClick={() =>
+                    openAccordian !== null && openAccordian === i
+                      ? setOpenAccordian(null)
+                      : setOpenAccordian(i)
+                  }
+                >
+                  <div
+                    className={`font-bold lg:text-2xl md:text-xl text-lg    ${
+                      i === openAccordian && "text-[#EA0000]"
+                    }`}
+                  >
+                    {role.title}
+                  </div>
+                  <div>
+                    {openAccordian === i ? (
+                      <RiArrowUpSLine className="h-6 w-6 text-gray-700" />
+                    ) : (
+                      <RiArrowDownSLine className="h-6 w-6 text-gray-700" />
+                    )}
+                  </div>
+                </div>
+                {openAccordian === i && (
+                  <div className="p-4">
+                    <div className="transition ease-in-out duration-1000 text-gray-700 lg:text-xl md:text-lg text-base">
+                      {role.description}
+                    </div>
+                    <div>{role.component}</div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+          <p className="py-8 lg:py-16 text-lg lg:text-xl lg:leading-[30px] leading-9">
+            LiveTicketGroup is proud to be an equal opportunity employer. We do
+            not discriminate based upon race, color, religion, national origin,
+            sex, sexual orientation, gender identity, physical or mental
+            disability, veteran status, or age. We celebrate diversity,
+            equality, and inclusion and value the impact that different
+            backgrounds and perspectives bring to our organization.
+          </p>
+        </div>
+        <div className="mt-10 2xl:mt-[151px]">
+          <Offices />
+        </div>
+        <div className="mt-24 2xl:mt-[191px]">
+          <ContactForm />
+        </div>
+        <div className="absolute -right-[450px] 2xl:-right-[250px] bottom-[800px] md:bottom-[200px] 2xl:bottom-[400px] -z-10">
+          <Image src={Circle} alt="image" />
+        </div>
       </div>
-      <div className="mt-10 2xl:mt-[151px]">
-        <Offices />
-      </div>
-      <div className="mt-24 2xl:mt-[191px]">
-        <ContactForm />
-      </div>
-      <div className="absolute -right-[450px] 2xl:-right-[250px] bottom-[800px] md:bottom-[200px] 2xl:bottom-[400px] -z-10">
-        <Image src={Circle} alt="image" />
-      </div>
-    </div>
+    </>
   );
 };
 

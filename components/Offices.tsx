@@ -33,7 +33,7 @@ const offices = [
 const Offices = () => {
   return (
     <div>
-      <div className="max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto">
+      <div className="max-w-[280px] xs:max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto">
         <h3 className="uppercase text-base xl:text-lg 2xl:text-xl text-gray-700">
           Where you can find us
         </h3>
@@ -41,7 +41,7 @@ const Offices = () => {
           Our Offices.
         </h1>
       </div>
-      <div className="max-w-xs md:max-w-2xl lg:max-w-[900px] xl:max-w-[1080px] 2xl:max-w-[1650px] mt-11 2xl:mt-[88px] mx-auto">
+      <div className="max-w-[280px] xs:max-w-xs md:max-w-2xl lg:max-w-[900px] xl:max-w-[1080px] 2xl:max-w-[1650px] mt-11 2xl:mt-[88px] mx-auto">
         <div className="block space-y-8 md:space-y-0 md:grid grid-cols-3 gap-4">
           {offices.map((office, i) => (
             <div key={i}>
