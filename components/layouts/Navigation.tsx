@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
 import Logo1 from "@assets/images/logo-1.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const navigation = [
   {
     title: "About",
@@ -57,6 +57,11 @@ const NavLink = ({ href, title, active, ...props }: NavLinkProps) => {
 const Navigation = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    setShowSidebar(false);
+  }, [router.pathname]);
+
   return (
     <div className=" px-4 xl:px-24 lg:px-16 md:px-6 py-8">
       <div className="flex items-center justify-between">
@@ -113,27 +118,37 @@ const Navigation = () => {
             )}
 
             <div
-              className={`block md:hidden top-0 right-0 w-[100vw] sm:w-[45vw] bg-black  p-10 pl-20 text-white fixed h-full z-40 ease-in-out duration-300 ${
+              className={`block md:hidden top-0 right-0  h-screen p-3 bg-gray-800 shadow  text-white fixed  z-40 ease-in-out duration-300 ${
                 showSidebar ? "translate-x-0 " : "translate-x-full"
               }`}
             >
-              <div className="mt-10">
-                {navigation.map((item, i) => (
-                  <div key={i} className="flex flex-col ">
-                    <Link
-                      href={item.href}
-                      title={item.title}
-                      className={classNames(
-                        "py-2 pl-4 transition-all ease-in-out duration-200 text-lg",
-                        router.pathname === item.href
-                          ? "font-bold hover:text-red-600 focus:text-red-600  underline decoration-4"
-                          : "text-white hover:text-red-500 focus:text-red-500",
-                      )}
-                    >
-                      {item.title}
-                    </Link>
-                  </div>
-                ))}
+              <div className="space-y-3">
+                <div className="relative w-full">
+                  <input
+                    type="search"
+                    name="Search"
+                    disabled
+                    className="w-full py-2 pl-10 text-sm bg-gray-800 border-gray-800"
+                  />
+                </div>
+                <div className="mt-10">
+                  {navigation.map((item, i) => (
+                    <div key={i} className="flex flex-col ">
+                      <Link
+                        href={item.href}
+                        title={item.title}
+                        className={classNames(
+                          "py-4 pl-4 transition-all ease-in-out text-2xl duration-200",
+                          router.pathname === item.href
+                            ? "font-bold hover:text-red-600 focus:text-red-600  underline decoration-4"
+                            : "text-white hover:text-red-500 focus:text-red-500",
+                        )}
+                      >
+                        {item.title}
+                      </Link>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

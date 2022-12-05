@@ -100,20 +100,20 @@ const Careers: NextPageWithLayout = () => {
 
   return (
     <>
-      <div className="bg-careerBg bg-fixed bg-cover h-[300px] md:h-[400px] xl:h-[500px] 2xl:h-[830px] flex justify-center items-center w-full text-white">
-        <div className="max-w-xl  2xl:max-w-5xl w-full flex flex-col md:gap-4 lg:gap-5 xl:gap-10 2xl:gap-20">
-          <h1 className="px-[16px] text-3xl md:text-5xl 2xl:text-8xl md:max-w-5xl font-semibold leading-snug text-center">
-            Come create <span className="text-red-500">live</span> experiences
-            with us
-          </h1>
-          <div className="flex justify-center items-center w-full">
-            <button className="mt-8 uppercase bg-[#EA0000] text-white hover:bg-red-600 px-5 py-2 md:px-10 md:py-4 rounded-full transition-all ease-in-out duration-200">
-              View Opeanings
-            </button>
+      <div className="relative w-full max-w-[1920px] overflow-hidden">
+        <div className="bg-careerBg bg-fixed bg-cover h-[300px] md:h-[400px] xl:h-[500px] 2xl:h-[830px] flex justify-center items-center w-full text-white">
+          <div className="max-w-xl  2xl:max-w-5xl w-full flex flex-col md:gap-4 lg:gap-5 xl:gap-10 2xl:gap-20">
+            <h1 className="px-[16px] text-3xl md:text-5xl 2xl:text-8xl md:max-w-5xl font-semibold leading-snug text-center">
+              Come create <span className="text-red-500">live</span> experiences
+              with us
+            </h1>
+            <div className="flex justify-center items-center w-full">
+              <button className="mt-8 uppercase bg-[#EA0000] text-white hover:bg-red-600 px-5 py-2 md:px-10 md:py-4 rounded-full transition-all ease-in-out duration-200">
+                View Opeanings
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="relative w-full max-w-[1920px] overflow-hidden">
         <div className="max-w-[280px] xs:max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto my-10 md:my-14 lg:my-18 xl:my-26 2xl:my-28">
           <div className="md:text-lg 2xl:text-xl">
             <p>
