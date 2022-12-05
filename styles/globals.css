@@ -15,8 +15,7 @@
   top: 0;
   left: 0;
 }
-.slick-list,
-.slick-slider,
+
 .slick-track {
   display: flex !important;
   flex-direction: row !important;
@@ -25,8 +24,4 @@
 
 .slick-next {
   display: none !important;
-}
-
-.slick-list {
-  padding: 0 20% 0 0 !important;
 }
