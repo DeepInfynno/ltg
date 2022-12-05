@@ -108,7 +108,7 @@ const Careers: NextPageWithLayout = () => {
               with us
             </h1>
             <div className="flex justify-center items-center w-full">
-              <button className="mt-8 uppercase bg-[#EA0000] text-white hover:bg-red-600 px-5 py-2 md:px-10 md:py-4 rounded-full transition-all ease-in-out duration-200">
+              <button className="mt-8 uppercase bg-[#EA0000] text-white hover:bg-red-400 px-5 py-2 md:px-10 md:py-2 rounded-full transition-all ease-in-out duration-200">
                 View Opeanings
               </button>
             </div>
@@ -208,7 +208,7 @@ const Careers: NextPageWithLayout = () => {
               </select>
             </div>
           </div>
-          <div className="md:mt-10 2xl:mt-[100px]">
+          <div className="md:mt-10 2xl:mt-[80px]">
             {openRoles.map((role, i) => (
               <div key={i} className="border-gray-300 border-b">
                 <div
@@ -254,7 +254,7 @@ const Careers: NextPageWithLayout = () => {
             backgrounds and perspectives bring to our organization.
           </p>
         </div>
-        <div className="mt-10 2xl:mt-[151px]">
+        <div className="mt-10 2xl:mt-[100px]">
           <Offices />
         </div>
         <div className="mt-24 2xl:mt-[191px]">

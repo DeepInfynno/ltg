@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 import PieroHuerto from "@assets/images/piero-huerto.svg";
 import PieroHuertoResponsive from "@assets/images/piero-huerto-responsive.svg";
 import Image from "next/image";
-import Logo1 from "@assets/images/logo-1.svg";
+import Logo1 from "@assets/images/logo-invert.svg";
 
 const navigation = [
   {
@@ -82,13 +82,13 @@ const Footer = ({ hideContact }: FooterProps) => {
                 type="email"
                 name="email"
                 placeholder="Your Email Address"
-                className="border-none w-full rounded-lg px-4 py-2 placeholder:text-gray-400"
+                className="border-none w-full rounded-lg px-4 py-2 text-black placeholder:text-gray-400"
               />
               <input
                 type="password"
                 name="password"
                 placeholder="Password"
-                className="border-none w-full rounded-lg px-4 py-2 placeholder:text-gray-400"
+                className="border-none w-full rounded-lg px-4 py-2 text-black placeholder:text-gray-400"
               />
               <div className="flex flex-row items-center gap-4 pt-3 text-xl justify-center lg:justify-start">
                 <input
