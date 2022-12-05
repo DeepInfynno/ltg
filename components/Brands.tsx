@@ -1,33 +1,41 @@
+import LiveFestivalTickets from '@assets/images/livefestivaltickets.svg';
+import LiveFootballTickets from '@assets/images/livefootballtickets.svg';
+import LiveRugbyTickets from '@assets/images/liverugbytickets.svg';
+import LiveTennisTickets from '@assets/images/livetennistickets.svg';
+import Image from 'next/image';
+
 type BrandLinkProps = {
   href: string;
   title: string;
+  image: string;
 };
 
-const BrandLink = ({ href, title, ...props }: BrandLinkProps) => (
-  <div className="border border-gray-200 hover:border-red-500 shadow-sm rounded-md px-2 md:px-6 py-4">
+const BrandLink = ({ href, image, title, ...props }: BrandLinkProps) => (
+  <div className="w-auto border flex items-center bg-white border-[#EBECED] p-4 md:p-[18px] hover:border-[#EB4245] shadow-sm rounded-[3px] md:rounded-md ">
     <a
       href={href}
-      className="block text-center font-semibold text-gray-700 text-sm md:text-xl"
       {...props}
     >
-      live<span className="text-red-500">{title}</span>tickets
+      <Image src={image} alt={title} />
     </a>
   </div>
 );
 
 const Brands = () => {
   return (
-    <div>
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        <h3 className="uppercase text-gray-700">Our Brands</h3>
-        <h1 className="text-3xl font-semibold py-6">
+    <div className="mb-[75px] md:mb-[144px] z-10 px-[35px] 2xl:px-0">
+      <div className="max-w-[863px] w-full mx-auto">
+        <h3 className="uppercase text-black text-[18px] md:text-xl font-light leading-[23px]">OUR BRANDS</h3>
+        <h1 className="text-[22px] md:text-[35px] leading-[30px] md:leading-[39px] text-black font-bold mt-[36px] md:mt-[41px]">
           Empowering sports event experiences.
         </h1>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-16 py-4 md:py-8">
-          <BrandLink href="" title="football" />
-          <BrandLink href="" title="rugby" />
-          <BrandLink href="" title="festival" />
-          <BrandLink href="" title="tennis" />
+      </div>
+      <div className="max-w-[1456px] w-full mx-auto mt-[43px] md:mt-[76px]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-2 gap-y-6 md:gap-8 lg:gap-16 md:py-2">
+          <BrandLink href="https://www.livefootballtickets.com/" image={LiveFootballTickets} title="football" />
+          <BrandLink href="https://www.liverugbytickets.co.uk/" image={LiveRugbyTickets} title="rugby" />
+          <BrandLink href="https://www.livefestivaltickets.com/"  image={LiveFestivalTickets} title="festival" />
+          <BrandLink href="https://www.livetennistickets.com/"  image={LiveTennisTickets} title="tennis" />
         </div>
       </div>
     </div>

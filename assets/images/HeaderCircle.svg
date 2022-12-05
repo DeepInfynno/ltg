@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="624" height="131" viewBox="0 0 624 131">
+  <defs>
+    <clipPath id="clip-path">
+      <rect x="-14" y="255" width="624" height="131" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Scroll_Group_27" data-name="Scroll Group 27" transform="translate(14 -255)" clip-path="url(#clip-path)" style="isolation: isolate">
+    <g id="Group_43" data-name="Group 43" transform="translate(-1370 -938)">
+      <g id="Ellipse_30" data-name="Ellipse 30" transform="translate(1370 938)" fill="none" stroke="#ea0000" stroke-width="1" opacity="0.1">
+        <circle cx="859.5" cy="859.5" r="859.5" stroke="none"/>
+        <circle cx="859.5" cy="859.5" r="859" fill="none"/>
+      </g>
+      <g id="Ellipse_31" data-name="Ellipse 31" transform="translate(1409 977)" fill="none" stroke="#ea0000" stroke-width="1" opacity="0.3">
+        <circle cx="820.5" cy="820.5" r="820.5" stroke="none"/>
+        <circle cx="820.5" cy="820.5" r="820" fill="none"/>
+      </g>
+      <g id="Ellipse_33" data-name="Ellipse 33" transform="translate(1446 1014)" fill="none" stroke="#ea0000" stroke-width="1" opacity="0.4">
+        <circle cx="783.5" cy="783.5" r="783.5" stroke="none"/>
+        <circle cx="783.5" cy="783.5" r="783" fill="none"/>
+      </g>
+      <g id="Ellipse_34" data-name="Ellipse 34" transform="translate(1483 1051)" fill="none" stroke="#ea0000" stroke-width="1" opacity="0.6">
+        <circle cx="746.5" cy="746.5" r="746.5" stroke="none"/>
+        <circle cx="746.5" cy="746.5" r="746" fill="none"/>
+      </g>
+      <g id="Ellipse_35" data-name="Ellipse 35" transform="translate(1520 1088)" fill="none" stroke="#ea0000" stroke-width="1" opacity="0.4">
+        <circle cx="709.5" cy="709.5" r="709.5" stroke="none"/>
+        <circle cx="709.5" cy="709.5" r="709" fill="none"/>
+      </g>
+      <g id="Ellipse_36" data-name="Ellipse 36" transform="translate(1560 1128)" fill="none" stroke="#ea0000" stroke-width="1" opacity="0.3">
+        <circle cx="669.5" cy="669.5" r="669.5" stroke="none"/>
+        <circle cx="669.5" cy="669.5" r="669" fill="none"/>
+      </g>
+      <g id="Ellipse_37" data-name="Ellipse 37" transform="translate(1602 1170)" fill="none" stroke="#ea0000" stroke-width="1" opacity="0.1">
+        <circle cx="627.5" cy="627.5" r="627.5" stroke="none"/>
+        <circle cx="627.5" cy="627.5" r="627" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>
