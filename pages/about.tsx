@@ -118,7 +118,7 @@ const AboutUs: NextPageWithLayout = () => {
               return (
                 <div
                   key={item.id}
-                  className="text-white flex flex-row  gap-4 md:justify-center w-full"
+                  className="text-white flex flex-row  gap-4 md:justify-start lg:justify-center w-full"
                 >
                   <Image
                     src={item.image}
