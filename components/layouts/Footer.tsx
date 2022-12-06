@@ -52,7 +52,7 @@ const NavLink = ({ href, title, ...props }: NavLinkProps) => (
   <Link
     href={href}
     {...props}
-    className="block py-3 md:py-2 md:px-4 text-black font-bold md:font-normal text-lg hover:text-red-500 focus:text-red-500 transition-all ease-in-out duration-200"
+    className="block py-3 md:py-2 md:px-4 text-black font-bold md:font-semibold text-lg hover:text-red-500 focus:text-red-500 transition-all ease-in-out duration-200"
   >
     {title}
   </Link>

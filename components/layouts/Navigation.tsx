@@ -64,7 +64,7 @@ const Navigation = () => {
   }, [router.pathname]);
 
   return (
-    <div className="sticky top-0 shadow-[0px_2px_7px_1px_#0002]  z-50 bg-white px-4 xl:px-24 lg:px-16 md:px-6 py-8">
+    <div className="sticky top-0 shadow-[0px_2px_7px_1px_#0002]  z-50 bg-white px-4 xl:px-24 lg:px-16 md:px-6 py-3 md:py-8">
       <div className="flex items-center justify-between">
         <Link href="/" className="text-2xl font-semibold">
           <Image

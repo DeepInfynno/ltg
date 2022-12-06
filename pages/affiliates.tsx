@@ -54,19 +54,10 @@ const Affiliate: NextPageWithLayout = () => {
   return (
     <>
       <section>
-        <div className="absolute  right-0 lg:h-[1250px] h-[800px] w-">
-          <Image
-            src={Circle}
-            width={100}
-            alt="circle"
-            height={100}
-            className="w-[100%] h-[100%] sticky z-[-1000]"
-          />
-        </div>
         <div className="bg-black text-white text-center md:text-left">
           <div className="container mx-auto px-4 md:px-8 lg:px-8  py-24 lg:py-48 max">
             <h1 className="text-2xl md:text-4xl lg:text-6xl xl:text-8xl font-semibold md:leading-[1.1] w-full">
-              Live<span className="text-red-500">ticket</span>group Affiliate
+              Live<span className="text-[#EA0000]">ticket</span>group Affiliate
               Programm
             </h1>
             <h1 className="text-white lg:mt-20 mt-10 lg:text-[22px] md:text-lg text-base font-semibold">
@@ -78,6 +69,15 @@ const Affiliate: NextPageWithLayout = () => {
               </button>
             </div>
           </div>
+        </div>
+        <div className="absolute z-10 -top-[174px] right-0 lg:h-[1250px] h-[800px] w-">
+          <Image
+            src={Circle}
+            width={100}
+            alt="circle"
+            height={100}
+            className="w-[100%] h-[100%] sticky z-[-1000]"
+          />
         </div>
       </section>
       <section className="flex flex-col justify-center items-center">
@@ -190,7 +190,7 @@ const Affiliate: NextPageWithLayout = () => {
               </h1>
               <h1 className="mt-10 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
                 {" "}
-                What’s in it for you.
+                What’s in it for users.
               </h1>
               <div className="absolute  right-0 h-[1450px]">
                 <Image
@@ -209,13 +209,13 @@ const Affiliate: NextPageWithLayout = () => {
                     return (
                       <div
                         key={believe.id}
-                        className={`bg-red-500 flex h-[100px] flex-row items-center justify-center ${
-                          index === currentIndex2 ? "opacity-100" : "opacity-40"
+                        className={` flex h-[100px] flex-row items-center justify-center ${
+                          index === currentIndex2 ? "opacity-100 bg-[#EA0000] text-white" : "opacity-40 bg-[#F8F8F8] text-black"
                         } lg:px-6 md:px-8 md:py-16 lg:py-16 sm:px-5 sm:py-3 px-4 py-2 rounded-lg `}
                       >
                         <div className="h-full grid place-items-center">
                           <p
-                            className="lg:text-[24px] md:text-[22px] sm:text-lg text-base max-w-lg font-bold lg:leading-9 md:leading-8  leading-7 text-white"
+                            className="lg:text-[24px] md:text-[22px] sm:text-lg text-base max-w-lg font-bold lg:leading-9 md:leading-8  leading-7"
                             style={{
                               display: "-webkit-box",
                               overflow: "hidden",

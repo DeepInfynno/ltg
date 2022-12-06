@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @import url("https://fonts.cdnfonts.com/css/helvetica-neue-9");
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
 .slick-slider .slick-list,
 .slick-slider .slick-track {
   -webkit-transform: translate3d(0, 0, 0);
@@ -38,9 +43,11 @@
   flex-direction: column;
   gap: 16px;
 }
+
 #inputID::placeholder {
   text-align: center;
 }
+
 @media only screen and (min-width: 1024px) and (max-width: 1500px) {
   .affiliate .slick-track {
     margin: 0 35px !important;
