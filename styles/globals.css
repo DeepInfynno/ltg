@@ -22,6 +22,13 @@
   gap: 15px !important;
 }
 
+.affiliate .slick-track {
+  display: flex !important;
+  flex-direction: row !important;
+  margin: 0 20px !important;
+  gap: 15px !important;
+}
+
 .slick-next {
   display: none !important;
 }
@@ -31,20 +38,34 @@
   flex-direction: column;
   gap: 16px;
 }
-<<<<<<< HEAD
-
-#inputID::placeholder {
-  text-align: center;
-} 
-=======
 #inputID::placeholder {
   text-align: center;
 }
->>>>>>> 48535ab6f442335c85a77f5e473ee97a1cada41f
+@media only screen and (min-width: 1024px) and (max-width: 1500px) {
+  .affiliate .slick-track {
+    margin: 0 35px !important;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  .affiliate .slick-track {
+    margin: 0 5px !important;
+  }
+}
 @media only screen and (max-width: 600px) {
   .highlight-slider .slick-list {
     width: 90vw;
     overflow: visible;
     max-width: 322px;
+  }
+}
+@media only screen and (max-width: 600px) and (min-width: 376px) {
+  .office .slick-track {
+    margin: 0 20px !important;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .affiliate .slick-track {
+    margin: 0 0px !important;
   }
 }

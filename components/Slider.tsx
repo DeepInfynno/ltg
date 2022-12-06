@@ -184,7 +184,7 @@ const SliderComponenet = ({
         breakpoint: 480,
         settings: {
           infinite: true,
-          slidesToShow: 1.1,
+          slidesToShow: 1.12,
           speed: 500,
         },
       },

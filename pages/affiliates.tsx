@@ -109,9 +109,10 @@ const Affiliate: NextPageWithLayout = () => {
       <div className="mt-12 container mx-auto sm:px-4 px-9">
         <h1 className="text-xl font-normal ml-0.5">WHAT WE BELIEVE</h1>
         <h1 className="mt-10 text-4xl font-bold"> What’s in it for you.</h1>
-        <div className="lg:py-20 md:py-16 md:pb-16 pb-12">
+        <div className="affiliate lg:py-20 md:py-16 md:pb-16 pb-12">
           <SliderComponenet
             setCurrentIndex={setCurrentIndex}
+            sliderFor={"affiliate"}
             componenetData={believesData.map((believe, index) => {
               return (
                 <div
@@ -183,9 +184,10 @@ const Affiliate: NextPageWithLayout = () => {
               className="w-[100%] h-[100%] sticky z-[-1000]"
             />
           </div>
-          <div className="lg:py-20 md:py-16 md:pb-12 pb-12">
+          <div className="affiliate lg:py-20 md:py-16 md:pb-12 pb-12">
             <SliderComponenet
               setCurrentIndex={setCurrentIndex2}
+              sliderFor={"affiliate"}
               componenetData={believesData2.map((believe, index) => {
                 return (
                   <div
