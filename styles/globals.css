@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @import url("https://fonts.cdnfonts.com/css/helvetica-neue-9");
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
 .slick-slider .slick-list,
 .slick-slider .slick-track {
   -webkit-transform: translate3d(0, 0, 0);
@@ -31,16 +36,10 @@
   flex-direction: column;
   gap: 16px;
 }
-<<<<<<< HEAD
 
 #inputID::placeholder {
   text-align: center;
 } 
-=======
-#inputID::placeholder {
-  text-align: center;
-}
->>>>>>> 48535ab6f442335c85a77f5e473ee97a1cada41f
 @media only screen and (max-width: 600px) {
   .highlight-slider .slick-list {
     width: 90vw;
