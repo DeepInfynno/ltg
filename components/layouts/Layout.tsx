@@ -9,7 +9,7 @@ type LayoutProps = {
 
 const Layout = ({ hideContact, children }: LayoutProps) => {
   return (
-    <div>
+    <div className="">
       <Navigation />
       {children}
       <Footer hideContact={hideContact} />

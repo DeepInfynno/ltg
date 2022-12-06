@@ -31,7 +31,7 @@ const WhoWeAre = () => {
         This is our specialty. Through our platform, we connect buyers and
         sellers and make sure the experience is seamless from sale to seat.
       </p>
-      <button className="block mx-auto md:mx-0 mt-[73px] md:mt-[54px] rounded-[20px] bg-[#EA0000] w-[155px] h-[39px] text-white">
+      <button className="block mx-auto md:mx-0 mt-[73px] md:mt-[54px] font-semibold hover:bg-red-400 rounded-[20px] bg-[#EA0000] w-[155px] h-[39px] text-white">
         <span className="text-[18px] leading-[21px]">LEARN MORE</span>
       </button>
     </div>

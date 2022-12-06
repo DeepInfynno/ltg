@@ -4,6 +4,7 @@ import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
 import Logo1 from "@assets/images/logo-invert.svg";
 import { useEffect, useState } from "react";
+import { IoMdClose } from "react-icons/io";
 const navigation = [
   {
     title: "About",
@@ -62,7 +63,6 @@ const Navigation = () => {
     setShowSidebar(false);
   }, [router.pathname]);
 
-  
   return (
     <div className="sticky top-0 shadow-[0px_2px_7px_1px_#0002]  z-50 bg-white px-4 xl:px-24 lg:px-16 md:px-6 py-8">
       <div className="flex items-center justify-between">
@@ -86,12 +86,10 @@ const Navigation = () => {
           </div>
           <div className="block md:hidden">
             {showSidebar ? (
-              <button
-                className="flex text-4xl text-white items-center cursor-pointer fixed right-10 top-6 z-50"
+              <IoMdClose
+                className="h-6 w-6 text-white cursor-pointer fixed right-10 top-6 z-50"
                 onClick={() => setShowSidebar(!showSidebar)}
-              >
-                x
-              </button>
+              />
             ) : (
               <button
                 data-collapse-toggle="navbar-hamburger"
@@ -119,7 +117,7 @@ const Navigation = () => {
             )}
 
             <div
-              className={`block md:hidden top-0 right-0  h-screen p-3 bg-gray-800 shadow  text-white fixed  z-40 ease-in-out duration-300 ${
+              className={`block md:hidden top-0 right-0  h-full p-3 bg-gray-800 shadow  text-white fixed  z-40 ease-in-out duration-300 ${
                 showSidebar ? "translate-x-0 " : "translate-x-full"
               }`}
             >
