@@ -54,6 +54,15 @@ const Affiliate: NextPageWithLayout = () => {
   return (
     <>
       <section>
+        <div className="absolute  right-0 lg:h-[1250px] h-[800px]">
+          <Image
+            src={Circle}
+            width={100}
+            alt="circle"
+            height={100}
+            className="w-[100%] h-[100%] sticky z-[-1000]"
+          />
+        </div>
         <div className="bg-black text-white text-center md:text-left">
           <div className="container mx-auto px-4 md:px-8 lg:px-8  py-24 lg:py-48 max">
             <h1 className="text-2xl md:text-4xl lg:text-6xl xl:text-8xl font-semibold md:leading-[1.1] w-full">
@@ -69,15 +78,6 @@ const Affiliate: NextPageWithLayout = () => {
               </button>
             </div>
           </div>
-        </div>
-        <div className="absolute z-10 -top-[174px] right-0 lg:h-[1250px] h-[800px] w-">
-          <Image
-            src={Circle}
-            width={100}
-            alt="circle"
-            height={100}
-            className="w-[100%] h-[100%] sticky z-[-1000]"
-          />
         </div>
       </section>
       <section className="flex flex-col justify-center items-center">
@@ -110,10 +110,8 @@ const Affiliate: NextPageWithLayout = () => {
               </div>
             </div>
           </div>
-        </div>
-        {/* what we belive */}
-        <div className="w-full">
-          <div className="2xl:pl-[274px] mt-12">
+          {/* what we belive */}
+          <div className="mt-12 container">
             <h1 className="text-base md:text-lg lg:text-xl 2xl:text-xl font-normal ml-0.5">
               WHAT WE BELIEVE
             </h1>
@@ -152,9 +150,7 @@ const Affiliate: NextPageWithLayout = () => {
               />
             </div>
           </div>
-        </div>
-        {/* T&c */}
-        <div className="max-w-[280px] xs:max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] w-full">
+          {/* T&c */}
           <div className="container">
             <div className="bg-[#EA0000] px-6 lg:px-8 xl:px-10 flex flex-col lg:flex-row gap-1 lg:gap-10 rounded-md justify-center items-center md:py-8 py-10">
               <div className="flex justify-center items-center w-full">
@@ -185,16 +181,13 @@ const Affiliate: NextPageWithLayout = () => {
               </div>
             </div>
           </div>
-        </div>
-        {/* what we belive */}
-        <div className="w-full">
-          <div className="relative 2xl:pl-[274px] lg:pt-32">
-            <div className="mt-12 z-50 ">
+          {/* what we belive */}
+          <div className="relative lg:pt-32 ">
+            <div className="container mt-12 z-50">
               <h1 className="text-base md:text-lg lg:text-xl 2xl:text-xl font-normal ml-0.5">
                 WHAT WE BELIEVE
               </h1>
               <h1 className="mt-10 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
-                {" "}
                 What’s in it for users.
               </h1>
               <div className="absolute  right-0 h-[1450px]">
@@ -214,7 +207,7 @@ const Affiliate: NextPageWithLayout = () => {
                     return (
                       <div
                         key={believe.id}
-                        className={` flex h-[100px] flex-row items-center justify-center ${
+                        className={`flex h-[100px] flex-row items-center justify-center ${
                           index === currentIndex2
                             ? "opacity-100 bg-[#EA0000] text-white"
                             : "opacity-40 bg-[#F8F8F8] text-black"
@@ -239,10 +232,8 @@ const Affiliate: NextPageWithLayout = () => {
                 />
               </div>
             </div>
-          </div>
-          {/* api docs */}
-          <div className="w-full flex flex-col justify-center items-center">
-            <div className="w-full max-w-[280px] xs:max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px]">
+            {/* api docs */}
+            <div className="container">
               <div className="bg-[#F8F8F8] px-6 lg:px-8 flex flex-col lg:flex-row gap-1 lg:gap-10 rounded-md justify-center items-center md:py-8 py-10">
                 <div className="flex justify-center items-center w-full">
                   <div className="w-full flex flex-col gap-9 max-w-[355px]">
@@ -270,8 +261,8 @@ const Affiliate: NextPageWithLayout = () => {
                   />
                 </div>
               </div>
-              <ContactForm />
             </div>
+            <ContactForm />
           </div>
         </div>
       </section>
