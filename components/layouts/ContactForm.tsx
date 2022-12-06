@@ -4,7 +4,7 @@ const ContactForm = () => {
       <div className="bg-gray-100 rounded-xl my-16">
         <div className="flex flex-col lg:flex-row items-center lg:p-20 md:p-10 p-4">
           <div className="lg:w-2/5 mb-10 lg:px-0 md:px-12">
-            <h3 className="text-4xl font-semibold mb-4 text-center lg:text-left">
+            <h3 className="lg:text-4xl md:text-3xl sm:text-2xl text-xl font-semibold mb-4 text-center lg:text-left">
               Get in Touch!
             </h3>
             <p className="text-xl leading-9 text-center lg:text-left">
