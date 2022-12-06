@@ -10,17 +10,17 @@ import Circle from "@assets/images/Circle.svg";
 import football from "@assets/images/football.svg";
 import { HiPlus } from 'react-icons/hi';
 import { useState } from "react";
-
+import Logo from "@assets/images/LogoWhite.svg";
 
 const Home: NextPageWithLayout = () => {
   const [showVideo, setShowVideo] = useState(false);
   return (
     <>
-      <div className="md:mt-[153px] xl:mt-0 -mt-[108px] max-w-[1920px] mx-auto w-full xl:w-screen overflow-hidden relative">
+      <div className="mt-[45px] xl:-mt-[108px] max-w-[1920px] mx-auto w-full overflow-hidden relative">
         <div className="absolute -top-[193px] -right-[386px] xl:-right-[30px] xl:-top-[264px] -z-10">
           <Image src={Circle} alt="circle" />
         </div>
-        <div className="hidden lg:block absolute rotate-180 -left-[0px] -bottom-[811px] -z-10">
+        <div className="hidden lg:block absolute rotate-180 -left-[42px] -bottom-[850px] -z-10">
           <Image src={Circle} alt="circle" />
         </div>
         <div className="flex items-start max-w-[80vw] md:max-w-none md:items-center flex-col md:flex-row mx-auto w-full justify-end md:pr-[44px]">
@@ -51,10 +51,17 @@ const Home: NextPageWithLayout = () => {
             <div onClick={() => setShowVideo(!showVideo)} className="bg-[#EA0000] absolute bottom-[62px] right-[70px] md:hidden flex justify-center items-center p-[13px] rounded-full w-max h-max">
               <HiPlus size={46} color="white" />
             </div>
-            <div className="hidden md:block absolute w-[15vw] lg:w-auto lg:max-w-[301px] lg:max-h-[480px] top-1/2 -translate-y-1/2 right-[55px] overflow-hidden">
-              <video className="w-full" autoPlay loop>
-                <source src="/video.mp4" />
-              </video>
+            <div className="hidden md:flex items-center justify-center absolute w-[15vw] lg:w-auto lg:max-w-[301px] lg:max-h-[480px] top-1/2 -translate-y-1/2 right-[55px] overflow-hidden">
+              <div className="relative">
+                <div className="px-5 xl:px-10 absolute flex items-center justify-center h-full w-full bg-[#00000050]">
+                  <div className="relative">
+                    <Image src={Logo} alt="logo" />
+                  </div>
+                </div>
+                <video className="w-full" autoPlay muted loop>
+                  <source src="/video.mp4" />
+                </video>
+              </div>
             </div>
           </div>
         </div>
@@ -80,6 +87,11 @@ const Home: NextPageWithLayout = () => {
             className="z-50 absolute top-3 right-4 flex justify-center items-center p-2 w-max rotate-45 h-max"
           >
             <HiPlus size={46} color="white" />
+          </div>
+          <div className="absolute flex items-center justify-center h-full w-full bg-[#00000050]">
+            <div className="relative">
+              <Image src={Logo} alt="logo" />
+            </div>
           </div>
           <div className="w-full overflow-hidden">
             <video className="w-full" autoPlay loop muted>
