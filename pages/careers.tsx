@@ -102,7 +102,7 @@ const Careers: NextPageWithLayout = () => {
   return (
     <>
       <div className="relative w-full max-w-[1920px] overflow-hidden">
-        <div className="bg-careerBg bg-fixed bg-cover h-[300px] md:h-[400px] xl:h-[500px] 2xl:h-[830px] flex justify-center items-center w-full text-white">
+        <div className="bg-careerBg bg-fixed bg-cover h-[300px] xs:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] 2xl:h-[850px] flex justify-center items-center w-full text-white">
           <div className="max-w-xl  2xl:max-w-5xl w-full flex flex-col md:gap-4 lg:gap-5 xl:gap-10 2xl:gap-20">
             <h1 className="px-[16px] text-3xl md:text-5xl 2xl:text-8xl md:max-w-5xl font-semibold leading-snug text-center">
               Come create <span className="text-red-500">live</span> experiences
@@ -149,27 +149,29 @@ const Careers: NextPageWithLayout = () => {
             ))}
           </div>
         </div>
-        <SliderComponenet
-          setCurrentIndex={setCurrentIndex}
-          sliderFor={"careers"}
-          componenetData={imagesArray.map((data, index) => {
-            return (
-              <div
-                key={data.id}
-                className={`relative w-full h-[200px] md:h-[300px] lg:h-[400px] xl:h-[500px] 2xl:h-[600px] ${
-                  index === currentIndex ? "opacity-100" : "opacity-40"
-                }`}
-              >
-                <Image
-                  src={data.image}
-                  alt={data.title}
-                  layout="fill"
-                  className="rounded-lg w-2 h-2"
-                />
-              </div>
-            );
-          })}
-        />
+        <div className="careers">
+          <SliderComponenet
+            setCurrentIndex={setCurrentIndex}
+            sliderFor={"careers"}
+            componenetData={imagesArray.map((data, index) => {
+              return (
+                <div
+                  key={data.id}
+                  className={`relative w-full h-[200px] xl:max-w-[750px] 2xl:max-w-none md:h-[300px] lg:h-[400px] xl:h-[450px] 2xl:h-[600px] ${
+                    index === currentIndex ? "opacity-100" : "opacity-40"
+                  }`}
+                >
+                  <Image
+                    src={data.image}
+                    alt={data.title}
+                    layout="fill"
+                    className="rounded-lg w-2 h-2"
+                  />
+                </div>
+              );
+            })}
+          />
+        </div>
         {/* Benefits */}
         <div className="max-w-[280px] xs:max-w-xs  sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto py-8 lg:py-16 2xl:py-28">
           <h3 className="uppercase text-base xl:text-lg 2xl:text-xl text-gray-700">
@@ -200,10 +202,10 @@ const Careers: NextPageWithLayout = () => {
               Open roles.
             </h1>
             <div className="flex w-max gap-2 my-8 md:my-0 md:mt-0">
-              <select className="w-[160px] xl:w-[200px] 2xl:w-[260px] text-black font-bold text-base xl:text-lg 2xl:text-2xl rounded-md">
+              <select className="w-[140px] xs:w-[160px] xl:w-[200px] 2xl:w-[260px] cursor-pointer text-black font-bold text-base xl:text-lg 2xl:text-2xl rounded-md">
                 <option value="all-departments">All Departments</option>
               </select>
-              <select className="w-[160px] xl:w-[200px] 2xl:w-[260px] text-black font-bold text-base xl:text-lg 2xl:text-2xl rounded-md">
+              <select className="w-[140px] xs:w-[160px] xl:w-[200px] 2xl:w-[260px] cursor-pointer text-black font-bold text-base xl:text-lg 2xl:text-2xl rounded-md">
                 <option value="all-locations">All Locations</option>
               </select>
             </div>

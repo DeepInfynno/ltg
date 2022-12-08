@@ -57,21 +57,21 @@ const AboutUs: NextPageWithLayout = () => {
   return (
     <>
       <div className="relative w-full max-w-[1920px] overflow-hidden">
-        <div className="absolute  right-0 lg:h-[1250px] h-[800px] w-">
+        <div className="absolute -right-40 -top-[280px]  md:right-0 lg:h-[1250px] h-[800px] md:-top-[350px]">
           <Image
             src={Circle}
             width={100}
             alt="circle"
             height={100}
-            className="w-[100%] h-[100%] sticky z-[-1000]"
+            className="w-[100%] h-[100%] sticky"
           />
         </div>
         <div className="bg-black text-white text-center md:text-left">
-          <div className="container mx-auto px-4 md:px-8 lg:px-8  py-24 lg:py-48 max">
-            <h1 className="text-2xl md:text-3xl lg:text-6xl xl:text-8xl font-semibold md:leading-[1.1] w-full">
+          <div className="container mx-auto px-4 md:px-8 lg:px-8 py-24 lg:py-48 max">
+            <h1 className="text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-semibold md:leading-[1.1] w-full">
               About Us
             </h1>
-            <h1 className="text-white lg:mt-20 mt-10  lg:text-[22px] md:text-lg text-base font-semibold">
+            <h1 className="text-white lg:mt-20 mt-10 2xl:text-[22px] xl:text-xl lg:text-lg md:text-base text-sm font-semibold">
               When you market more, you’ll earn more.
             </h1>
           </div>
@@ -85,7 +85,7 @@ const AboutUs: NextPageWithLayout = () => {
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
             </h3>
-            <div className=" text-base xl:text-lg 2xl:text-xl leading-7">
+            <div className="text-base xl:text-lg 2xl:text-xl leading-7">
               <p>
                 Lorem Ipsum has been the industry's standard dummy text ever
                 since the 1500s, when an unknown printer took a galley of type
@@ -112,7 +112,7 @@ const AboutUs: NextPageWithLayout = () => {
           </div>
         </div>
         {/* Beleives */}
-        <div className="bg-black  my-10 md:my-14 lg:my-18 xl:my-26 2xl:my-28">
+        {/* <div className="bg-black  my-10 md:my-14 lg:my-18 xl:my-26 2xl:my-28">
           <div className="max-w-[280px] lg:grid lg:grid-cols-4 md:grid md:grid-cols-2 py-10 grid gap-4 justify-around xs:max-w-xs md:gap-5 lg:gap-0   sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto">
             {dataArray.map((item) => {
               return (
@@ -138,7 +138,7 @@ const AboutUs: NextPageWithLayout = () => {
               );
             })}
           </div>
-        </div>
+        </div> */}
         <div className="max-w-[280px] xs:max-w-xs  sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto">
           <h3 className="uppercase text-base xl:text-lg 2xl:text-xl text-gray-700">
             Work with us
@@ -148,10 +148,10 @@ const AboutUs: NextPageWithLayout = () => {
               Open roles.
             </h1>
             <div className="flex w-max gap-2 my-8 md:my-0 md:mt-0">
-              <select className="w-[160px] xl:w-[200px] 2xl:w-[260px] text-black font-bold text-base xl:text-lg 2xl:text-2xl rounded-md">
+              <select className="w-[140px] xs:w-[160px] xl:w-[200px] 2xl:w-[260px] cursor-pointer text-black font-bold text-base xl:text-lg 2xl:text-2xl rounded-md">
                 <option value="all-departments">All Departments</option>
               </select>
-              <select className="w-[160px] xl:w-[200px] 2xl:w-[260px] text-black font-bold text-base xl:text-lg 2xl:text-2xl rounded-md">
+              <select className="w-[140px] xs:w-[160px] xl:w-[200px] cursor-pointer 2xl:w-[260px] text-black font-bold text-base xl:text-lg 2xl:text-2xl rounded-md">
                 <option value="all-locations">All Locations</option>
               </select>
             </div>
@@ -208,7 +208,7 @@ const AboutUs: NextPageWithLayout = () => {
         <div className="mt-24 2xl:mt-[191px]">
           <ContactForm />
         </div>
-        <div className="absolute -right-[450px] 2xl:-right-[250px] bottom-[800px] md:bottom-[200px] 2xl:bottom-[400px] -z-10">
+        <div className="absolute hidden md:block -right-[450px] 2xl:-right-[250px] bottom-[800px] md:bottom-[200px] 2xl:bottom-[400px] -z-10">
           <Image src={Circle} alt="image" />
         </div>
       </div>

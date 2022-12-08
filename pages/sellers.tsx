@@ -40,36 +40,41 @@ const features = [
 const Sellers: NextPageWithLayout = () => {
   return (
     <div className="max-w-[1920px] mx-auto">
-      <div className="bg-[url('../assets/images/sellerback.svg')] bg-fixed bg-no-repeat bg-[44%] xl:bg-[left_46%] 2xl:h-[955px]">
-        <div className="py-28 md:py-24 xl:py-64 max-w-[90vw] xl:max-w-7xl mx-auto px-4 text-white">
-          <h1 className="text-white text-4xl max-w-[65vw] md:max-w-none md:text-[60px] xl:text-[98px] font-bold leading-[50px] md:leading-[73px] xl:leading-[113px]">
+      <div className="bg-[url('../assets/images/sellerback.svg')] h-[350px] xs:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] 2xl:h-[850px] flex items-center bg-fixed bg-no-repeat bg-[44%] xl:bg-[left_46%]">
+        <div className="container mx-auto px-4 md:px-8 lg:px-8 py-24 lg:py-48">
+          <h1 className="text-white text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold md:leading-[40px] lg:leading-[70px] xl:leading-[90px] 2xl:leading-[113px]">
             Sell tickets on <br />
             live<span className="text-[#EA0000]">ticket</span>group.
           </h1>
-          <p className="mt-[54px] md:mt-[78px] text-[18px] md:text-[22px] max-w-[745px] leading-[26px] font-bold text-white">
+          <p className="mt-[20px] xs:mt-[22px] sm:mt-[30px] md:mt-[50px] xl:mt-[60px] 2xl:mt-[78px] max-w-[345px] md:max-w-[445px] lg:max-w-[545px] xl:max-w-[645px] 2xl:max-w-[745px] 2xl:text-[22px] xl:text-xl lg:text-lg md:text-base text-sm leading-[26px] font-bold text-white">
             We are the world&apos;s largest sports ticket marketplace providing
             superior ticketing, marketing and service solutions for buyers and
             sellers.
           </p>
-          <Button className="mt-[84px] !px-10">Start Selling</Button>
+          <Button className="mt-[22px] xs:mt-[24px] sm:mt-[40px] md:mt-[55px] xl:mt-[70px] 2xl:mt-[84px] !px-10">
+            Start Selling
+          </Button>
         </div>
       </div>
-      <div className="mt-[64px] md:mt-[103px] max-w-[540px] lg:max-w-[863px] mx-4 sm:mx-auto text-[20px] md:text-[26px] leading-[30px] text-black font-bold">
+      <div className="mt-[64px] md:mt-[103px] max-w-[280px] xs:max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto text-base sm:text-lg md:text-[20px] lg:text-[22px] xl:text-2xl 2xl:text-[26px] leading-[30px] text-black font-bold">
         Our platform will enable you to sell tickets in an efficient way. Our
         online marketing experts ensure your tickets get the right exposure.
       </div>
-      <div className="max-w-[1024px] 2xl:max-w-[1366px] mx-auto mt-[83px] mb-[50px] lg:mb-[85px] px-5 md:px-7 lg:px-0">
+      <div className="max-w-[280px] xs:max-w-xs sm:max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1364px] mx-auto mt-[83px] mb-[50px] lg:mb-[85px]">
         <div className="grid md:grid-cols-2 gap-[18px]">
           {features.map((feature, i) => (
-            <div key={i} className="bg-gray-100 rounded-lg flex p-8 md:p-12">
-              <div className="min-w-[90px] lg:min-w-[130px] relative">
+            <div
+              key={i}
+              className="bg-gray-100 rounded-lg flex p-4 sm:p-6 lg:p-12"
+            >
+              <div className="min-w-[90px] 2xl:min-w-[130px] relative">
                 {feature.icon}
               </div>
               <div>
-                <h3 className="text-[30px] md:text-[35px] leading-[30px] text-black font-bold">
+                <h3 className="text-2xl sm:text-[26px] md:text-[28px] lg:text-[30px] xl:text-[32px] 2xl:text-[35px] leading-[30px] text-black font-bold">
                   {feature.title}
                 </h3>
-                <p className="mt-[35px] lg:mt-[65px] max-w-[420px] text-[18px] md:text-[20px] leading-[30px]">
+                <p className="mt-[35px] 2xl:mt-[65px] xl:mt-[55px] max-w-[420px] text-xs md:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[20px] leading-[30px]">
                   {feature.description}
                 </p>
               </div>
