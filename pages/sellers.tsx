@@ -3,11 +3,12 @@ import { NextPageWithLayout } from "./_app";
 import { TbHandClick } from "react-icons/tb";
 import { BiSupport } from "react-icons/bi";
 import { TfiLayers, TfiDesktop } from "react-icons/tfi";
-import LTG1 from '@assets/images/LTG01.svg'
-import LTG2 from '@assets/images/LTG02.svg'
-import LTG3 from '@assets/images/LTG03.svg'
-import LTG4 from '@assets/images/LTG04.svg'
+import LTG1 from "@assets/images/LTG01.svg";
+import LTG2 from "@assets/images/LTG02.svg";
+import LTG3 from "@assets/images/LTG03.svg";
+import LTG4 from "@assets/images/LTG04.svg";
 import Image from "next/image";
+import Button from "@components/form/Button";
 
 const features = [
   {
@@ -50,9 +51,7 @@ const Sellers: NextPageWithLayout = () => {
             superior ticketing, marketing and service solutions for buyers and
             sellers.
           </p>
-          <button className="uppercase mt-[84px] bg-[#EA0000] text-white hover:bg-red-600 px-10 py-2 rounded-[20px] transition-all ease-in-out duration-200">
-            Start Selling
-          </button>
+          <Button className="mt-[84px] !px-10">Start Selling</Button>
         </div>
       </div>
       <div className="mt-[64px] md:mt-[103px] max-w-[540px] lg:max-w-[863px] mx-4 sm:mx-auto text-[20px] md:text-[26px] leading-[30px] text-black font-bold">
@@ -63,19 +62,23 @@ const Sellers: NextPageWithLayout = () => {
         <div className="grid md:grid-cols-2 gap-[18px]">
           {features.map((feature, i) => (
             <div key={i} className="bg-gray-100 rounded-lg flex p-8 md:p-12">
-              <div className="min-w-[90px] lg:min-w-[130px] relative">{feature.icon}</div>
+              <div className="min-w-[90px] lg:min-w-[130px] relative">
+                {feature.icon}
+              </div>
               <div>
-                <h3 className="text-[30px] md:text-[35px] leading-[30px] text-black font-bold">{feature.title}</h3>
-                <p className="mt-[35px] lg:mt-[65px] max-w-[420px] text-[18px] md:text-[20px] leading-[30px]">{feature.description}</p>
+                <h3 className="text-[30px] md:text-[35px] leading-[30px] text-black font-bold">
+                  {feature.title}
+                </h3>
+                <p className="mt-[35px] lg:mt-[65px] max-w-[420px] text-[18px] md:text-[20px] leading-[30px]">
+                  {feature.description}
+                </p>
               </div>
             </div>
           ))}
         </div>
       </div>
       <div className="text-center mb-[40px] lg:mb-[73px]">
-        <button className="bg-[#EA0000] text-white hover:bg-red-600 px-16 py-2 rounded-full transition-all ease-in-out duration-200">
-          <span className="text-[18px] leading-5 font-bold uppercase">Start Selling</span>
-        </button>
+        <Button className="!px-10">Start Selling</Button>
       </div>
     </div>
   );

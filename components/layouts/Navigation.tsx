@@ -46,8 +46,8 @@ const NavLink = ({ href, title, active, ...props }: NavLinkProps) => {
       className={classNames(
         "py-2 px-4 transition-all ease-in-out duration-200 text-lg",
         router.pathname === href
-          ? "font-bold hover:text-red-600 focus:text-red-600 text-red-600  underline decoration-4"
-          : "text-gray-700 hover:text-red-500 focus:text-red-500",
+          ? "font-bold hover:text-red-600 focus:text-red-600 text-red-600 underline decoration-4"
+          : "text-black font-normal hover:text-red-500 focus:text-red-500",
       )}
     >
       {title}
@@ -76,7 +76,7 @@ const Navigation = () => {
           />
         </Link>
 
-        <div className="flex items-center">
+        <div className="flex items-center gap-6">
           <div className="hidden md:flex items-center">
             {navigation
               .filter((val) => val.title !== "Seller Login")

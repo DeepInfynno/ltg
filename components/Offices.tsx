@@ -46,7 +46,7 @@ const Offices = () => {
         </h1>
       </div>
       <div className=" w-full mt-11 2xl:mt-[88px]">
-        <div className="office xs:px-4 lg:px-10 xl:px-44 2xl:px-32">
+        <div className="office xs:px-4 md:px-18 lg:px-24 xl:px-48 2xl:px-32">
           <SliderComponenet
             setCurrentIndex={setCurrentIndex}
             sliderFor={"office"}

@@ -1,3 +1,5 @@
+import Button from "@components/form/Button";
+
 const ContactForm = () => {
   return (
     <div className="container mx-auto md:px-4">
@@ -33,9 +35,7 @@ const ContactForm = () => {
                 rows={5}
               />
               <div className="flex justify-center lg:justify-start">
-                <button className="bg-[#EA0000] text-white hover:bg-red-400 px-10 py-2 rounded-full transition-all ease-in-out duration-200 font-bold uppercase">
-                  Say hi!
-                </button>
+                <Button className="!px-10">Say hi!</Button>
               </div>
             </form>
           </div>

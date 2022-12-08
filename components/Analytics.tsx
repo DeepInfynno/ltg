@@ -1,3 +1,5 @@
+import Button from "./form/Button";
+
 const Analytics = () => {
   return (
     <div className="flex flex-col gap-6 mt-4">
@@ -62,9 +64,7 @@ const Analytics = () => {
           complex information to stakeholders in an easy-to-understand manner.
         </li>
       </div>
-      <button className=" my-4 lg:mt-8 rounded-full bg-[#EA0000] text-white font-bold text-lg px-8 py-2 hover:bg-red-400 focus:bg-red-400 w-max   transition-all ease-in-out duration-200 uppercase ">
-        Apply now
-      </button>
+      <Button className="my-4 lg:mt-8 !px-8 py-2">Apply now</Button>
     </div>
   );
 };
