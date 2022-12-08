@@ -55,22 +55,22 @@ const Affiliate: NextPageWithLayout = () => {
   return (
     <>
       <section>
-        <div className="absolute  right-0 lg:h-[1250px] h-[800px]">
+        <div className="absolute -right-40 -top-[280px]  md:right-0 lg:h-[1250px] h-[800px] md:-top-[350px]">
           <Image
             src={Circle}
             width={100}
             alt="circle"
             height={100}
-            className="w-[100%] h-[100%] sticky z-[-1000]"
+            className="w-[100%] h-[100%] sticky"
           />
         </div>
-        <div className="bg-black text-white text-center md:text-left">
+        <div className="bg-black flex items-center h-[300px] xs:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] 2xl:h-[850px] text-white text-center md:text-left">
           <div className="container mx-auto px-4 md:px-8 lg:px-8 py-24 lg:py-48 max">
-            <h1 className="text-2xl md:text-4xl lg:text-6xl xl:text-8xl font-semibold md:leading-[1.1] w-full">
-              Live<span className="text-[#EA0000]">ticket</span>group Affiliate
-              Programm
+            <h1 className="text-2xl md:text-3xl lg:text-6xl xl:text-7xl xl:max-w-[801px] 2xl:max-w-[901px] xl:leading-[90px] 2xl:leading-[113px] 2xl:text-8xl font-semibold md:leading-[1.1] w-full">
+              Live<span className="text-[#EA0000]">ticket</span>
+              group Affiliate Programm
             </h1>
-            <h1 className="text-white lg:mt-20 mt-10 lg:text-[22px] md:text-lg text-base font-semibold">
+            <h1 className="text-white lg:mt-20 mt-10 2xl:text-[22px] xl:text-xl lg:text-lg md:text-base text-sm font-semibold">
               When you market more, you’ll earn more.
             </h1>
             <div>
@@ -130,7 +130,7 @@ const Affiliate: NextPageWithLayout = () => {
                     >
                       <div className="h-full grid place-items-center">
                         <p
-                          className="lg:text-[24px] md:text-[22px] sm:text-lg text-base max-w-lg font-bold lg:leading-9 md:leading-8  leading-7"
+                          className="2xl:text-2xl xl:text-[22px] lg:text-xl md:text-lg sm:text-base text-sm max-w-lg font-bold lg:leading-9 md:leading-8  leading-7"
                           style={{
                             display: "-webkit-box",
                             overflow: "hidden",
@@ -212,7 +212,7 @@ const Affiliate: NextPageWithLayout = () => {
                       >
                         <div className="h-full grid place-items-center">
                           <p
-                            className="lg:text-[24px] md:text-[22px] sm:text-lg text-base max-w-lg font-bold lg:leading-9 md:leading-8  leading-7"
+                            className="2xl:text-2xl xl:text-[22px] lg:text-xl md:text-lg sm:text-base text-sm max-w-lg font-bold lg:leading-9 md:leading-8  leading-7"
                             style={{
                               display: "-webkit-box",
                               overflow: "hidden",

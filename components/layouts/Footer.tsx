@@ -109,7 +109,7 @@ const Footer = ({ hideContact }: FooterProps) => {
                 </label>
               </div>
             </div>
-            <Button className="mt-8">seller login</Button>
+            <Button className="mt-8">login</Button>
           </form>
         </div>
       </div>
