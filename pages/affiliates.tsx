@@ -6,6 +6,7 @@ import Image from "next/image";
 import Alexandru from "@assets/images/alexandru.svg";
 import Markus from "@assets/images/markus.svg";
 import Circle from "@assets/images/Circle.svg";
+import Button from "@components/form/Button";
 
 const believesData = [
   {
@@ -64,7 +65,7 @@ const Affiliate: NextPageWithLayout = () => {
           />
         </div>
         <div className="bg-black text-white text-center md:text-left">
-          <div className="container mx-auto px-4 md:px-8 lg:px-8  py-24 lg:py-48 max">
+          <div className="container mx-auto px-4 md:px-8 lg:px-8 py-24 lg:py-48 max">
             <h1 className="text-2xl md:text-4xl lg:text-6xl xl:text-8xl font-semibold md:leading-[1.1] w-full">
               Live<span className="text-[#EA0000]">ticket</span>group Affiliate
               Programm
@@ -73,9 +74,7 @@ const Affiliate: NextPageWithLayout = () => {
               When you market more, you’ll earn more.
             </h1>
             <div>
-              <button className="mt-12 lg:mt-24 bg-[#EA0000] text-white font-bold text-base 2xl:text-lg hover:bg-red-400 focus:bg-red-400 px-8 py-2 rounded-full transition-all ease-in-out duration-200 uppercase ">
-                Become an affiliate
-              </button>
+              <Button className="mt-12 lg:mt-24">Become an affiliate</Button>
             </div>
           </div>
         </div>
@@ -104,9 +103,7 @@ const Affiliate: NextPageWithLayout = () => {
                 management.
               </p>
               <div className="flex flex-row justify-center lg:justify-start">
-                <button className="mt-12 lg:mt-24 bg-[#EA0000] text-white font-bold text-base whitespace-nowrap 2xl:text-lg hover:bg-red-400 focus:bg-red-400 px-8 py-2 rounded-full transition-all ease-in-out duration-200 uppercase ">
-                  Become an affiliate
-                </button>
+                <Button className="mt-12 lg:mt-24">Become an affiliate</Button>
               </div>
             </div>
           </div>
@@ -164,9 +161,9 @@ const Affiliate: NextPageWithLayout = () => {
                     our affiliates.
                   </p>
                   <div className="flex justify-center lg:justify-start">
-                    <button className="bg-transparent text-white text-sm md:text-base xl:text-xl 2xl:text-lg rounded-full hover:bg-red-400 focus:bg-red-400  border border-white w-max px-4 py-2 uppercase font-bold mt-3 ">
-                      Learn more
-                    </button>
+                    <Button className="bg-transparent border border-white !px-4 py-2 mt-3">
+                      learn more
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -245,9 +242,7 @@ const Affiliate: NextPageWithLayout = () => {
                       supports each other –our unity gives us the.
                     </p>
                     <div className="flex justify-center lg:justify-start">
-                      <button className="bg-[#EA0000] text-white text-sm md:text-base xl:text-xl 2xl:text-lg rounded-full border hover:bg-red-400 focus:bg-red-400 border-white w-max px-4 py-2 uppercase font-bold mt-3">
-                        Learn more
-                      </button>
+                      <Button className="!px-4 py-2 mt-3">learn more</Button>
                     </div>
                   </div>
                 </div>

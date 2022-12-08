@@ -10,6 +10,7 @@ import Amsterdam from "@assets/images/amsterdam.jpg";
 import SanFrancisco from "@assets/images/san-francisco.jpg";
 import Image from "next/image";
 import SliderComponenet from "@components/Slider";
+import Button from "@components/form/Button";
 
 const imagesArray = [
   {
@@ -108,9 +109,7 @@ const Careers: NextPageWithLayout = () => {
               with us
             </h1>
             <div className="flex justify-center items-center w-full">
-              <button className="mt-8 uppercase bg-[#EA0000] text-white hover:bg-red-400 px-5 py-2 md:px-10 md:py-2 rounded-full transition-all ease-in-out duration-200">
-                View Opeanings
-              </button>
+              <Button className="mt-8 md:!px-10">View Opeanings</Button>
             </div>
           </div>
         </div>

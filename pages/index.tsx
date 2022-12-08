@@ -8,9 +8,10 @@ import Image from "next/image";
 import { NextPageWithLayout } from "./_app";
 import Circle from "@assets/images/Circle.svg";
 import football from "@assets/images/football.svg";
-import { HiPlus } from 'react-icons/hi';
+import { HiPlus } from "react-icons/hi";
 import { useState } from "react";
 import Logo from "@assets/images/LogoWhite.svg";
+import Button from "@components/form/Button";
 
 const Home: NextPageWithLayout = () => {
   const [showVideo, setShowVideo] = useState(false);
@@ -23,9 +24,9 @@ const Home: NextPageWithLayout = () => {
         <div className="hidden lg:block absolute rotate-180 -left-[42px] -bottom-[850px] -z-10">
           <Image src={Circle} alt="circle" />
         </div>
-        <div className="flex items-start max-w-[80vw] md:max-w-none md:items-center flex-col md:flex-row mx-auto w-full justify-end md:pr-[44px]">
+        <div className="flex items-start max-w-[80vw] md:max-w-none md:items-center md:-mt-[20px] lg:-mt-[100px] xl:mt-0 flex-col md:flex-row mx-auto w-full justify-end md:pr-[44px]">
           <div className="md:translate-x-[69px]">
-            <h2 className="text-black max-w-[712px] text-[58px] leading-[67px] md:text-[98px] md:leading-[113px] font-bold">
+            <h2 className="text-black max-w-[712px] text-5xl leading-[58px] xs:text-[58px] xs:leading-[67px] md:text-5xl md:leading-tight lg:text-6xl lg:leading-tight xl:text-7xl xl:leading-tight 2xl:text-[98px] 2xl:leading-[113px] font-bold">
               Experience
               <br />
               it <span className="text-[#EA0000]">Live</span>.
@@ -45,13 +46,16 @@ const Home: NextPageWithLayout = () => {
             </button>
           </div>
           <div className="relative -right-[42px] md:right-auto self-end">
-            <div className="relative h-full w-full max-h-[399px] max-w-[399px] md:max-w-[1097px] md:max-h-[1098px]">
+            <div className="relative h-full w-full max-h-[399px] max-w-[399px] md:max-w-[1097px] md:max-h-[1098px] xl:max-w-[820px] 2xl:max-w-[1097px]">
               <Image src={football} alt="football" height={1098} width={1097} />
             </div>
-            <div onClick={() => setShowVideo(!showVideo)} className="bg-[#EA0000] absolute bottom-[62px] right-[70px] md:hidden flex justify-center items-center p-[13px] rounded-full w-max h-max">
+            <div
+              onClick={() => setShowVideo(!showVideo)}
+              className="bg-[#EA0000] absolute bottom-[62px] right-[70px] md:hidden flex justify-center items-center p-[13px] rounded-full w-max h-max"
+            >
               <HiPlus size={46} color="white" />
             </div>
-            <div className="hidden md:flex items-center justify-center absolute w-[15vw] lg:w-auto lg:max-w-[301px] lg:max-h-[480px] top-1/2 -translate-y-1/2 right-[55px] overflow-hidden">
+            <div className="hidden md:flex items-center justify-center absolute w-[15vw] lg:w-auto lg:max-w-[170px] lg:max-h-[280px] 2xl:max-w-[301px] 2xl:max-h-[480px] top-1/2 -translate-y-1/2 right-[55px] overflow-hidden">
               <div className="relative">
                 <div className="px-5 xl:px-10 absolute flex items-center justify-center h-full w-full bg-[#00000050]">
                   <div className="relative">
@@ -71,11 +75,7 @@ const Home: NextPageWithLayout = () => {
         <div className="mb-[88px]">
           <Offices />
           <div className="hidden md:block text-center mt-[99px]">
-          <button className="bg-[#EA0000] text-white hover:bg-red-400 py-2 px-4   rounded-full transition-all ease-in-out duration-200 uppercase">  
-              <span className="text-[18px] leading-[21px] text-white">
-                CONTACT US
-              </span>
-            </button>
+            <Button>contact us</Button>
           </div>
           <Newsletter />
         </div>

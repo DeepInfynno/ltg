@@ -1,3 +1,4 @@
+import Button from "@components/form/Button";
 import { ContactForm, Layout } from "@components/layouts";
 import Offices from "@components/Offices";
 import { NextPageWithLayout } from "./_app";
@@ -8,11 +9,7 @@ const Contact: NextPageWithLayout = () => {
       <div className="mb-[88px]">
         <Offices />
         <div className="hidden md:block text-center mt-[99px]">
-          <button className="bg-[#EA0000] text-white hover:bg-red-400 py-2 px-4   rounded-full transition-all ease-in-out duration-200 uppercase">
-            <span className="text-[18px] leading-[21px] text-white">
-              CONTACT US
-            </span>
-          </button>
+          <Button className="!px-4">contact us</Button>
         </div>
       </div>
       <ContactForm />
