@@ -11,6 +11,7 @@ import Image from "next/image";
 import Button from "@components/form/Button";
 import Meta from "@components/Meta";
 import OgImage from "../assets/images/logo-1.svg";
+import Link from "next/link";
 
 const features = [
   {
@@ -60,9 +61,11 @@ const Sellers: NextPageWithLayout = () => {
             superior ticketing, marketing and service solutions for buyers and
             sellers.
           </p>
-          <Button className="mt-[22px] xs:mt-[24px] sm:mt-[40px] md:mt-[55px] xl:mt-[70px] 2xl:mt-[84px] !px-10">
-            Start Selling
-          </Button>
+          <Link href="#">
+            <Button className="mt-[22px] xs:mt-[24px] sm:mt-[40px] md:mt-[55px] xl:mt-[70px] 2xl:mt-[84px] !px-10">
+              Start Selling
+            </Button>
+          </Link>
         </div>
       </div>
       <div className="mt-[64px] md:mt-[103px] max-w-[280px] xs:max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto text-base sm:text-lg md:text-[20px] lg:text-[22px] xl:text-2xl 2xl:text-[26px] leading-[30px] text-black font-bold">
@@ -92,7 +95,9 @@ const Sellers: NextPageWithLayout = () => {
         </div>
       </div>
       <div className="text-center mb-[40px] lg:mb-[73px]">
-        <Button className="!px-10">Start Selling</Button>
+        <Link href="#">
+          <Button className="!px-10">Start Selling</Button>
+        </Link>
       </div>
     </div>
   );

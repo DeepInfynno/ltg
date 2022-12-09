@@ -11,7 +11,7 @@ type BrandLinkProps = {
 };
 
 const BrandLink = ({ href, image, title, ...props }: BrandLinkProps) => (
-  <div className="w-auto border flex items-center bg-white border-[#EBECED] p-4 md:p-[18px] hover:border-[#EB4245] shadow-sm rounded-[3px] md:rounded-md ">
+  <div className="w-auto border cursor-pointer flex items-center bg-white border-[#EBECED] p-4 md:p-[18px] hover:border-[#EB4245] shadow-sm rounded-[3px] md:rounded-md ">
     <a href={href} {...props}>
       <Image src={image} alt={title} />
     </a>
@@ -29,8 +29,8 @@ const Brands = () => {
           Empowering sports event experiences.
         </h1>
       </div>
-      <div className="md:max-w-[1056px] xl:max-w-[1156px] 2xl:max-w-[1456px] w-full mx-auto mt-[43px] md:mt-[76px]">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-2 gap-y-6 md:gap-8 lg:gap-16 md:py-2">
+      <div className="sm:max-w-[556px] md:max-w-[1056px] xl:max-w-[1156px] 2xl:max-w-[1456px] w-full mx-auto mt-[43px] md:mt-[76px]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-2 sm:gap-x-6 md:gap-x-2 gap-y-6 md:gap-8 lg:gap-16 md:py-2">
           <BrandLink
             href="https://www.livefootballtickets.com/"
             image={LiveFootballTickets}
