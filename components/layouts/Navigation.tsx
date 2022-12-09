@@ -29,7 +29,7 @@ const navigation = [
     href: "/contact",
   },
   {
-    title: "Seller Login",
+    title: "Login",
     href: "/login",
   },
 ];
@@ -87,7 +87,7 @@ const Navigation = () => {
         <div className="flex items-center gap-6">
           <div className="hidden md:flex items-center">
             {navigation
-              .filter((val) => val.title !== "Seller Login")
+              .filter((val) => val.title !== "Login")
               .map((item, i) => (
                 <NavLink key={i} href={item.href} title={item.title} />
               ))}
@@ -151,7 +151,7 @@ const Navigation = () => {
                             : "text-white hover:text-red-500 focus:text-red-500",
                         )}
                       >
-                        {item.title === "Seller Login" ?
+                        {item.title === "Login" ?
                           <Button >{item.title}</Button>
                         : 
                           item.title
