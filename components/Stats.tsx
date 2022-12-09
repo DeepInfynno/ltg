@@ -4,14 +4,14 @@ import Slider from "react-slick";
 
 const data = [
   { title: "Tickets sold", count: "1M+", time: "As of December 2022" },
+  { title: "Partners", count: "10K+", time: "As of December 2022" },
   {
     title: "#1 Rating amongst major ticketers",
     count: "4.3/5",
     time: "As of October, 2022. Trustpilot.com",
   },
-  { title: "Venues", count: "1K+", time: "As of December 2022" },
-  { title: "Partners", count: "10K+", time: "As of December 2022" },
   { title: "Years of Experience", count: "16", time: "Since 2006" },
+  { title: "Venues", count: "1K+", time: "As of December 2022" },
   { title: "International Offices", count: "3", time: "As of December 2022" },
 ];
 

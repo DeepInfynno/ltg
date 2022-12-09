@@ -3,7 +3,7 @@ import Button from "./form/Button";
 const Newsletter = () => {
   return (
     <div className="bg-gray-100 max-w-6xl sm:mx-auto mx-[19px] md:my-[88px] my-[32px] rounded-lg md:p-16 p-5 text-center">
-      <h3 className="md:text-3xl text-[22px]  font-semibold">
+      <h3 className="md:text-3xl text-[22px] font-semibold">
         Sign up for our newsletter
       </h3>
       <p className="max-w-2xl mx-auto py-8 text-base">
