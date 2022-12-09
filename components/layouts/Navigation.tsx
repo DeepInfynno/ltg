@@ -6,6 +6,7 @@ import Logo1 from "@assets/images/logo-invert.svg";
 import { useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import Login from "@components/Login";
+import Button from "@components/form/Button";
 const navigation = [
   {
     title: "About",
@@ -150,7 +151,11 @@ const Navigation = () => {
                             : "text-white hover:text-red-500 focus:text-red-500",
                         )}
                       >
-                        {item.title}
+                        {item.title === "Seller Login" ?
+                          <Button >{item.title}</Button>
+                        : 
+                          item.title
+                        }
                       </Link>
                     </div>
                   ))}
