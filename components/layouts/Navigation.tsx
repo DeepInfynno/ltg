@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import Logo1 from "@assets/images/logo-invert.svg";
 import { useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
+import Login from "@components/Login";
 const navigation = [
   {
     title: "About",
@@ -57,7 +58,13 @@ const NavLink = ({ href, title, active, ...props }: NavLinkProps) => {
 
 const Navigation = () => {
   const [showSidebar, setShowSidebar] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const router = useRouter();
+
+  const handleModal = (e: any) => {
+    e.preventDefault();
+    setShowModal(!showModal);
+  }
 
   useEffect(() => {
     setShowSidebar(false);
@@ -151,12 +158,20 @@ const Navigation = () => {
               </div>
             </div>
           </div>
-          <Link
-            href="/login"
-            className="px-10 py-2 bg-black text-lg text-white rounded-full hover:bg-red-500 focus:bg-red-500 transition-all ease-in-out duration-200 uppercase font-bold hidden md:flex"
-          >
-            Login
-          </Link>
+          <div className={classNames("relative",{"before:content-none md:before:content-[''] before:absolute before:w-[53px] before:h-[53px] before:bg-black before:rotate-45 before:right-[26px] before:top-[calc(100%_+_14px)]": showModal })}>
+            <Link
+              href="/login"
+              onClick={handleModal}
+              className="px-10 py-2 bg-black text-lg text-white rounded-full hover:bg-red-500 focus:bg-red-500 transition-all ease-in-out duration-200 uppercase font-bold hidden md:flex"
+              >
+              Login
+            </Link>
+            {showModal && 
+              <div className="hidden md:block absolute top-[84px] bg-black right-[-96px] w-screen md:max-w-[540px] lg:max-w-[640px] 2xl:max-w-[974px]">
+                <Login />
+              </div>
+            }
+          </div>
         </div>
       </div>
     </div>
