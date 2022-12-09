@@ -9,6 +9,7 @@ import Circle from "@assets/images/Circle.svg";
 import Button from "@components/form/Button";
 import Meta from "@components/Meta";
 import OgImage from "../assets/images/logo-1.svg";
+import Link from "next/link";
 
 const believesData = [
   {
@@ -83,7 +84,9 @@ const Affiliate: NextPageWithLayout = () => {
               When you market more, you’ll earn more.
             </h1>
             <div>
-              <Button className="mt-12 lg:mt-24">Become an affiliate</Button>
+              <Link href="#">
+                <Button className="mt-12 lg:mt-24">Become an affiliate</Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -112,50 +115,52 @@ const Affiliate: NextPageWithLayout = () => {
                 management.
               </p>
               <div className="flex flex-row justify-center lg:justify-start">
-                <Button className="mt-12 lg:mt-24">Become an affiliate</Button>
+                <Link href="#">
+                  <Button className="mt-12 lg:mt-24">Become an affiliate</Button>
+                </Link>
               </div>
             </div>
           </div>
-          {/* what we belive */}
-          <div className="mt-12 container">
-            <h1 className="text-base md:text-lg lg:text-xl 2xl:text-xl font-normal ml-0.5">
-              WHAT WE BELIEVE
-            </h1>
-            <h1 className="mt-10 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
-              {" "}
-              What’s in it for you.
-            </h1>
-            <div className="affiliate lg:py-20 md:py-16 md:pb-16 pb-12">
-              <SliderComponenet
-                setCurrentIndex={setCurrentIndex}
-                sliderFor={"affiliate"}
-                componenetData={believesData.map((believe, index) => {
-                  return (
-                    <div
-                      key={believe.id}
+        {/* </div> */}
+        {/* what we belive */}
+        <div className="mt-12 container">
+          <h1 className="text-base md:text-lg lg:text-xl 2xl:text-xl font-normal ml-0.5">
+            WHAT WE BELIEVE
+          </h1>
+          <h1 className="mt-10 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
+            What’s in it for you.
+          </h1>
+          <div className="affiliate lg:py-20 md:py-16 md:pb-16 pb-12">
+            <SliderComponenet
+              setCurrentIndex={setCurrentIndex}
+              sliderFor={"affiliate"}
+              componenetData={believesData.map((believe, index) => {
+                return (
+                  <div
+                    key={believe.id}
                       className={` bg-[#F8F8F8] h-[100px] flex flex-row items-center justify-center ${
-                        index === currentIndex ? "opacity-100" : "opacity-40"
+                      index === currentIndex ? "opacity-100" : "opacity-40"
                       }  lg:px-6 md:px-8 md:py-16 sm:px-5 px-4 py-2 rounded-lg `}
-                    >
-                      <div className="h-full grid place-items-center">
-                        <p
+                  >
+                    <div className="h-full grid place-items-center">
+                      <p
                           className="2xl:text-2xl xl:text-xl lg:text-lg md:text-base sm:text-sm text-xs max-w-lg font-bold lg:leading-9 md:leading-8  leading-7"
-                          style={{
-                            display: "-webkit-box",
-                            overflow: "hidden",
-                            WebkitBoxOrient: "vertical",
-                            WebkitLineClamp: 3,
-                          }}
-                        >
-                          {believe.title}
-                        </p>
-                      </div>
+                        style={{
+                          display: "-webkit-box",
+                          overflow: "hidden",
+                          WebkitBoxOrient: "vertical",
+                          WebkitLineClamp: 3,
+                        }}
+                      >
+                        {believe.title}
+                      </p>
                     </div>
-                  );
-                })}
-              />
-            </div>
+                  </div>
+                );
+              })}
+            />
           </div>
+        </div>
           {/* T&c */}
           <div className="container">
             <div className="bg-[#EA0000] px-6 lg:px-8 xl:px-10 flex flex-col lg:flex-row gap-1 lg:gap-10 rounded-md justify-center items-center md:py-8 py-10">
@@ -170,9 +175,11 @@ const Affiliate: NextPageWithLayout = () => {
                     our affiliates.
                   </p>
                   <div className="flex justify-center lg:justify-start">
-                    <Button className="bg-transparent border border-white !px-4 py-2 mt-3">
-                      learn more
-                    </Button>
+                    <Link href="#">
+                      <Button className="bg-transparent border border-white !px-4 py-2 mt-3">
+                        learn more
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -251,7 +258,9 @@ const Affiliate: NextPageWithLayout = () => {
                       supports each other –our unity gives us the.
                     </p>
                     <div className="flex justify-center lg:justify-start">
-                      <Button className="!px-4 py-2 mt-3">learn more</Button>
+                      <Link href="#">
+                        <Button className="!px-4 py-2 mt-3">learn more</Button>
+                      </Link>
                     </div>
                   </div>
                 </div>
