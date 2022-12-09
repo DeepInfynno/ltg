@@ -5,6 +5,8 @@ import { useRouter } from "next/router";
 import Logo1 from "@assets/images/logo-invert.svg";
 import { useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
+import Login from "@components/Login";
+import Button from "@components/form/Button";
 const navigation = [
   {
     title: "About",
@@ -27,7 +29,7 @@ const navigation = [
     href: "/contact",
   },
   {
-    title: "Seller Login",
+    title: "Login",
     href: "/login",
   },
 ];
@@ -57,7 +59,13 @@ const NavLink = ({ href, title, active, ...props }: NavLinkProps) => {
 
 const Navigation = () => {
   const [showSidebar, setShowSidebar] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const router = useRouter();
+
+  const handleModal = (e: any) => {
+    e.preventDefault();
+    setShowModal(!showModal);
+  }
 
   useEffect(() => {
     setShowSidebar(false);
@@ -79,7 +87,7 @@ const Navigation = () => {
         <div className="flex items-center gap-6">
           <div className="hidden md:flex items-center">
             {navigation
-              .filter((val) => val.title !== "Seller Login")
+              .filter((val) => val.title !== "Login")
               .map((item, i) => (
                 <NavLink key={i} href={item.href} title={item.title} />
               ))}
@@ -143,7 +151,11 @@ const Navigation = () => {
                             : "text-white hover:text-red-500 focus:text-red-500",
                         )}
                       >
-                        {item.title}
+                        {item.title === "Login" ?
+                          <Button >{item.title}</Button>
+                        : 
+                          item.title
+                        }
                       </Link>
                     </div>
                   ))}
@@ -151,12 +163,20 @@ const Navigation = () => {
               </div>
             </div>
           </div>
-          <Link
-            href="/login"
-            className="px-10 py-2 bg-black text-lg text-white rounded-full hover:bg-red-500 focus:bg-red-500 transition-all ease-in-out duration-200 uppercase font-bold hidden md:flex"
-          >
-            Login
-          </Link>
+          <div className={classNames("relative",{"before:content-none md:before:content-[''] before:absolute before:w-[53px] before:h-[53px] before:bg-black before:rotate-45 before:right-[26px] before:top-[calc(100%_+_14px)]": showModal })}>
+            <Link
+              href="/login"
+              onClick={handleModal}
+              className="px-10 py-2 bg-black text-lg text-white rounded-full hover:bg-red-500 focus:bg-red-500 transition-all ease-in-out duration-200 uppercase font-bold hidden md:flex"
+              >
+              Login
+            </Link>
+            {showModal && 
+              <div className="hidden md:block absolute top-[84px] bg-black -right-[20px] xl:-right-[96px] w-screen md:max-w-[540px] lg:max-w-[640px] 2xl:max-w-[974px]">
+                <Login />
+              </div>
+            }
+          </div>
         </div>
       </div>
     </div>
