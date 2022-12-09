@@ -12,6 +12,8 @@ module.exports = {
       screens: {
         xs: "375px",
         "2xl": "1537px",
+        "3xl": "2290px",
+        "4xl": "2560px",
       },
       fontFamily: {
         helvetica: ["Helvetica Neue", ...defaultTheme.fontFamily.sans],

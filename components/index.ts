@@ -4,3 +4,4 @@ export { default as Brands } from "./Brands";
 export { default as Stats } from "./Stats";
 export { default as WhoWeAre } from "./WhoWeAre";
 export { default as Analytics } from "./Analytics";
+export { default as Meta } from "./Meta";

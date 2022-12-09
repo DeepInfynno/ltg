@@ -21,8 +21,8 @@ const navigation = [
     href: "/sellers",
   },
   {
-    title: "Carrers",
-    href: "/carrers",
+    title: "Careers",
+    href: "/careers",
   },
   {
     title: "Contact",
@@ -69,7 +69,7 @@ const Footer = ({ hideContact }: FooterProps) => {
       {/* {!hideContact && <ContactForm />} */}
       <div className="relative">
         <div className="bg-black">
-          <div className="bg-pieroHuerto h-[600px] w-full opacity-20"></div>
+          <div className="bg-pieroHuerto bg-no-repeat bg-cover h-[600px] w-full opacity-20"></div>
         </div>
         <div className="max-w-xl mx-auto px-8 sm:px-4 py-8 md:py-16 text-white text-center absolute  md:top-[2%] top-[6%] md:left-[20%] md:right-[20%] left-[5%] right-[5%]">
           <h3 className="lg:text-4xl md:text-3xl text-[22px] font-bold">
@@ -129,7 +129,7 @@ const Footer = ({ hideContact }: FooterProps) => {
               &copy; 2022 liveticketgroup. All rights reserved.
             </p>
           </div>
-          <div className="flex flex-row justify-between xs:justify-start xs:gap-32 md:gap-6 lg:gap-16 xl:gap-28 mt-10 2xl:gap-32 md:mt-0">
+          <div className="flex flex-row justify-between max-w-[210px] xs:max-w-none xs:justify-start xs:gap-32 md:gap-6 lg:gap-16 xl:gap-28 mt-10 2xl:gap-32 md:mt-0">
             <div>
               {navigation.map((item, i) => (
                 <NavLink key={i} href={item.href} title={item.title} />
