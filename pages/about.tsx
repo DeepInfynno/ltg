@@ -8,6 +8,8 @@ import Circle from "@assets/images/Circle.svg";
 import Amsterdam from "@assets/images/amsterdam.jpg";
 import SanFrancisco from "@assets/images/san-francisco.jpg";
 import Image from "next/image";
+import Meta from "@components/Meta";
+import OgImage from "../assets/images/logo-1.svg";
 
 const dataArray = [
   {
@@ -56,7 +58,14 @@ const AboutUs: NextPageWithLayout = () => {
 
   return (
     <>
-      <div className="relative w-full max-w-[1920px] overflow-hidden">
+      <div className="relative mx-auto w-full max-w-[1920px] overflow-hidden">
+        <Meta
+          title={"About-Us"}
+          description={"Lorem, ipsum dolor sit amet consectetur"}
+          og_title={"About-Us"}
+          og_description={"Lorem, ipsum dolor sit amet consectetur"}
+          og_image={OgImage}
+        />
         <div className="absolute -right-40 -top-[280px]  md:right-0 lg:h-[1250px] h-[800px] md:-top-[350px]">
           <Image
             src={Circle}

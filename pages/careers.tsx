@@ -11,6 +11,8 @@ import SanFrancisco from "@assets/images/san-francisco.jpg";
 import Image from "next/image";
 import SliderComponenet from "@components/Slider";
 import Button from "@components/form/Button";
+import OgImage from "../assets/images/logo-1.svg";
+import Meta from "@components/Meta";
 
 const imagesArray = [
   {
@@ -101,7 +103,14 @@ const Careers: NextPageWithLayout = () => {
 
   return (
     <>
-      <div className="relative w-full max-w-[1920px] overflow-hidden">
+      <Meta
+        title={"Careers"}
+        description={"Lorem, ipsum dolor sit amet consectetur"}
+        og_title={"Careers"}
+        og_description={"Lorem, ipsum dolor sit amet consectetur"}
+        og_image={OgImage}
+      />
+      <div className="relative w-full max-w-[1920px] mx-auto overflow-hidden">
         <div className="bg-careerBg bg-fixed bg-cover h-[300px] xs:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] 2xl:h-[850px] flex justify-center items-center w-full text-white">
           <div className="max-w-xl  2xl:max-w-5xl w-full flex flex-col md:gap-4 lg:gap-5 xl:gap-10 2xl:gap-20">
             <h1 className="px-[16px] text-3xl md:text-5xl 2xl:text-8xl md:max-w-5xl font-semibold leading-snug text-center">

@@ -7,6 +7,8 @@ import Alexandru from "@assets/images/alexandru.svg";
 import Markus from "@assets/images/markus.svg";
 import Circle from "@assets/images/Circle.svg";
 import Button from "@components/form/Button";
+import Meta from "@components/Meta";
+import OgImage from "../assets/images/logo-1.svg";
 
 const believesData = [
   {
@@ -54,7 +56,14 @@ const Affiliate: NextPageWithLayout = () => {
   const [currentIndex2, setCurrentIndex2] = useState<number>(0);
   return (
     <>
-      <section>
+      <Meta
+        title={"Affiliate"}
+        description={"Lorem, ipsum dolor sit amet consectetur"}
+        og_title={"Affiliate"}
+        og_description={"Lorem, ipsum dolor sit amet consectetur"}
+        og_image={OgImage}
+      />
+      <section className="relative mx-auto w-full max-w-[1920px] overflow-hidden">
         <div className="absolute -right-40 -top-[280px]  md:right-0 lg:h-[1250px] h-[800px] md:-top-[350px]">
           <Image
             src={Circle}
@@ -130,7 +139,7 @@ const Affiliate: NextPageWithLayout = () => {
                     >
                       <div className="h-full grid place-items-center">
                         <p
-                          className="2xl:text-2xl xl:text-[22px] lg:text-xl md:text-lg sm:text-base text-sm max-w-lg font-bold lg:leading-9 md:leading-8  leading-7"
+                          className="2xl:text-2xl xl:text-xl lg:text-lg md:text-base sm:text-sm text-xs max-w-lg font-bold lg:leading-9 md:leading-8  leading-7"
                           style={{
                             display: "-webkit-box",
                             overflow: "hidden",
@@ -212,7 +221,7 @@ const Affiliate: NextPageWithLayout = () => {
                       >
                         <div className="h-full grid place-items-center">
                           <p
-                            className="2xl:text-2xl xl:text-[22px] lg:text-xl md:text-lg sm:text-base text-sm max-w-lg font-bold lg:leading-9 md:leading-8  leading-7"
+                            className="2xl:text-2xl xl:text-xl lg:text-lg md:text-base sm:text-sm text-xs max-w-lg font-bold lg:leading-9 md:leading-8  leading-7"
                             style={{
                               display: "-webkit-box",
                               overflow: "hidden",

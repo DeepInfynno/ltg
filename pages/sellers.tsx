@@ -9,6 +9,8 @@ import LTG3 from "@assets/images/LTG03.svg";
 import LTG4 from "@assets/images/LTG04.svg";
 import Image from "next/image";
 import Button from "@components/form/Button";
+import Meta from "@components/Meta";
+import OgImage from "../assets/images/logo-1.svg";
 
 const features = [
   {
@@ -40,8 +42,15 @@ const features = [
 const Sellers: NextPageWithLayout = () => {
   return (
     <div className="max-w-[1920px] mx-auto">
-      <div className="bg-[url('../assets/images/sellerback.svg')] h-[350px] xs:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] 2xl:h-[850px] flex items-center bg-fixed bg-no-repeat bg-[44%] xl:bg-[left_46%]">
-        <div className="container mx-auto px-4 md:px-8 lg:px-8 py-24 lg:py-48">
+      <Meta
+        title={"Sellers"}
+        description={"Lorem, ipsum dolor sit amet consectetur"}
+        og_title={"Sellers"}
+        og_description={"Lorem, ipsum dolor sit amet consectetur"}
+        og_image={OgImage}
+      />
+      <div className="bg-[url('../assets/images/sellerback.svg')] h-[350px] xs:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] 2xl:h-[850px] flex items-center bg-fixed bg-no-repeat bg-[44%] md:bg-[40%_30%] lg:bg-[30%_30%] xl:bg-[30%_30%] 2xl:bg-[10%_40%] 3xl:bg-[-60%_40%] 4xl:bg-[25vh_40%]">
+        <div className="container 3xl:max-w-[1537px] mx-auto px-4 md:px-8 lg:px-8 py-24 lg:py-48">
           <h1 className="text-white text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold md:leading-[40px] lg:leading-[70px] xl:leading-[90px] 2xl:leading-[113px]">
             Sell tickets on <br />
             live<span className="text-[#EA0000]">ticket</span>group.
