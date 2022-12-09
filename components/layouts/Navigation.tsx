@@ -172,7 +172,7 @@ const Navigation = () => {
               Login
             </Link>
             {showModal && 
-              <div className="hidden md:block absolute top-[84px] bg-black right-[-96px] w-screen md:max-w-[540px] lg:max-w-[640px] 2xl:max-w-[974px]">
+              <div className="hidden md:block absolute top-[84px] bg-black -right-[20px] xl:-right-[96px] w-screen md:max-w-[540px] lg:max-w-[640px] 2xl:max-w-[974px]">
                 <Login />
               </div>
             }
