@@ -99,6 +99,7 @@ const openRoles = [
 ];
 
 const Careers: NextPageWithLayout = () => {
+  // const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [openAccordian, setOpenAccordian] = useState<number | null>(null);
 
@@ -164,11 +165,13 @@ const Careers: NextPageWithLayout = () => {
         <div className="careers">
           <SliderComponenet
             setCurrentIndex={setCurrentIndex}
+            currentIndex={currentIndex}
             sliderFor={"careers"}
             componenetData={imagesArray.map((data, index) => {
               return (
                 <div
                   key={data.id}
+                  onClick={() => setCurrentIndex(index)}
                   className={`relative w-full h-[200px] xl:max-w-[750px] 2xl:max-w-none md:h-[300px] lg:h-[400px] xl:h-[450px] 2xl:h-[600px] ${
                     index === currentIndex ? "opacity-100" : "opacity-40"
                   }`}

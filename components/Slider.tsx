@@ -1,15 +1,20 @@
-import { Dispatch, ReactNode, SetStateAction } from "react";
+import { Dispatch, LegacyRef, ReactNode, SetStateAction, useRef, useEffect } from "react";
 import Slider from "react-slick";
 
 const SliderComponenet = ({
   setCurrentIndex,
+  currentIndex,
   sliderFor,
   componenetData,
 }: {
   setCurrentIndex: Dispatch<SetStateAction<number>>;
+  currentIndex?: number;
   componenetData: ReactNode;
   sliderFor: ReactNode;
 }) => {
+
+  const careerSlider: LegacyRef<Slider> | undefined = useRef(null);
+
   const careerSettings = {
     className: "center",
     centerMode: true,
@@ -199,6 +204,11 @@ const SliderComponenet = ({
     ],
   };
 
+  useEffect(() => {
+    careerSlider.current?.slickGoTo(currentIndex || 0);
+  }, [currentIndex])
+  
+
   return (
     <div className="w-full">
       <div
@@ -208,7 +218,7 @@ const SliderComponenet = ({
         }}
       >
         {sliderFor === "careers" ? (
-          <Slider {...careerSettings}>{componenetData}</Slider>
+          <Slider ref={careerSlider} {...careerSettings}>{componenetData}</Slider>
         ) : sliderFor === "office" ? (
           <Slider {...officeSettings}>{componenetData}</Slider>
         ) : (
