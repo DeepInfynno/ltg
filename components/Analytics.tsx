@@ -65,7 +65,7 @@ const Analytics = () => {
           complex information to stakeholders in an easy-to-understand manner.
         </li>
       </div>
-      <Link href="#">
+      <Link href="/contact">
         <Button className="my-4 lg:mt-8 !px-8 py-2">Apply now</Button>
       </Link>
     </div>
