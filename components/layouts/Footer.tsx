@@ -9,7 +9,7 @@ import Button from "@components/form/Button";
 
 const navigation = [
   {
-    title: "About",
+    title: "About Us",
     href: "/about",
   },
   {
@@ -17,7 +17,7 @@ const navigation = [
     href: "/affiliates",
   },
   {
-    title: "Sellers",
+    title: "Become a Seller",
     href: "/sellers",
   },
   {
@@ -29,7 +29,7 @@ const navigation = [
     href: "/contact",
   },
   {
-    title: "Seller Login",
+    title: "Login",
     href: "/login",
   },
 ];
@@ -67,7 +67,7 @@ const Footer = ({ hideContact }: FooterProps) => {
   return (
     <div>
       {/* {!hideContact && <ContactForm />} */}
-      <div className="relative">
+      {/* <div className="relative">
         <div className="bg-black">
           <div className="bg-pieroHuerto bg-no-repeat bg-cover h-[600px] w-full opacity-20"></div>
         </div>
@@ -112,8 +112,8 @@ const Footer = ({ hideContact }: FooterProps) => {
             <Button className="mt-8">login</Button>
           </form>
         </div>
-      </div>
-      <div className="container mx-auto xs:mx-0 md:mx-auto px-9 xs:px-10 sm:px-16 lg:px-20 py-8 md:py-16 max-w-[1920px]">
+      </div> */}
+      <div className="container mx-auto xs:mx-0 md:mx-auto px-9 xs:px-10 sm:px-16 lg:px-0 py-8 md:py-16 lg:max-w-[863px] xl:max-w-[1024px] 2xl:max-w-[1364px]">
         <div className="block md:grid grid-cols-4 md:grid-cols-2 gap-8 md:gap-28 lg:gap-20">
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="py-8 text-4xl font-semibold ">
@@ -141,7 +141,7 @@ const Footer = ({ hideContact }: FooterProps) => {
               ))}
               <div className="w-full mt-[158px] xs:mt-[134px] hidden md:block">
                 <div className="flex gap-[23px] py-3 md:py-2 md:px-4">
-                  <a href="">
+                  <a href="https://www.linkedin.com/company/livetixgroup">
                     <SiLinkedin className="h-6 w-6 text-gray-500" />
                   </a>
                   <a href="">
@@ -153,7 +153,7 @@ const Footer = ({ hideContact }: FooterProps) => {
           </div>
           <div className="pb-20 block md:hidden">
             <div className="mt-16 xl:mt-[230px] lg:mt-[240px] md:mt-[240px]  md:ml-[-70px] lg:ml-[-110px] flex items-center space-x-8">
-              <a href="">
+              <a href="https://www.linkedin.com/company/livetixgroup">
                 <SiLinkedin className="h-6 w-6 text-gray-500" />
               </a>
               <a href="">

@@ -166,7 +166,6 @@ const Navigation = () => {
           <div className={classNames("relative",{"before:content-none md:before:content-[''] before:absolute before:w-[53px] before:h-[53px] before:bg-black before:rotate-45 before:right-[26px] before:top-[calc(100%_+_14px)]": showModal })}>
             <Link
               href="/login"
-              onClick={handleModal}
               className="px-10 py-2 bg-black text-lg text-white rounded-full hover:bg-red-500 focus:bg-red-500 transition-all ease-in-out duration-200 uppercase font-bold hidden md:flex"
               >
               Login

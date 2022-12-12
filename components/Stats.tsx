@@ -1,6 +1,7 @@
 import Image from "next/image";
 import CardCircle from "@assets/images/Card_Circle.svg";
 import Slider from "react-slick";
+import classNames from "classnames";
 
 const data = [
   { title: "Tickets sold", count: "1M+", time: "As of December 2022" },
@@ -15,7 +16,7 @@ const data = [
   { title: "International Offices", count: "3", time: "As of December 2022" },
 ];
 
-const Stats = () => {
+const Stats = ({headerClass} : {headerClass?: string}) => {
   const settings = {
     rows: 2,
     dots: false,
@@ -45,7 +46,7 @@ const Stats = () => {
 
   return (
     <div className="mb-[76px] md:mb-[170px] sm:px-5">
-      <div className="max-w-[863px] mx-auto px-[35px] md:px-0">
+      <div className={`max-w-[863px] mx-auto px-[35px] md:px-0 ${headerClass || ""} `}>
         <h3 className="uppercase text-black xl:text-[18px] 2xl:text-[20px] leading-[23px]">
           SOME NUMBERS
         </h3>
