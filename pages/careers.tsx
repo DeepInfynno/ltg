@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import { NextPageWithLayout } from "./_app";
 import { ContactForm, Layout } from "@components/layouts";
 import Offices from "@components/Offices";
@@ -14,6 +14,7 @@ import Button from "@components/form/Button";
 import OgImage from "../assets/images/logo-1.svg";
 import Meta from "@components/Meta";
 import Link from "next/link";
+import Newsletter from "@components/Newsletter";
 
 const imagesArray = [
   {
@@ -83,25 +84,79 @@ const benefits = [
   },
 ];
 
-const openRoles = [
-  { title: "Accounting", description: "Accounting", component: <Analytics /> },
+type RolesType = {
+  title: string;
+  description: string;
+  department: string;
+  location: string;
+  component: ReactElement;
+};
+
+const openRoles: RolesType[] = [
+  {
+    title: "Accounting",
+    description: "Accounting",
+    department: "Accounting",
+    location: "Amsterdam",
+    component: <Analytics />,
+  },
   {
     title: "Analytics",
     description: "Sr. Business Analyst, Gaming",
+    department: "Analytics",
+    location: "Madrid",
     component: <Analytics />,
   },
-  { title: "Service", description: "Service", component: <Analytics /> },
+  {
+    title: "Service",
+    description: "Service",
+    department: "Service",
+    location: "Madrid",
+    component: <Analytics />,
+  },
   {
     title: "Product Owner",
     description: "Product Owner",
+    department: "Product Owner",
+    location: "San Francisco",
+    component: <Analytics />,
+  },
+  {
+    title: "Product Owner",
+    description: "Product Owner",
+    department: "Product Owner",
+    location: "San Francisco",
+    component: <Analytics />,
+  },
+  {
+    title: "Product Owner",
+    description: "Product Owner",
+    department: "Analytics",
+    location: "San Francisco",
     component: <Analytics />,
   },
 ];
+const departmentList = ["Accounting", "Analytics", "Service", "Product Owner"];
+const locations = ["Amsterdam", "Madrid", "San Francisco"];
 
 const Careers: NextPageWithLayout = () => {
   // const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [openAccordian, setOpenAccordian] = useState<number | null>(null);
+  const [department, setDepartment] = useState<string>("all-departments");
+  const [location, setLocation] = useState<string>("all-locations");
+  const [accordionData, setaccordionData] = useState<RolesType[]>(openRoles);
+
+  useEffect(() => {
+    const data = openRoles
+      .filter((acc) =>
+        department === "all-departments" ? true : acc.department === department,
+      )
+      .filter((locations) =>
+        location === "all-locations" ? true : locations.location === location,
+      );
+    setaccordionData(data);
+  }, [department, location]);
 
   return (
     <>
@@ -220,50 +275,66 @@ const Careers: NextPageWithLayout = () => {
               Open roles.
             </h1>
             <div className="flex w-max gap-2 my-8 md:my-0 md:mt-0">
-              <select className="w-[140px] xs:w-[160px] xl:w-[200px] 2xl:w-[260px] cursor-pointer text-black font-bold text-base xl:text-lg 2xl:text-2xl rounded-md">
+              <select
+                onChange={(e) => setDepartment(e.target?.value)}
+                className="w-[140px] xs:w-[160px] xl:w-[200px] 2xl:w-[260px] cursor-pointer text-black font-bold text-base xl:text-lg 2xl:text-2xl rounded-md"
+              >
                 <option value="all-departments">All Departments</option>
+                {departmentList.map((department) => {
+                  return <option value={department}>{department}</option>;
+                })}
               </select>
-              <select className="w-[140px] xs:w-[160px] xl:w-[200px] 2xl:w-[260px] cursor-pointer text-black font-bold text-base xl:text-lg 2xl:text-2xl rounded-md">
+              <select
+                onChange={(e) => setLocation(e.target?.value)}
+                className="w-[140px] xs:w-[160px] xl:w-[200px] 2xl:w-[260px] cursor-pointer text-black font-bold text-base xl:text-lg 2xl:text-2xl rounded-md"
+              >
                 <option value="all-locations">All Locations</option>
+                {locations.map((location) => {
+                  return <option value={location}>{location}</option>;
+                })}
               </select>
             </div>
           </div>
           <div className="md:mt-10 2xl:mt-[80px]">
-            {openRoles.map((role, i) => (
-              <div key={i} className="border-gray-300 border-b">
-                <div
-                  className="flex items-center justify-between cursor-pointer py-4 px-2"
-                  onClick={() =>
-                    openAccordian !== null && openAccordian === i
-                      ? setOpenAccordian(null)
-                      : setOpenAccordian(i)
-                  }
-                >
+            {accordionData.length > 0 ? (
+              accordionData.map((role, i) => (
+                <div key={i} className="border-gray-300 border-b">
                   <div
-                    className={`font-bold lg:text-2xl md:text-xl text-lg    ${
-                      i === openAccordian && "text-[#EA0000]"
-                    }`}
+                    className="flex items-center justify-between cursor-pointer py-4 px-2"
+                    onClick={() =>
+                      openAccordian !== null && openAccordian === i
+                        ? setOpenAccordian(null)
+                        : setOpenAccordian(i)
+                    }
                   >
-                    {role.title}
-                  </div>
-                  <div>
-                    {openAccordian === i ? (
-                      <RiArrowUpSLine className="h-6 w-6 text-gray-700" />
-                    ) : (
-                      <RiArrowDownSLine className="h-6 w-6 text-gray-700" />
-                    )}
-                  </div>
-                </div>
-                {openAccordian === i && (
-                  <div className="p-4">
-                    <div className="transition ease-in-out duration-1000 text-gray-700 lg:text-xl md:text-lg text-base">
-                      {role.description}
+                    <div
+                      className={`font-bold lg:text-2xl md:text-xl text-lg    ${
+                        i === openAccordian && "text-[#EA0000]"
+                      }`}
+                    >
+                      {role.title}
                     </div>
-                    <div>{role.component}</div>
+                    <div>
+                      {openAccordian === i ? (
+                        <RiArrowUpSLine className="h-6 w-6 text-gray-700" />
+                      ) : (
+                        <RiArrowDownSLine className="h-6 w-6 text-gray-700" />
+                      )}
+                    </div>
                   </div>
-                )}
-              </div>
-            ))}
+                  {openAccordian === i && (
+                    <div className="p-4">
+                      <div className="transition ease-in-out duration-1000 text-gray-700 lg:text-xl md:text-lg text-base">
+                        {role.description}
+                      </div>
+                      <div>{role.component}</div>
+                    </div>
+                  )}
+                </div>
+              ))
+            ) : (
+              <p>No Data Found</p>
+            )}
           </div>
           <p className="py-8 lg:py-16 text-lg lg:text-xl lg:leading-[30px] leading-9">
             LiveTicketGroup is proud to be an equal opportunity employer. We do
@@ -278,7 +349,8 @@ const Careers: NextPageWithLayout = () => {
           <Offices />
         </div>
         <div className="mt-24 2xl:mt-[191px]">
-          <ContactForm />
+          {/* <ContactForm /> */}
+          <Newsletter />
         </div>
         <div className="absolute -right-[450px] 2xl:-right-[250px] bottom-[800px] md:bottom-[200px] 2xl:bottom-[400px] -z-10">
           <Image src={Circle} alt="image" />
