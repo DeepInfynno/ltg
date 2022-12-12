@@ -40,7 +40,7 @@ const Login = ({ modalClass }: { modalClass?: string }) => {
               <p>Remember me</p>
             </div>
           </div>
-          <Button className="mt-8 !px-12">Seller Login</Button>
+          <Button className="mt-8 !px-12">Login</Button>
         </form>
       </div>
     </div>

@@ -13,6 +13,7 @@ import SliderComponenet from "@components/Slider";
 import Button from "@components/form/Button";
 import OgImage from "../assets/images/logo-1.svg";
 import Meta from "@components/Meta";
+import Link from "next/link";
 
 const imagesArray = [
   {
@@ -110,15 +111,17 @@ const Careers: NextPageWithLayout = () => {
         og_description={"Lorem, ipsum dolor sit amet consectetur"}
         og_image={OgImage}
       />
-      <div className="relative w-full max-w-[1920px] mx-auto overflow-hidden">
+      <div className="relative w-full max-w-[1920px] mx-auto overflow-hidden scroll-smooth">
         <div className="bg-careerBg bg-fixed bg-cover h-[300px] xs:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] 2xl:h-[850px] flex justify-center items-center w-full text-white">
-          <div className="max-w-xl  2xl:max-w-5xl w-full flex flex-col md:gap-4 lg:gap-5 xl:gap-10 2xl:gap-20">
+          <div className="max-w-xl 2xl:max-w-5xl w-full flex flex-col md:gap-4 lg:gap-5 xl:gap-10 2xl:gap-20">
             <h1 className="px-[16px] text-3xl md:text-5xl 2xl:text-8xl md:max-w-5xl font-semibold leading-snug text-center">
               Come create <span className="text-red-500">live</span> experiences
               with us
             </h1>
             <div className="flex justify-center items-center w-full">
-              <Button className="mt-8 md:!px-10">View Opeanings</Button>
+              <Link href="#work-with-us">
+                <Button className="mt-8 md:!px-10">View Opeanings</Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -202,7 +205,10 @@ const Careers: NextPageWithLayout = () => {
             ))}
           </div>
         </div>
-        <div className="max-w-[280px] xs:max-w-xs  sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto">
+        <div
+          id="work-with-us"
+          className="max-w-[280px] xs:max-w-xs  sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto"
+        >
           <h3 className="uppercase text-base xl:text-lg 2xl:text-xl text-gray-700">
             Work with us
           </h3>

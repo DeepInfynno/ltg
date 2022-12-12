@@ -113,7 +113,7 @@ const Footer = ({ hideContact }: FooterProps) => {
           </form>
         </div>
       </div>
-      <div className="container mx-auto xs:mx-0 md:mx-auto px-9 xs:px-10 sm:px-16 lg:px-20 py-8 md:py-16 mt-16 ">
+      <div className="container mx-auto xs:mx-0 md:mx-auto px-9 xs:px-10 sm:px-16 lg:px-20 py-8 md:py-16 max-w-[1920px]">
         <div className="block md:grid grid-cols-4 md:grid-cols-2 gap-8 md:gap-28 lg:gap-20">
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="py-8 text-4xl font-semibold ">

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Button from "./form/Button";
 
 const Analytics = () => {
@@ -64,7 +65,9 @@ const Analytics = () => {
           complex information to stakeholders in an easy-to-understand manner.
         </li>
       </div>
-      <Button className="my-4 lg:mt-8 !px-8 py-2">Apply now</Button>
+      <Link href="#">
+        <Button className="my-4 lg:mt-8 !px-8 py-2">Apply now</Button>
+      </Link>
     </div>
   );
 };

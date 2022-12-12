@@ -12,11 +12,21 @@ import { HiPlus } from "react-icons/hi";
 import { useState } from "react";
 import Logo from "@assets/images/LogoWhite.svg";
 import Button from "@components/form/Button";
+import Link from "next/link";
+import Meta from "@components/Meta";
+import OgImage from "../assets/images/logo-1.svg";
 
 const Home: NextPageWithLayout = () => {
   const [showVideo, setShowVideo] = useState(false);
   return (
     <>
+      <Meta
+        title={"Home"}
+        description={"Lorem, ipsum dolor sit amet consectetur"}
+        og_title={"Home"}
+        og_description={"Lorem, ipsum dolor sit amet consectetur"}
+        og_image={OgImage}
+      />
       <div className="mt-[45px] xl:-mt-[108px] max-w-[1920px] mx-auto w-full overflow-hidden relative">
         <div className="absolute -top-[193px] -right-[386px] xl:-right-[30px] xl:-top-[264px] -z-10">
           <Image src={Circle} alt="circle" />
@@ -39,11 +49,13 @@ const Home: NextPageWithLayout = () => {
               Building lifetime memories, giving fans access to unforgettable
               live events.
             </p>
-            <button className="relative z-10 py-[10px] w-[260px] text-[#EA0000] before:content-[''] before:h-full before:w-[156px] before:absolute before:top-0 before:left-0 before:z-0 before:rounded-[10px_0px_0px_10px] before:bg-[#EA000045]">
-              <span className="block leading-[21px] font-bold text-[18px]">
-                BECOME A SELLER
-              </span>
-            </button>
+            <Link href="/contact">
+              <button className="relative z-10 py-[10px] w-[260px] text-[#EA0000] before:content-[''] before:h-full before:w-[156px] before:absolute before:top-0 before:left-0 before:z-0 before:rounded-[10px_0px_0px_10px] before:bg-[#EA000045]">
+                <span className="block leading-[21px] font-bold text-[18px]">
+                  BECOME A SELLER
+                </span>
+              </button>
+            </Link>
           </div>
           <div className="relative -right-[42px] md:right-auto self-end">
             <div className="relative h-full w-full max-h-[399px] max-w-[399px] md:max-w-[1097px] md:max-h-[1098px] xl:max-w-[820px] 2xl:max-w-[1097px]">
@@ -75,7 +87,9 @@ const Home: NextPageWithLayout = () => {
         <div className="mb-[88px]">
           <Offices />
           <div className="hidden md:block text-center mt-[99px]">
-            <Button>contact us</Button>
+            <Link href="/contact">
+              <Button>contact us</Button>
+            </Link>
           </div>
           <Newsletter />
         </div>
