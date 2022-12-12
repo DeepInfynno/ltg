@@ -1,15 +1,22 @@
 import { Dispatch, LegacyRef, ReactNode, SetStateAction, useRef, useEffect } from "react";
 import Slider from "react-slick";
+import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa';
+import { IconContext } from "react-icons/lib";
+import classNames from "classnames";
 
-const SliderComponenet = ({
+const SliderComponent = ({
   setCurrentIndex,
   currentIndex,
+  showDots,
+  showArrows,
   sliderFor,
-  componenetData,
+  componentData,
 }: {
   setCurrentIndex: Dispatch<SetStateAction<number>>;
   currentIndex?: number;
-  componenetData: ReactNode;
+  showDots?: boolean;
+  showArrows?: boolean;
+  componentData: ReactNode;
   sliderFor: ReactNode;
 }) => {
 
@@ -146,8 +153,12 @@ const SliderComponenet = ({
 
   const settings = {
     infinite: true,
-    slidesToShow: 2.05,
+    slidesToShow: 3,
     speed: 500,
+    arrows: showArrows || false,
+    dots: showDots || false,
+    nextArrow: <FaArrowCircleRight color="#ea0000" size={"40px"} />,
+    prevArrow: <FaArrowCircleLeft color="#ea0000" size={"40px"} />,
     onSwipe: function () {},
     afterChange: function (index: number) {
       setCurrentIndex(index);
@@ -157,7 +168,7 @@ const SliderComponenet = ({
         breakpoint: 1500,
         settings: {
           infinite: true,
-          slidesToShow: 2.1,
+          slidesToShow: 3,
           speed: 500,
         },
       },
@@ -165,7 +176,7 @@ const SliderComponenet = ({
         breakpoint: 1200,
         settings: {
           infinite: true,
-          slidesToShow: 2.05,
+          slidesToShow: 3,
           speed: 500,
         },
       },
@@ -173,15 +184,15 @@ const SliderComponenet = ({
         breakpoint: 750,
         settings: {
           infinite: true,
-          slidesToShow: 2.05,
+          slidesToShow: 2,
           speed: 500,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 640,
         settings: {
           infinite: true,
-          slidesToShow: 1.1,
+          slidesToShow: 1,
           speed: 500,
         },
       },
@@ -189,7 +200,7 @@ const SliderComponenet = ({
         breakpoint: 480,
         settings: {
           infinite: true,
-          slidesToShow: 1.12,
+          slidesToShow: 1,
           speed: 500,
         },
       },
@@ -218,15 +229,15 @@ const SliderComponenet = ({
         }}
       >
         {sliderFor === "careers" ? (
-          <Slider ref={careerSlider} {...careerSettings}>{componenetData}</Slider>
+          <Slider ref={careerSlider} {...careerSettings}>{componentData}</Slider>
         ) : sliderFor === "office" ? (
-          <Slider {...officeSettings}>{componenetData}</Slider>
+          <Slider {...officeSettings}>{componentData}</Slider>
         ) : (
-          <Slider {...settings}>{componenetData}</Slider>
+          <Slider {...settings}>{componentData}</Slider>
         )}
       </div>
     </div>
   );
 };
 
-export default SliderComponenet;
+export default SliderComponent;

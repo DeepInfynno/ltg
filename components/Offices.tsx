@@ -2,7 +2,7 @@ import Madrid from "@assets/images/madrid.jpg";
 import Amsterdam from "@assets/images/amsterdam.jpg";
 import SanFrancisco from "@assets/images/san-francisco.jpg";
 import Image from "next/image";
-import SliderComponenet from "./Slider";
+import SliderComponent from "./Slider";
 import { useState } from "react";
 
 const offices = [
@@ -47,10 +47,10 @@ const Offices = () => {
       </div>
       <div className=" w-full mt-11 2xl:mt-[88px]">
         <div className="office xs:px-4 md:px-18 lg:px-24 xl:px-48 2xl:px-32">
-          <SliderComponenet
+          <SliderComponent
             setCurrentIndex={setCurrentIndex}
             sliderFor={"office"}
-            componenetData={offices.map((office, i) => {
+            componentData={offices.map((office, i) => {
               return (
                 <div key={i}>
                   <div className="relative w-full h-52 md:h-40 xl:h-44 2xl:h-72">
