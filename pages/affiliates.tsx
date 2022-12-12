@@ -1,7 +1,7 @@
 import { NextPageWithLayout } from "./_app";
 import { ContactForm, Layout } from "@components/layouts";
 import { useState } from "react";
-import SliderComponenet from "@components/Slider";
+import SliderComponent from "@components/Slider";
 import Image from "next/image";
 import Alexandru from "@assets/images/alexandru.svg";
 import Markus from "@assets/images/markus.svg";
@@ -84,7 +84,7 @@ const Affiliate: NextPageWithLayout = () => {
               When you market more, you’ll earn more.
             </h1>
             <div>
-              <Link href="#">
+              <Link href="/contact">
                 <Button className="mt-12 lg:mt-24">Become an affiliate</Button>
               </Link>
             </div>
@@ -115,52 +115,57 @@ const Affiliate: NextPageWithLayout = () => {
                 management.
               </p>
               <div className="flex flex-row justify-center lg:justify-start">
-                <Link href="#">
+                <Link href="/contact">
                   <Button className="mt-12 lg:mt-24">Become an affiliate</Button>
                 </Link>
               </div>
             </div>
           </div>
-        {/* </div> */}
-        {/* what we belive */}
-        <div className="mt-12 container">
-          <h1 className="text-base md:text-lg lg:text-xl 2xl:text-xl font-normal ml-0.5">
-            WHAT WE BELIEVE
-          </h1>
-          <h1 className="mt-10 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
-            What’s in it for you.
-          </h1>
-          <div className="affiliate lg:py-20 md:py-16 md:pb-16 pb-12">
-            <SliderComponenet
-              setCurrentIndex={setCurrentIndex}
-              sliderFor={"affiliate"}
-              componenetData={believesData.map((believe, index) => {
-                return (
-                  <div
-                    key={believe.id}
-                      className={` bg-[#F8F8F8] h-[100px] flex flex-row items-center justify-center ${
-                      index === currentIndex ? "opacity-100" : "opacity-40"
-                      }  lg:px-6 md:px-8 md:py-16 sm:px-5 px-4 py-2 rounded-lg `}
-                  >
-                    <div className="h-full grid place-items-center">
-                      <p
-                          className="2xl:text-2xl xl:text-xl lg:text-lg md:text-base sm:text-sm text-xs max-w-lg font-bold lg:leading-9 md:leading-8  leading-7"
-                        style={{
-                          display: "-webkit-box",
-                          overflow: "hidden",
-                          WebkitBoxOrient: "vertical",
-                          WebkitLineClamp: 3,
-                        }}
-                      >
-                        {believe.title}
-                      </p>
+          {/* </div> */}
+        </div>
+        <div className="max-w-[240px] xs:max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl 2xl:max-w-[1364px] w-full">
+          {/* what we belive */}
+          <div className="mt-12 container">
+            <h1 className="text-base md:text-lg lg:text-xl 2xl:text-xl font-normal ml-0.5">
+              WHAT WE BELIEVE
+            </h1>
+            <h1 className="mt-10 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
+              What’s in it for you.
+            </h1>
+            <div className="affiliate w-[calc(100%_-_60px)] ml-[30px] lg:py-20 md:py-16 md:pb-16 pb-12">
+              <SliderComponent
+                setCurrentIndex={setCurrentIndex}
+                sliderFor={"affiliate"}
+                showArrows
+                componentData={believesData.map((believe, index) => {
+                  return (
+                    <div
+                      key={believe.id}
+                        className={` bg-[#F8F8F8] h-[100px] flex flex-row items-center justify-center ${
+                        index === currentIndex ? "opacity-100" : "opacity-40"
+                        }  lg:px-6 md:px-8 md:py-16 sm:px-5 px-4 py-2 rounded-lg `}
+                    >
+                      <div className="h-full grid place-items-center">
+                        <p
+                            className="2xl:text-2xl xl:text-xl lg:text-lg md:text-base sm:text-sm text-xs max-w-lg font-bold lg:leading-9 md:leading-8  leading-7"
+                          style={{
+                            display: "-webkit-box",
+                            overflow: "hidden",
+                            WebkitBoxOrient: "vertical",
+                            WebkitLineClamp: 3,
+                          }}
+                        >
+                          {believe.title}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
-            />
+                  );
+                })}
+              />
+            </div>
           </div>
         </div>
+        <div className="max-w-[280px] xs:max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] w-full">
           {/* T&c */}
           <div className="container">
             <div className="bg-[#EA0000] px-6 lg:px-8 xl:px-10 flex flex-col lg:flex-row gap-1 lg:gap-10 rounded-md justify-center items-center md:py-8 py-10">
@@ -194,7 +199,10 @@ const Affiliate: NextPageWithLayout = () => {
               </div>
             </div>
           </div>
-          {/* what we belive */}
+        </div>
+        {/* what we belive */}
+        {/* <div className="max-w-[280px] xs:max-w-sm sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] w-full"> */}
+        <div className="max-w-[240px] xs:max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl 2xl:max-w-[1364px] w-full">
           <div className="relative lg:pt-32 ">
             <div className="container mt-12 z-50">
               <h1 className="text-base md:text-lg lg:text-xl 2xl:text-xl font-normal ml-0.5">
@@ -213,10 +221,11 @@ const Affiliate: NextPageWithLayout = () => {
                 />
               </div>
               <div className="affiliate lg:py-20 md:py-16 md:pb-12 pb-12">
-                <SliderComponenet
+                <SliderComponent
                   setCurrentIndex={setCurrentIndex2}
                   sliderFor={"affiliate"}
-                  componenetData={believesData2.map((believe, index) => {
+                  showDots
+                  componentData={believesData2.map((believe, index) => {
                     return (
                       <div
                         key={believe.id}
@@ -246,7 +255,7 @@ const Affiliate: NextPageWithLayout = () => {
               </div>
             </div>
             {/* api docs */}
-            <div className="container">
+            {/* <div className="container">
               <div className="bg-[#F8F8F8] px-6 lg:px-8 flex flex-col lg:flex-row gap-1 lg:gap-10 rounded-md justify-center items-center md:py-8 py-10">
                 <div className="flex justify-center items-center w-full">
                   <div className="w-full flex flex-col gap-9 max-w-[355px]">
@@ -274,9 +283,11 @@ const Affiliate: NextPageWithLayout = () => {
                   />
                 </div>
               </div>
-            </div>
-            <ContactForm />
+            </div> */}
           </div>
+        </div>
+        <div className="max-w-[280px] xs:max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] w-full">
+          <ContactForm />
         </div>
       </section>
     </>

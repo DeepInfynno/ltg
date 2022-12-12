@@ -32,12 +32,7 @@ html {
 .affiliate .slick-track {
   display: flex !important;
   flex-direction: row !important;
-  margin: 0 20px !important;
   gap: 15px !important;
-}
-
-.slick-next {
-  display: none !important;
 }
 
 .highlight-slider .slick-initialized .slick-slide {
@@ -59,17 +54,27 @@ html {
   }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1500px) {
-  .affiliate .slick-track {
-    margin: 0 35px !important;
-  }
+.affiliate .slick-dots {
+  top: calc(100% + 20px);
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
-  .affiliate .slick-track {
-    margin: 0 5px !important;
-  }
+.affiliate .slick-dots li.slick-active button:before { 
+	color: #ea0000;
 }
+.affiliate .slick-prev, .affiliate .slick-next {
+  height: 30px;
+  width: 30px;
+}
+.affiliate .slick-prev {
+  left: -35px;
+}
+.affiliate .slick-next {
+  right: -35px;
+}
+.affiliate .slick-dots li button:before {
+	font-size: 12px;	
+}
+
 @media only screen and (max-width: 600px) {
   .highlight-slider .slick-list {
     width: 90vw;

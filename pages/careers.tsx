@@ -9,7 +9,7 @@ import Circle from "@assets/images/Circle.svg";
 import Amsterdam from "@assets/images/amsterdam.jpg";
 import SanFrancisco from "@assets/images/san-francisco.jpg";
 import Image from "next/image";
-import SliderComponenet from "@components/Slider";
+import SliderComponent from "@components/Slider";
 import Button from "@components/form/Button";
 import OgImage from "../assets/images/logo-1.svg";
 import Meta from "@components/Meta";
@@ -218,11 +218,11 @@ const Careers: NextPageWithLayout = () => {
           </div>
         </div>
         <div className="careers">
-          <SliderComponenet
+          <SliderComponent
             setCurrentIndex={setCurrentIndex}
             currentIndex={currentIndex}
             sliderFor={"careers"}
-            componenetData={imagesArray.map((data, index) => {
+            componentData={imagesArray.map((data, index) => {
               return (
                 <div
                   key={data.id}
