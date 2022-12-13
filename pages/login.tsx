@@ -35,14 +35,14 @@ const Login: NextPageWithLayout = () => {
             <div className="flex flex-row items-center gap-4 pt-3 text-xl justify-center lg:justify-start">
               <label
                 htmlFor="remember"
-                className="flex gap-[17px] cursor-pointer"
+                className="flex gap-3 sm:gap-[17px] cursor-pointer items-center"
               >
                 <input
                   id="remember"
                   type={"checkbox"}
                   className="text-xl cursor-pointer p-3 rounded-md text-red-500"
                 />
-                <p>Remember me</p>
+                <p className="text-sm md:text-lg leading-9 lg:leading-8">Remember me</p>
               </label>
             </div>
           </div>
