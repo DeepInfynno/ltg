@@ -2,7 +2,7 @@ import Link from "next/link";
 import Button from "./form/Button";
 
 type analyticsProps = {
-  location: string;
+  location?: string;
 };
 
 const Analytics = ({ location }: analyticsProps) => {
