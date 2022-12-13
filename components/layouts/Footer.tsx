@@ -65,7 +65,7 @@ type FooterProps = {
 
 const Footer = ({ hideContact }: FooterProps) => {
   return (
-    <div className="w-screen z-50 shadow-[-8px_2px_10px_3px_#0002]">
+    <div className="w-full z-50 shadow-[-8px_2px_10px_3px_#0002]">
       {/* {!hideContact && <ContactForm />} */}
       <div className="container max-w-none mx-auto xs:mx-0 md:mx-auto px-9 xs:px-10 sm:px-16 lg:px-0 py-8 md:py-16 lg:max-w-[863px] xl:max-w-[1024px] 2xl:max-w-[1364px]">
         <div className="block md:grid grid-cols-4 md:grid-cols-2 gap-8 md:gap-28 lg:gap-20">
@@ -95,7 +95,10 @@ const Footer = ({ hideContact }: FooterProps) => {
               ))}
               <div className="w-full mt-[158px] xs:mt-[134px] hidden md:block">
                 <div className="flex gap-[23px] py-3 md:py-2 md:px-4">
-                  <Link target="_blank" href="https://www.linkedin.com/company/livetixgroup">
+                  <Link
+                    target="_blank"
+                    href="https://www.linkedin.com/company/livetixgroup"
+                  >
                     <SiLinkedin className="h-6 w-6 text-gray-500" />
                   </Link>
                   <Link target="_blank" href="#">
@@ -107,7 +110,10 @@ const Footer = ({ hideContact }: FooterProps) => {
           </div>
           <div className="pb-20 block md:hidden">
             <div className="mt-16 xl:mt-[230px] lg:mt-[240px] md:mt-[240px]  md:ml-[-70px] lg:ml-[-110px] flex items-center space-x-8">
-              <Link target="_blank" href="https://www.linkedin.com/company/livetixgroup">
+              <Link
+                target="_blank"
+                href="https://www.linkedin.com/company/livetixgroup"
+              >
                 <SiLinkedin className="h-6 w-6 text-gray-500" />
               </Link>
               <Link target="_blank" href="#">

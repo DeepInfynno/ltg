@@ -16,7 +16,7 @@ const offices = [
   },
   {
     image: Amsterdam,
-    location: "Amesterdam",
+    location: "Amsterdam",
     title: "Nordics Office",
     address: "Street Name - Street Number",
     contact: "Phone Number",

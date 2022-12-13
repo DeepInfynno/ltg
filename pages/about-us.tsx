@@ -56,7 +56,7 @@ const openRoles = [
 ];
 
 const AboutUs: NextPageWithLayout = () => {
-  const [openAccordian, setOpenAccordian] = useState<number | null>(null);
+  // const [openAccordian, setOpenAccordian] = useState<number | null>(null);
 
   return (
     <>
