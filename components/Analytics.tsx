@@ -1,14 +1,18 @@
 import Link from "next/link";
 import Button from "./form/Button";
 
-const Analytics = () => {
+type analyticsProps = {
+  location: string;
+};
+
+const Analytics = ({ location }: analyticsProps) => {
   return (
     <div className="flex flex-col gap-6 mt-4">
       <div>
         <p className=" font-bold lg:text-xl md:text-lg text-base">
           Location:
           <span className="font-normal text-black">
-            &nbsp; Amsterdam, NL (Remote)
+            &nbsp; {location}, NL (Remote)
           </span>
         </p>
       </div>

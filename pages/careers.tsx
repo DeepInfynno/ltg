@@ -89,7 +89,7 @@ type RolesType = {
   description: string;
   department: string;
   location: string;
-  component: ReactElement;
+  // component: ReactElement;
 };
 
 const openRoles: RolesType[] = [
@@ -98,42 +98,42 @@ const openRoles: RolesType[] = [
     description: "Accounting",
     department: "Accounting",
     location: "Amsterdam",
-    component: <Analytics />,
+    // component: <Analytics />,
   },
   {
     title: "Analytics",
     description: "Sr. Business Analyst, Gaming",
     department: "Analytics",
     location: "Madrid",
-    component: <Analytics />,
+    // component: <Analytics />,
   },
   {
     title: "Service",
     description: "Service",
     department: "Service",
     location: "Madrid",
-    component: <Analytics />,
+    // component: <Analytics />,
   },
   {
-    title: "Product Owner",
+    title: "Product Owner San Francisco",
     description: "Product Owner",
     department: "Product Owner",
     location: "San Francisco",
-    component: <Analytics />,
+    // component: <Analytics />,
   },
   {
-    title: "Product Owner",
+    title: "Product Owner Madrid",
     description: "Product Owner",
     department: "Product Owner",
-    location: "San Francisco",
-    component: <Analytics />,
+    location: "Madrid",
+    // component: <Analytics />,
   },
   {
-    title: "Product Owner",
+    title: "Product Owner Amsterdam",
     description: "Product Owner",
-    department: "Analytics",
-    location: "San Francisco",
-    component: <Analytics />,
+    department: "Product Owner",
+    location: "Amsterdam",
+    // component: <Analytics />,
   },
 ];
 const departmentList = ["Accounting", "Analytics", "Service", "Product Owner"];
@@ -250,6 +250,7 @@ const Careers: NextPageWithLayout = () => {
           <h1 className="text-xl xl:text-2xl 2xl:text-4xl font-semibold pt-5 2xl:pt-10">
             Our benefits.
           </h1>
+
           <div className="block md:grid grid-cols-2 md:gap-16 xl:gap-20 2xl:gap-24 py-8 lg:py-16 2xl:py-28 2xl:pb-0 space-y-8 md:space-y-0">
             {benefits.map((benefit, i) => (
               <div key={i}>
@@ -268,12 +269,10 @@ const Careers: NextPageWithLayout = () => {
                 </p>
               </div>
             ))}
+            <span id="work-with-us"></span>
           </div>
         </div>
-        <div
-          id="work-with-us"
-          className="max-w-[280px] xs:max-w-xs  sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto"
-        >
+        <div className="max-w-[280px] xs:max-w-xs  sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto">
           <h3 className="uppercase text-base xl:text-lg 2xl:text-xl text-gray-700">
             Work with us
           </h3>
@@ -334,7 +333,9 @@ const Careers: NextPageWithLayout = () => {
                       <div className="transition ease-in-out duration-1000 text-gray-700 lg:text-xl md:text-lg text-base">
                         {role.description}
                       </div>
-                      <div>{role.component}</div>
+                      <div>
+                        <Analytics location={role.location} />
+                      </div>
                     </div>
                   )}
                 </div>

@@ -48,7 +48,7 @@ const NavLink = ({ href, title, active, ...props }: NavLinkProps) => {
       className={classNames(
         "py-2 xl:px-2 whitespace-nowrap 2xl:px-4 transition-all ease-in-out duration-200 text-lg lg:max-w-[200px] xl:max-w-none",
         router.pathname === href
-          ? "font-bold hover:text-red-600 focus:text-red-600 text-red-600"
+          ? "font-normal hover:text-red-600 focus:text-red-600 text-red-600"
           : "text-black font-normal hover:text-red-500 focus:text-red-500",
       )}
     >
@@ -75,7 +75,9 @@ const Navigation = () => {
     <div className="sticky top-0 shadow-[0px_2px_7px_1px_#0002] z-50 bg-white px-4 2xl:px-24 xl:px-16 md:px-6 py-3 md:py-4 lg:py-8">
       <div className="flex max-w-[1920px] w-full mx-auto items-center flex-row-reverse lg:flex-row justify-between">
         <div className="lg:hidden">
-          <Button className="!px-3 sm:!px-6 md:!px-10">Login</Button>
+          <Link href="/login">
+            <Button className="!px-3 sm:!px-6 md:!px-10">Login</Button>
+          </Link>
         </div>
         <div className="flex items-center gap-2 flex-row-reverse lg:flex-row justify-end lg:justify-between w-full">
           <Link
@@ -146,7 +148,7 @@ const Navigation = () => {
                           href={item.href}
                           title={item.title}
                           className={classNames(
-                            "py-4 pl-4 transition-all ease-in-out text-2xl duration-200",
+                            "py-3 pl-4 transition-all ease-in-out text-xl duration-200",
                             router.pathname === item.href
                               ? "font-bold hover:text-red-600 focus:text-red-600 text-red-600"
                               : "text-white hover:text-red-500 focus:text-red-500",
