@@ -50,7 +50,8 @@ const Home: NextPageWithLayout = () => {
               live events.
             </p>
             <Link href="/contact">
-              <button className="relative z-10 py-[10px] w-[260px] text-[#EA0000] before:content-[''] before:h-full before:w-[156px] before:absolute before:top-0 before:left-0 before:z-0 before:rounded-[10px_0px_0px_10px] before:bg-[#EA000045]">
+              <button className="relative group z-10 py-[10px] w-[260px] text-[#EA0000] rounded-[10px] overflow-hidden">
+                <div className="h-full group-hover:w-full w-[156px] absolute top-0 left-0 z-0 bg-[#EA000045] transition-all duration-500"></div>
                 <span className="block leading-[21px] font-bold text-[18px]">
                   BECOME A SELLER
                 </span>
