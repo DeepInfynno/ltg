@@ -10,7 +10,7 @@ import Button from "@components/form/Button";
 const navigation = [
   {
     title: "About Us",
-    href: "/about",
+    href: "/about-us",
   },
   {
     title: "Affiliates",
@@ -95,24 +95,24 @@ const Footer = ({ hideContact }: FooterProps) => {
               ))}
               <div className="w-full mt-[158px] xs:mt-[134px] hidden md:block">
                 <div className="flex gap-[23px] py-3 md:py-2 md:px-4">
-                  <a href="https://www.linkedin.com/company/livetixgroup">
+                  <Link target="_blank" href="https://www.linkedin.com/company/livetixgroup">
                     <SiLinkedin className="h-6 w-6 text-gray-500" />
-                  </a>
-                  <a href="">
+                  </Link>
+                  <Link target="_blank" href="#">
                     <SiInstagram className="h-6 w-6 text-gray-500" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
           <div className="pb-20 block md:hidden">
             <div className="mt-16 xl:mt-[230px] lg:mt-[240px] md:mt-[240px]  md:ml-[-70px] lg:ml-[-110px] flex items-center space-x-8">
-              <a href="https://www.linkedin.com/company/livetixgroup">
+              <Link target="_blank" href="https://www.linkedin.com/company/livetixgroup">
                 <SiLinkedin className="h-6 w-6 text-gray-500" />
-              </a>
-              <a href="">
+              </Link>
+              <Link target="_blank" href="#">
                 <SiInstagram className="h-6 w-6 text-gray-500" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
