@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NextPageWithLayout } from "./_app";
-import { ContactForm, Layout } from "@components/layouts";
+import { Layout } from "@components/layouts";
 import Offices from "@components/Offices";
 import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
 import Analytics from "@components/Analytics";
@@ -10,6 +10,8 @@ import SanFrancisco from "@assets/images/san-francisco.jpg";
 import Image from "next/image";
 import Meta from "@components/Meta";
 import OgImage from "../assets/images/logo-1.svg";
+import Stats from "@components/Stats";
+import Newsletter from "@components/Newsletter";
 
 const dataArray = [
   {
@@ -148,7 +150,7 @@ const AboutUs: NextPageWithLayout = () => {
             })}
           </div>
         </div> */}
-        <div className="max-w-[280px] xs:max-w-xs  sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto">
+        {/* <div className="max-w-[280px] xs:max-w-xs  sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto">
           <h3 className="uppercase text-base xl:text-lg 2xl:text-xl text-gray-700">
             Work with us
           </h3>
@@ -210,12 +212,13 @@ const AboutUs: NextPageWithLayout = () => {
             equality, and inclusion and value the impact that different
             backgrounds and perspectives bring to our organization.
           </p>
-        </div>
+        </div> */}
+        <Stats headerClass="max-w-[280px] xs:max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto" />
         <div className="mt-10 2xl:mt-[100px]">
           <Offices />
         </div>
-        <div className="mt-24 2xl:mt-[191px]">
-          <ContactForm />
+        <div className="mt-24 2xl:mt-[191px] px-5 sm:px-10 xl:px-0 lg:max-w-[863px] xl:max-w-none mx-auto">
+          <Newsletter />
         </div>
         <div className="absolute hidden md:block -right-[450px] 2xl:-right-[250px] bottom-[800px] md:bottom-[200px] 2xl:bottom-[400px] -z-10">
           <Image src={Circle} alt="image" />

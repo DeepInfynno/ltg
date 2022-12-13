@@ -12,6 +12,7 @@ import Button from "@components/form/Button";
 import Meta from "@components/Meta";
 import OgImage from "../assets/images/logo-1.svg";
 import Link from "next/link";
+import Newsletter from "@components/Newsletter";
 
 const features = [
   {
@@ -61,7 +62,7 @@ const Sellers: NextPageWithLayout = () => {
             superior ticketing, marketing and service solutions for buyers and
             sellers.
           </p>
-          <Link href="#">
+          <Link href="/contact" className="w-max block">
             <Button className="mt-[22px] xs:mt-[24px] sm:mt-[40px] md:mt-[55px] xl:mt-[70px] 2xl:mt-[84px] !px-10">
               Start Selling
             </Button>
@@ -95,9 +96,12 @@ const Sellers: NextPageWithLayout = () => {
         </div>
       </div>
       <div className="text-center mb-[40px] lg:mb-[73px]">
-        <Link href="#">
+        <Link href="/contact" className="w-max mx-auto block">
           <Button className="!px-10">Start Selling</Button>
         </Link>
+      </div>
+      <div className="max-w-[280px] mx-auto xs:max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] w-full">
+        <Newsletter />
       </div>
     </div>
   );

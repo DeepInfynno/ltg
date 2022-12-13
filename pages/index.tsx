@@ -57,7 +57,7 @@ const Home: NextPageWithLayout = () => {
               </button>
             </Link>
           </div>
-          <div className="relative -right-[42px] md:right-auto self-end">
+          <div className="relative -right-[42px] md:right-auto self-end invisible">
             <div className="relative h-full w-full max-h-[399px] max-w-[399px] md:max-w-[1097px] md:max-h-[1098px] xl:max-w-[820px] 2xl:max-w-[1097px]">
               <Image src={football} alt="football" height={1098} width={1097} />
             </div>

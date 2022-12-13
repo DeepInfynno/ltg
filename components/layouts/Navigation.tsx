@@ -95,7 +95,7 @@ const Navigation = () => {
             <button
               data-collapse-toggle="navbar-hamburger"
               type="button"
-              className="inline-flex items-center text-sm text-gray-500 rounded-lg "
+              className="inline-flex items-center text-sm text-gray-500 rounded-lg lg:hidden"
               aria-controls="navbar-hamburger"
               aria-expanded="false"
               onClick={() => setShowSidebar(!showSidebar)}
@@ -168,7 +168,6 @@ const Navigation = () => {
             >
               <Link
                 href="/login"
-                onClick={handleModal}
                 className="lg:px-6 2xl:px-10 py-2 bg-black text-sm 2xl:text-lg text-white rounded-full hover:bg-red-500 focus:bg-red-500 transition-all ease-in-out duration-200 uppercase font-bold hidden lg:flex"
               >
                 Login
