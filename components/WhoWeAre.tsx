@@ -34,7 +34,7 @@ const WhoWeAre = () => {
         This is our specialty. Through our platform, we connect buyers and
         sellers and make sure the experience is seamless from sale to seat.
       </p>
-      <Link href="/about">
+      <Link href="/about-us">
         <Button className="block mx-auto md:mx-0 mt-[73px] md:mt-[54px]">
           learn more
         </Button>

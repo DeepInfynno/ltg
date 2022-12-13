@@ -10,7 +10,7 @@ import Button from "@components/form/Button";
 const navigation = [
   {
     title: "About Us",
-    href: "/about",
+    href: "/about-us",
   },
   {
     title: "Become an Affiliate",
