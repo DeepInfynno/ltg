@@ -171,8 +171,8 @@ const Careers: NextPageWithLayout = () => {
         <div className="bg-careerBg bg-fixed bg-cover h-[300px] xs:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] 2xl:h-[850px] flex justify-center items-center w-full text-white">
           <div className="max-w-xl 2xl:max-w-5xl w-full flex flex-col md:gap-4 lg:gap-5 xl:gap-10 2xl:gap-20">
             <h1 className="px-[16px] text-3xl md:text-5xl 2xl:text-8xl md:max-w-5xl font-semibold leading-snug text-center">
-              Come create <span className="text-red-500">live</span> experiences
-              with us
+              Come create <span className="text-[#EA0000]">live</span>{" "}
+              experiences with us
             </h1>
             <div className="flex justify-center items-center w-full">
               <Link href="#work-with-us">
@@ -254,7 +254,14 @@ const Careers: NextPageWithLayout = () => {
             {benefits.map((benefit, i) => (
               <div key={i}>
                 <h3 className="text-xl xl:text-2xl 2xl:text-4xl w-full max-w-[674px] font-semibold">
-                  {benefit.title}
+                  {benefit.title.split(" ").includes("LIVE") ? (
+                    <p>
+                      Experience it <span className="text-[#EA0000]">LIVE</span>{" "}
+                      benefits
+                    </p>
+                  ) : (
+                    benefit.title
+                  )}
                 </h3>
                 <p className="mt-5 2xl:mt-8 text-base xl:text-lg 2xl:text-xl">
                   {benefit.description}
@@ -333,7 +340,9 @@ const Careers: NextPageWithLayout = () => {
                 </div>
               ))
             ) : (
-              <p>No Data Found</p>
+              <div className="min-h-[100px] flex justify-center items-center">
+                <p className="text-base xl:text-lg">No Data Found</p>
+              </div>
             )}
           </div>
           <p className="py-8 lg:py-16 text-lg lg:text-xl lg:leading-[30px] leading-9">
