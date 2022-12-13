@@ -95,7 +95,7 @@ const Navigation = () => {
             <button
               data-collapse-toggle="navbar-hamburger"
               type="button"
-              className="inline-flex items-center text-sm text-gray-500 rounded-lg "
+              className="inline-flex items-center text-sm text-gray-500 rounded-lg lg:hidden"
               aria-controls="navbar-hamburger"
               aria-expanded="false"
               onClick={() => setShowSidebar(!showSidebar)}
