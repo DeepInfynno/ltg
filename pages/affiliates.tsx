@@ -58,7 +58,7 @@ const Affiliate: NextPageWithLayout = () => {
   return (
     <>
       <Meta
-        title={"Affiliate"}
+        title={"Become an Affiliate"}
         description={"Lorem, ipsum dolor sit amet consectetur"}
         og_title={"Affiliate"}
         og_description={"Lorem, ipsum dolor sit amet consectetur"}
@@ -144,7 +144,6 @@ const Affiliate: NextPageWithLayout = () => {
                         key={believe.id}
                           className={` bg-[#F8F8F8] h-[100px] flex flex-row items-center justify-center ${
                           index === (currentIndex !== (believesData.length - 1) ? currentIndex + 1 : 0)
-                          // index === currentIndex
                           ? "opacity-100" : "md:opacity-40"
                           }  lg:px-6 md:px-8 md:py-16 sm:px-5 px-4 py-2 rounded-lg `}
                       >
@@ -183,7 +182,7 @@ const Affiliate: NextPageWithLayout = () => {
                       our affiliates.
                     </p>
                     <div className="flex justify-center lg:justify-start">
-                      <Link href="#">
+                      <Link href="/contact">
                         <Button className="bg-transparent border border-white !px-4 py-2 mt-3">
                           learn more
                         </Button>
@@ -225,11 +224,10 @@ const Affiliate: NextPageWithLayout = () => {
                         <div
                           key={believe.id}
                           onClick={() => setCurrentIndex2(index - 1)}
-                          className={`flex h-[100px] flex-row items-center justify-center ${
+                          className={`flex h-[100px] flex-row items-center justify-center cursor-pointer ${
                             index === (currentIndex2 !== (believesData2.length - 1) ? currentIndex2 + 1 : 0)
-                            // index === currentIndex2
                               ? "opacity-100 bg-[#EA0000] text-white"
-                              : "md:opacity-40 md:bg-[#F8F8F8] md:text-black"
+                              : "opacity-100 bg-[#EA0000] text-white md:opacity-40 md:bg-[#F8F8F8] md:text-black"
                           } lg:px-6 md:px-8 md:py-16 lg:py-16 sm:px-5 sm:py-3 px-4 py-2 rounded-lg `}
                         >
                           <div className="h-full grid place-items-center">

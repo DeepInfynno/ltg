@@ -11,11 +11,9 @@ type BrandLinkProps = {
 };
 
 const BrandLink = ({ href, image, title, ...props }: BrandLinkProps) => (
-  <div className="w-auto max-w-[240px] 2xl:max-w-[280px] border cursor-pointer flex items-center bg-white border-[#EBECED] p-4 md:p-[18px] hover:border-[#EB4245] shadow-sm rounded-[3px] md:rounded-md ">
-    <a href={href} {...props}>
-      <Image src={image} alt={title} />
-    </a>
-  </div>
+  <a href={href} {...props} className="w-auto max-w-[240px] 2xl:max-w-[280px] border cursor-pointer flex items-center bg-white border-[#EBECED] p-4 md:p-[18px] hover:border-[#EB4245] shadow-sm rounded-[3px] md:rounded-md ">
+    <Image src={image} alt={title} />
+  </a>
 );
 
 const Brands = () => {

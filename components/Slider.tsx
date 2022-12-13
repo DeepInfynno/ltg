@@ -181,7 +181,7 @@ const SliderComponent = ({
         },
       },
       {
-        breakpoint: 750,
+        breakpoint: 768,
         settings: {
           infinite: true,
           slidesToShow: 2,
