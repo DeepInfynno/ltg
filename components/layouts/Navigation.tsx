@@ -13,11 +13,11 @@ const navigation = [
     href: "/about",
   },
   {
-    title: "Become a Affiliates",
+    title: "Become an Affiliate",
     href: "/affiliates",
   },
   {
-    title: "Become a Sellers",
+    title: "Become a Seller",
     href: "/sellers",
   },
   {
