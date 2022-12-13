@@ -8,16 +8,16 @@ import Newsletter from "@components/Newsletter";
 const Contact: NextPageWithLayout = () => {
   return (
     <>
-      <Meta
+      {/* <Meta
         title={"Contact"}
         description={"Lorem, ipsum dolor sit amet consectetur"}
         og_title={"Contact"}
         og_description={"Lorem, ipsum dolor sit amet consectetur"}
         og_image={OgImage}
-      />
-      <div className="mt-[84px] flex flex-col gap-4">
+      /> */}
+      <div className="relative mt-[84px] w-full max-w-[1920px] mx-auto overflow-hidden flex flex-col gap-4">
         <Offices />
-        <Newsletter />
+        <Newsletter />  
       </div>
     </>
   );

@@ -233,7 +233,7 @@ const SliderComponent = ({
         ) : sliderFor === "office" ? (
           <Slider {...officeSettings}>{componentData}</Slider>
         ) : (
-          <Slider {...settings}>{componentData}</Slider>
+          <Slider ref={careerSlider} {...settings}>{componentData}</Slider>
         )}
       </div>
     </div>
