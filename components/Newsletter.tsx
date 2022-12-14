@@ -2,12 +2,12 @@ import Button from "./form/Button";
 
 const Newsletter = () => {
   return (
-    <div className="max-w-[280px] mx-auto xs:max-w-sm sm:max-w-xl md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] w-full">
+    <div className="w-full max-w-[280px] xs:max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto">
       <div className="bg-gray-100 md:my-[88px] my-[32px] rounded-lg md:p-16 p-5 text-center">
-        <h3 className="md:text-3xl text-[22px] font-semibold">
+        <h3 className="2xl:text-4xl xl:text-3xl md:text-2xl text-xl font-semibold">
           Sign up for our newsletter
         </h3>
-        <p className="max-w-2xl mx-auto py-8 text-base">
+        <p className="max-w-2xl mx-auto py-8 2xl:text-xl xl:text-lg md:text-base text-sm">
           Loren Ipsum text all else , we&apos;re one team that trusts and
           supports each other our unity gives us the strength to tackle even the
           most difficult challenges facing our business.

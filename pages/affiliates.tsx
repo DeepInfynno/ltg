@@ -1,5 +1,5 @@
 import { NextPageWithLayout } from "./_app";
-import { ContactForm, Layout } from "@components/layouts";
+import { Layout } from "@components/layouts";
 import { useState } from "react";
 import SliderComponent from "@components/Slider";
 import Image from "next/image";
@@ -10,6 +10,7 @@ import Button from "@components/form/Button";
 import Meta from "@components/Meta";
 import OgImage from "../assets/images/logo-1.svg";
 import Link from "next/link";
+import Newsletter from "@components/Newsletter";
 
 const believesData = [
   {
@@ -282,7 +283,7 @@ const Affiliate: NextPageWithLayout = () => {
             </div>
           </div>
           <div className="max-w-[280px] xs:max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] w-full">
-            <ContactForm />
+            <Newsletter />
           </div>
         </section>
         <div className="absolute bottom-[-80px] -z-10 right-0 h-[1450px]">
