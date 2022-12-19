@@ -1,14 +1,19 @@
 ## Getting Started
 
-First, run the development server:
+1.Clone the repository:
+https://github.com/LiveTicketGroup/ltg-livetixgroup-web-ui.git
 
-```bash
-npm run dev
-# or
+2.Install the dependencies:
+npm install
+or
+yarn install
+
+3.Start the development server:
+npm run start:dev
+or
 yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4.Launch http://localhost:3000
 
 ## Packages Used
 
