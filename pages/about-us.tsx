@@ -10,8 +10,12 @@ import SanFrancisco from "@assets/images/san-francisco.jpg";
 import Image from "next/image";
 import Meta from "@components/Meta";
 import OgImage from "../assets/images/logo-1.svg";
+import aboutImage1 from "../assets/images/aboutImage1.svg";
+import aboutImage2 from "../assets/images/aboutImage2.svg";
 import Stats from "@components/Stats";
 import Newsletter from "@components/Newsletter";
+import Button from "@components/form/Button";
+import Link from "next/link";
 
 const dataArray = [
   {
@@ -60,66 +64,71 @@ const AboutUs: NextPageWithLayout = () => {
 
   return (
     <>
+      <Meta
+        title={"About-Us"}
+        description={"Lorem, ipsum dolor sit amet consectetur"}
+        og_title={"About-Us"}
+        og_description={"Lorem, ipsum dolor sit amet consectetur"}
+        og_image={OgImage}
+      />
       <div className="relative mx-auto w-full max-w-[1920px] overflow-hidden">
-        <Meta
-          title={"About-Us"}
-          description={"Lorem, ipsum dolor sit amet consectetur"}
-          og_title={"About-Us"}
-          og_description={"Lorem, ipsum dolor sit amet consectetur"}
-          og_image={OgImage}
-        />
-        <div className="absolute -right-40 -top-[280px]  md:right-0 lg:h-[1250px] h-[800px] md:-top-[350px]">
-          <Image
-            src={Circle}
-            width={100}
-            alt="circle"
-            height={100}
-            className="w-[100%] h-[100%] sticky"
-          />
-        </div>
-        <div className="bg-black text-white text-center md:text-left">
-          <div className="container mx-auto px-4 md:px-8 lg:px-8 py-24 lg:py-48 max">
-            <h1 className="text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-semibold md:leading-[1.1] w-full">
-              About Us
+        <div className="bg-careerBg bg-fixed bg-cover h-[300px] xs:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] 2xl:h-[850px] flex justify-center items-center w-full text-white">
+          <div className="max-w-xl 2xl:max-w-5xl w-full flex flex-col md:gap-4 lg:gap-5 xl:gap-10 2xl:gap-20">
+            <h1 className="px-[16px] text-3xl md:text-5xl 2xl:text-8xl md:max-w-5xl font-semibold xl:leading-[65px] leading-snug text-center">
+              Who We <br /> Are
             </h1>
-            <h1 className="text-white lg:mt-20 mt-10 2xl:text-[22px] xl:text-xl lg:text-lg md:text-base text-sm font-semibold">
-              When you market more, you’ll earn more.
-            </h1>
+            <div className="flex justify-center items-center w-full">
+              <Link href="#work-with-us">
+                <Button className="mt-8 md:!px-10">FIND OUT MORE</Button>
+              </Link>
+            </div>
           </div>
         </div>
         <div className="max-w-[280px] xs:max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto my-10 md:my-14 lg:my-18 xl:my-26 2xl:my-28">
           <div className="flex flex-col gap-6">
-            <h1 className="font-bold text-xl xl:text-2xl 2xl:text-4xl">
-              What is Lorem Ipsum?
-            </h1>
-            <h3 className="text-base xl:text-lg 2xl:text-xl font-semibold">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+            <h3 className="uppercase text-base xl:text-lg 2xl:text-xl text-gray-700">
+              ABOUT US
             </h3>
+            <h1 className="text-xl xl:text-2xl 2xl:text-4xl font-semibold my-3 xl:my-6 2xl:my-10">
+              Who We Are
+            </h1>
             <div className="text-base xl:text-lg 2xl:text-xl leading-7">
               <p>
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book. It has survived
-                not only five centuries, but also the leap into electronic
-                typesetting, remaining essentially unchanged. It was popularised
-                in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.
+                We’re passionate fans, just like you. We believe in the magic of
+                live events and the power they have to unite us. We are on a
+                mission to curate unforgettable moments for fans worldwide. We
+                are a diverse group of professionals who work together to bring
+                our mission to life.
               </p>
+              <div className="relative w-[280px] xs:w-[375px] xs:h-[303px] h-[203px] sm:w-[640px] sm:h-[403px] md:w-[576px] md:h-[503px] xl:w-[712px] xl:h-[560px]  2xl:w-[812px] 2xl:h-[603px] mx-auto mt-[35px] mb-[50px] sm:mt-[50px] sm:mb-[80px] xl:mt-[60px] xl:mb-[100px] 2xl:mt-[67px] 2xl:mb-[122px] ">
+                <Image src={aboutImage2} fill alt="Image" />
+              </div>
               <p className="mt-4">
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum is that it has a more-or-less
-                normal distribution of letters, as opposed to using 'Content
-                here, content here', making it look like readable English. Many
-                desktop publishing packages and web page editors now use Lorem
-                Ipsum as their default model text, and a search for 'lorem
-                ipsum' will uncover many web sites still in their infancy.
-                Various versions have evolved over the years, sometimes by
-                accident, sometimes on purpose (injected humour and the like).
+                Through our trusted marketplace and customer-first approach, we
+                deliver value for partners, customers and the live entertainment
+                industry.
               </p>
             </div>
+          </div>
+        </div>
+        <div className="max-w-[280px] flex flex-col lg:flex-row lg:items-center lg:gap-10 2xl:gap-[138px] 2xl:pl-[138px] lg:p-6 2xl:py-12 xs:max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1640px] mx-auto bg-[#F8F8F8] rounded-[10px] mb-[120px]">
+          <div className="relative w-full max-w-[812px]">
+            <Image src={aboutImage1} width={812} height={603} alt="Image" />
+          </div>
+          <div className="max-w-full lg:max-w-[300px] xl:max-w-[360px] 2xl:max-w-[479px] w-full h-full flex flex-col justify-center py-9 px-4 md:py-10 md:px-6 lg:py-0 lg:px-0">
+            <h3 className="uppercase text-base xl:text-lg 2xl:text-xl text-gray-700">
+              OUR FOUNDER
+            </h3>
+            <h1 className="text-xl xl:text-2xl 2xl:text-4xl font-semibold my-3 xl:my-6 2xl:my-10">
+              Name Of The Founder
+            </h1>
+            <p className="text-base xl:text-lg 2xl:text-xl leading-7 mt-7 lg:mt-3 2xl:mt-14">
+              “We are obsessed with the fan experience. We are working to make
+              it as seamless as possible for fans to purchase tickets from
+              sellers - so they can focus on what’s most important - the magic
+              of a live event, the energy of a roaring crowd, and all the
+              special moments in between.”
+            </p>
           </div>
         </div>
         {/* Beleives */}
