@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
 import Logo1 from "@assets/images/logo-invert.svg";
+import Logo2 from "@assets/images/LogoWhite.svg";
 import { useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import Login from "@components/Login";
@@ -120,7 +121,7 @@ const Navigation = () => {
             <div className="block lg:hidden">
               {showSidebar ? (
                 <IoMdClose
-                  className="h-6 w-6 text-white cursor-pointer fixed left-6 top-6 z-50"
+                  className="h-[52px] w-[52px] p-2 bg-[#EA0000] rounded-full text-white cursor-pointer fixed right-5 sm:left-44 top-6 z-50"
                   onClick={() => setShowSidebar(!showSidebar)}
                 />
               ) : (
@@ -128,7 +129,7 @@ const Navigation = () => {
               )}
 
               <div
-                className={`block lg:hidden top-0 left-0  h-full p-3 bg-gray-800 shadow  text-white fixed  z-40 ease-in-out duration-300 ${
+                className={`block lg:hidden top-0 left-0 h-auto sm:h-full w-full sm:w-auto p-3 bg-[#1A1A1A] shadow text-white fixed z-40 ease-in-out duration-300 ${
                   showSidebar ? "translate-x-0 " : "-translate-x-full"
                 }`}
               >
@@ -138,10 +139,10 @@ const Navigation = () => {
                       type="search"
                       name="Search"
                       disabled
-                      className="w-full py-2 pl-10 text-sm bg-gray-800 border-gray-800"
+                      className="w-full py-2 pl-10 text-sm bg-[#1A1A1A] border-[#1A1A1A]"
                     />
                   </div>
-                  <div className="mt-10">
+                  <div className="mt-[111px]">
                     {navigation.map((item, i) => (
                       <div key={i} className="flex flex-col ">
                         <Link
@@ -158,6 +159,15 @@ const Navigation = () => {
                         </Link>
                       </div>
                     ))}
+                    <div className="relative w-[239px] sm:w-[200px] mb-[108px] h-10 pl-4 mt-[155px]">
+                      <Image
+                        className="text-white"
+                        width={239}
+                        height={40}
+                        src={Logo2}
+                        alt="logo-1"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
