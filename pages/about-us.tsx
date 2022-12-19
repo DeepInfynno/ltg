@@ -78,7 +78,7 @@ const AboutUs: NextPageWithLayout = () => {
               Who We <br /> Are
             </h1>
             <div className="flex justify-center items-center w-full">
-              <Link href="#work-with-us">
+              <Link href="#">
                 <Button className="mt-8 md:!px-10">FIND OUT MORE</Button>
               </Link>
             </div>
