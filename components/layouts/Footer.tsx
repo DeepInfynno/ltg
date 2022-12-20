@@ -108,7 +108,7 @@ const Footer = ({ hideContact }: FooterProps) => {
               </div>
             </div>
           </div>
-          <div className="pb-20 block md:hidden">
+          <div className="pb-10 block md:hidden">
             <div className="mt-16 xl:mt-[230px] lg:mt-[240px] md:mt-[240px]  md:ml-[-70px] lg:ml-[-110px] flex items-center space-x-8">
               <Link
                 target="_blank"

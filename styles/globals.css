@@ -58,10 +58,11 @@ html {
   top: calc(100% + 20px);
 }
 
-.affiliate .slick-dots li.slick-active button:before { 
-	color: #ea0000;
+.affiliate .slick-dots li.slick-active button:before {
+  color: #ea0000;
 }
-.affiliate .slick-prev, .affiliate .slick-next {
+.affiliate .slick-prev,
+.affiliate .slick-next {
   height: 30px;
   width: 30px;
 }
@@ -72,7 +73,7 @@ html {
   right: -35px;
 }
 .affiliate .slick-dots li button:before {
-	font-size: 12px;	
+  font-size: 12px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -86,9 +87,15 @@ html {
   .office .slick-track {
     margin: 0 20px !important;
   }
+  #inputID {
+    padding-left: 36px;
+  }
 }
 @media only screen and (max-width: 376px) {
   .affiliate .slick-track {
     margin: 0 0px !important;
+  }
+  #inputID {
+    padding-left: 20px;
   }
 }
