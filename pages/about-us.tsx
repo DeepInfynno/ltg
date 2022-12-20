@@ -78,7 +78,7 @@ const AboutUs: NextPageWithLayout = () => {
               Who We <br /> Are
             </h1>
             <div className="flex justify-center items-center w-full">
-              <Link href="#">
+              <Link href="/contact">
                 <Button className="mt-8 md:!px-10">FIND OUT MORE</Button>
               </Link>
             </div>
@@ -100,8 +100,8 @@ const AboutUs: NextPageWithLayout = () => {
                 are a diverse group of professionals who work together to bring
                 our mission to life.
               </p>
-              <div className="relative w-[280px] xs:w-[375px] xs:h-[303px] h-[203px] sm:w-[640px] sm:h-[403px] md:w-[576px] md:h-[503px] xl:w-[712px] xl:h-[560px]  2xl:w-[812px] 2xl:h-[603px] mx-auto mt-[35px] mb-[50px] sm:mt-[50px] sm:mb-[80px] xl:mt-[60px] xl:mb-[100px] 2xl:mt-[67px] 2xl:mb-[122px] ">
-                <Image src={aboutImage2} fill alt="Image" />
+              <div className="relative w-full lg:max-w-[612px] 2xl:max-w-[812px] mx-auto mt-[35px] mb-[50px] sm:mt-[50px] sm:mb-[80px] xl:mt-[60px] xl:mb-[100px] 2xl:mt-[67px] 2xl:mb-[122px] ">
+                <Image src={aboutImage2} width={812} height={603} alt="Image" />
               </div>
               <p className="mt-4">
                 Through our trusted marketplace and customer-first approach, we
