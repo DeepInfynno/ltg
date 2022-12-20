@@ -119,21 +119,18 @@ const Navigation = () => {
               </svg>
             </button>
             <div className="block lg:hidden">
-              {showSidebar ? (
-                <IoMdClose
-                  className="h-[52px] w-[52px] p-2 bg-[#EA0000] rounded-full text-white cursor-pointer fixed right-5 sm:left-44 top-6 z-50"
-                  onClick={() => setShowSidebar(!showSidebar)}
-                />
-              ) : (
-                ""
-              )}
-
               <div
                 className={`block lg:hidden top-0 left-0 h-auto sm:h-full w-full sm:w-auto p-3 bg-[#1A1A1A] shadow text-white fixed z-40 ease-in-out duration-300 ${
                   showSidebar ? "translate-x-0 " : "-translate-x-full"
                 }`}
               >
                 <div className="space-y-3">
+                  <div>
+                    <IoMdClose
+                      className="h-[52px] w-[52px] p-2 bg-[#EA0000] rounded-full text-white cursor-pointer fixed right-5 sm:left-44 top-6 z-50"
+                      onClick={() => setShowSidebar(!showSidebar)}
+                    />
+                  </div>
                   <div className="relative w-full">
                     <input
                       type="search"
