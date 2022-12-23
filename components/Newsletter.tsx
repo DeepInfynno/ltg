@@ -8,9 +8,10 @@ const Newsletter = () => {
           Sign up for our newsletter
         </h3>
         <p className="max-w-2xl mx-auto py-8 2xl:text-xl xl:text-lg md:text-base text-sm">
-          Loren Ipsum text all else , we&apos;re one team that trusts and
-          supports each other our unity gives us the strength to tackle even the
-          most difficult challenges facing our business.
+          Join the LiveTicketGroup Tribe and stay up to date on all upcoming
+          events! Don’t worry, we’ll only email you when it’s really (we mean,
+          really) important - like exclusive deals to some of the best live
+          matches in the world!
         </p>
         <form className="mt-2 max-w-4xl mx-auto">
           <input

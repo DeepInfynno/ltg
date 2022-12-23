@@ -118,7 +118,7 @@
                 className:
                   "max-w-2xl mx-auto py-8 2xl:text-xl xl:text-lg md:text-base text-sm",
                 children:
-                  "Loren Ipsum text all else , we're one team that trusts and supports each other our unity gives us the strength to tackle even the most difficult challenges facing our business.",
+                  "Join the LiveTicketGroup Tribe and stay up to date on all upcoming events! Don’t worry, we’ll only email you when it’s really (we mean, really) important - like exclusive deals to some of the best live matches in the world!",
               }),
               (0, l.jsxs)("form", {
                 className: "mt-2 max-w-4xl mx-auto",
