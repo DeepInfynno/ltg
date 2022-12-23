@@ -176,7 +176,7 @@ const Careers: NextPageWithLayout = () => {
             </h1>
             <div className="flex justify-center items-center w-full">
               <Link href="#work-with-us">
-                <Button className="mt-8 md:!px-10">View Opeanings</Button>
+                <Button className="mt-8 md:!px-10">VIEW OPENINGS</Button>
               </Link>
             </div>
           </div>

@@ -174,7 +174,7 @@
                               href: "#work-with-us",
                               children: (0, a.jsx)(g.Z, {
                                 className: "mt-8 md:!px-10",
-                                children: "View Opeanings",
+                                children: "VIEW OPENINGS",
                               }),
                             }),
                           }),
