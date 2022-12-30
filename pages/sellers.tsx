@@ -1,8 +1,5 @@
 import { Layout } from "@components/layouts";
 import { NextPageWithLayout } from "./_app";
-import { TbHandClick } from "react-icons/tb";
-import { BiSupport } from "react-icons/bi";
-import { TfiLayers, TfiDesktop } from "react-icons/tfi";
 import LTG1 from "@assets/images/LTG01.svg";
 import LTG2 from "@assets/images/LTG02.svg";
 import LTG3 from "@assets/images/LTG03.svg";
@@ -51,8 +48,8 @@ const Sellers: NextPageWithLayout = () => {
         og_description={"Lorem, ipsum dolor sit amet consectetur"}
         og_image={OgImage}
       />
-      <div className="bg-[url('../assets/images/sellerback.svg')] h-[350px] xs:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] 2xl:h-[850px] flex items-center bg-fixed bg-no-repeat bg-[44%] md:bg-[40%_30%] lg:bg-[30%_30%] xl:bg-[30%_30%] 2xl:bg-[10%_40%] 3xl:bg-[-60%_40%] 4xl:bg-[25vh_40%]">
-        <div className="container flex flex-col items-center text-center sm:block sm:text-left 3xl:max-w-[1537px] mx-auto px-4 md:px-8 lg:px-8 py-24 lg:py-48">
+      <div className="bg-sellerBg bg-cover h-[300px] xs:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] 2xl:h-[850px] before:h-[300px] xs:before:h-[350px] md:before:h-[450px] lg:before:h-[550px] xl:before:h-[600px] 2xl:before:h-[850px] before:w-full before:max-w-[1920px] before:bg-[#0000007A] before:absolute flex items-center bg-fixed bg-no-repeat sm:bg-[95%] md:bg-[90%_30%] lg:bg-[30%_30%] xl:bg-[30%_30%] 2xl:bg-[10%_10%] 3xl:bg-[-15vh_40%] 4xl:bg-[-25vh_30%]">
+        <div className="container z-10 flex flex-col items-center text-center sm:block sm:text-left 3xl:max-w-[1537px] mx-auto px-4 md:px-8 lg:px-8 py-24 lg:py-48">
           <h1 className="text-white text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold md:leading-[40px] lg:leading-[70px] xl:leading-[90px] 2xl:leading-[113px]">
             Sell tickets on <br />
             live<span className="text-[#EA0000]">ticket</span>group.

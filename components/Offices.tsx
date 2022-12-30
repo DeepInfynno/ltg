@@ -1,6 +1,6 @@
-import Madrid from "@assets/images/madrid.jpg";
-import Amsterdam from "@assets/images/amsterdam.jpg";
-import SanFrancisco from "@assets/images/san-francisco.jpg";
+import Madrid from "@assets/images/office/madrid.svg";
+import Amsterdam from "@assets/images/office/amsterdam.svg";
+import SanFrancisco from "@assets/images/office/san-francisco.svg";
 import Image from "next/image";
 import SliderComponent from "./Slider";
 import { useState } from "react";
