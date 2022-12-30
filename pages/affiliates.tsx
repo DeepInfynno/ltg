@@ -3,7 +3,6 @@ import { Layout } from "@components/layouts";
 import { useState } from "react";
 import SliderComponent from "@components/Slider";
 import Image from "next/image";
-import Alexandru from "@assets/images/alexandru.svg";
 import Markus from "@assets/images/markus.svg";
 import Circle from "@assets/images/Circle.svg";
 import Button from "@components/form/Button";
@@ -76,8 +75,8 @@ const Affiliate: NextPageWithLayout = () => {
               className="w-[100%] h-[100%] sticky"
             />
           </div>
-          <div className="bg-black flex items-center h-[300px] xs:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] 2xl:h-[850px] text-white text-center md:text-left">
-            <div className="container mx-auto px-4 md:px-8 lg:px-8 py-24 lg:py-48 max">
+          <div className="bg-affiliateBg flex items-center bg-fixed bg-cover h-[300px] xs:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] 2xl:h-[850px] before:h-[300px] xs:before:h-[350px] md:before:h-[450px] lg:before:h-[550px] xl:before:h-[600px] 2xl:before:h-[850px] before:w-full before:bg-[#0000007A] before:absolute text-white text-center md:text-left">
+            <div className="container z-10 mx-auto px-4 md:px-8 lg:px-8 py-24 lg:py-48 max">
               <h1 className="text-2xl md:text-3xl lg:text-6xl xl:text-7xl xl:max-w-[801px] 2xl:max-w-[901px] xl:leading-[90px] 2xl:leading-[113px] 2xl:text-8xl font-semibold md:leading-[1.1] w-full">
                 Live<span className="text-[#EA0000]">ticket</span>
                 group Affiliate Programm
@@ -87,7 +86,9 @@ const Affiliate: NextPageWithLayout = () => {
               </h1>
               <div>
                 <Link href="/contact">
-                  <Button className="mt-12 lg:mt-24">Become an affiliate</Button>
+                  <Button className="mt-12 lg:mt-24">
+                    Become an affiliate
+                  </Button>
                 </Link>
               </div>
             </div>
@@ -111,14 +112,16 @@ const Affiliate: NextPageWithLayout = () => {
                   Are you interested in a media or branded partnership?
                 </p>
                 <p className="text-lg md:text-xl lg:leading-[30px] leading-9">
-                  Connect with more users worldwide and drive your revenue through
-                  our LIVE Affiliate Program. You’ll have access to
+                  Connect with more users worldwide and drive your revenue
+                  through our LIVE Affiliate Program. You’ll have access to
                   LiveTicketGroup’s inventory, real-time reporting, and account
                   management.
                 </p>
                 <div className="flex flex-row justify-center lg:justify-start">
                   <Link href="/contact">
-                    <Button className="mt-12 lg:mt-24">Become an affiliate</Button>
+                    <Button className="mt-12 lg:mt-24">
+                      Become an affiliate
+                    </Button>
                   </Link>
                 </div>
               </div>
@@ -143,14 +146,18 @@ const Affiliate: NextPageWithLayout = () => {
                     return (
                       <div
                         key={believe.id}
-                          className={` bg-[#F8F8F8] h-[100px] flex flex-row items-center justify-center ${
-                          index === (currentIndex !== (believesData.length - 1) ? currentIndex + 1 : 0)
-                          ? "opacity-100" : "md:opacity-40"
-                          }  lg:px-6 md:px-8 md:py-16 sm:px-5 px-4 py-2 rounded-lg `}
+                        className={` bg-[#F8F8F8] h-[100px] flex flex-row items-center justify-center ${
+                          index ===
+                          (currentIndex !== believesData.length - 1
+                            ? currentIndex + 1
+                            : 0)
+                            ? "opacity-100"
+                            : "md:opacity-40"
+                        }  lg:px-6 md:px-8 md:py-16 sm:px-5 px-4 py-2 rounded-lg `}
                       >
                         <div className="h-full grid place-items-center">
                           <p
-                              className="2xl:text-2xl xl:text-xl lg:text-lg md:text-base sm:text-sm text-xs max-w-lg font-bold lg:leading-9 md:leading-8  leading-7"
+                            className="2xl:text-2xl xl:text-xl lg:text-lg md:text-base sm:text-sm text-xs max-w-lg font-bold lg:leading-9 md:leading-8  leading-7"
                             style={{
                               display: "-webkit-box",
                               overflow: "hidden",
@@ -178,9 +185,9 @@ const Affiliate: NextPageWithLayout = () => {
                       Affiliates T&Cs
                     </h1>
                     <p className="text-base md:text-lg 2xl:text-xl text-center lg:text-left text-white leading-9">
-                      We want to deliver quality service to our customers - every
-                      time. Our terms & conditions protect us , our customers and
-                      our affiliates.
+                      We want to deliver quality service to our customers -
+                      every time. Our terms & conditions protect us , our
+                      customers and our affiliates.
                     </p>
                     <div className="flex justify-center lg:justify-start">
                       <Link href="/contact">
@@ -226,7 +233,10 @@ const Affiliate: NextPageWithLayout = () => {
                           key={believe.id}
                           onClick={() => setCurrentIndex2(index - 1)}
                           className={`flex h-[100px] flex-row items-center justify-center cursor-pointer ${
-                            index === (currentIndex2 !== (believesData2.length - 1) ? currentIndex2 + 1 : 0)
+                            index ===
+                            (currentIndex2 !== believesData2.length - 1
+                              ? currentIndex2 + 1
+                              : 0)
                               ? "opacity-100 bg-[#EA0000] text-white"
                               : "opacity-100 bg-[#EA0000] text-white md:opacity-40 md:bg-[#F8F8F8] md:text-black"
                           } lg:px-6 md:px-8 md:py-16 lg:py-16 sm:px-5 sm:py-3 px-4 py-2 rounded-lg `}

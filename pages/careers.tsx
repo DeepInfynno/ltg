@@ -4,10 +4,7 @@ import { ContactForm, Layout } from "@components/layouts";
 import Offices from "@components/Offices";
 import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
 import Analytics from "@components/Analytics";
-import Madrid from "@assets/images/madrid.jpg";
 import Circle from "@assets/images/Circle.svg";
-import Amsterdam from "@assets/images/amsterdam.jpg";
-import SanFrancisco from "@assets/images/san-francisco.jpg";
 import Image from "next/image";
 import SliderComponent from "@components/Slider";
 import Button from "@components/form/Button";
@@ -15,27 +12,37 @@ import OgImage from "../assets/images/logo-1.svg";
 import Meta from "@components/Meta";
 import Link from "next/link";
 import Newsletter from "@components/Newsletter";
+import SliderImage1 from "../assets/images/careers/slider-image1.svg";
+import SliderImage2 from "../assets/images/careers/slider-image2.svg";
+import SliderImage3 from "../assets/images/careers/slider-image3.svg";
+import SliderImage4 from "../assets/images/careers/slider-image4.svg";
+import SliderImage5 from "../assets/images/careers/slider-image5.svg";
 
 const imagesArray = [
   {
     id: 1,
-    image: Madrid,
-    title: "madrid",
+    image: SliderImage1,
+    title: "Image1",
   },
   {
     id: 2,
-    image: Amsterdam,
-    title: "amsterdam",
+    image: SliderImage2,
+    title: "Image2",
   },
   {
     id: 3,
-    image: SanFrancisco,
-    title: "san",
+    image: SliderImage3,
+    title: "Image3",
   },
   {
     id: 4,
-    image: Amsterdam,
-    title: "amsterdam",
+    image: SliderImage4,
+    title: "Image4",
+  },
+  {
+    id: 5,
+    image: SliderImage5,
+    title: "Image5",
   },
 ];
 const believes = [
@@ -168,8 +175,8 @@ const Careers: NextPageWithLayout = () => {
         og_image={OgImage}
       />
       <div className="relative w-full max-w-[1920px] mx-auto overflow-hidden scroll-smooth">
-        <div className="bg-careerBg bg-fixed bg-cover h-[300px] xs:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] 2xl:h-[850px] flex justify-center items-center w-full text-white">
-          <div className="max-w-xl 2xl:max-w-5xl w-full flex flex-col md:gap-4 lg:gap-5 xl:gap-10 2xl:gap-20">
+        <div className="bg-careerBg bg-fixed bg-cover h-[300px] xs:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] 2xl:h-[850px] before:h-[300px] xs:before:h-[350px] md:before:h-[450px] lg:before:h-[550px] xl:before:h-[600px] 2xl:before:h-[850px] before:w-full before:bg-[#0000007A] before:absolute flex justify-center items-center w-full text-white">
+          <div className="max-w-xl z-10 2xl:max-w-5xl w-full flex flex-col md:gap-4 lg:gap-5 xl:gap-10 2xl:gap-20">
             <h1 className="px-[16px] text-3xl md:text-5xl 2xl:text-8xl md:max-w-5xl font-semibold leading-snug text-center">
               Come create <span className="text-[#EA0000]">live</span>{" "}
               experiences with us
@@ -227,7 +234,7 @@ const Careers: NextPageWithLayout = () => {
                 <div
                   key={data.id}
                   onClick={() => setCurrentIndex(index)}
-                  className={`relative w-full h-[200px] xl:max-w-[750px] 2xl:max-w-none md:h-[300px] lg:h-[400px] xl:h-[450px] 2xl:h-[600px] ${
+                  className={`relative w-full h-[200px] rounded-[20px] focus:outline-none xl:max-w-[750px] 2xl:max-w-none md:h-[300px] lg:h-[400px] xl:h-[450px] 2xl:h-[600px] ${
                     index === currentIndex ? "opacity-100" : "opacity-40"
                   }`}
                 >

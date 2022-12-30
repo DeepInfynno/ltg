@@ -1,8 +1,6 @@
-import { useState } from "react";
 import { NextPageWithLayout } from "./_app";
 import { Layout } from "@components/layouts";
 import Offices from "@components/Offices";
-import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
 import Analytics from "@components/Analytics";
 import Circle from "@assets/images/Circle.svg";
 import Amsterdam from "@assets/images/amsterdam.jpg";
@@ -10,8 +8,8 @@ import SanFrancisco from "@assets/images/san-francisco.jpg";
 import Image from "next/image";
 import Meta from "@components/Meta";
 import OgImage from "../assets/images/logo-1.svg";
-import aboutImage1 from "../assets/images/aboutImage1.svg";
-import aboutImage2 from "../assets/images/aboutImage2.svg";
+import aboutImage1 from "../assets/images/about-us/founder.svg";
+import aboutImage2 from "../assets/images/about-us/who-we-are.svg";
 import Stats from "@components/Stats";
 import Newsletter from "@components/Newsletter";
 import Button from "@components/form/Button";
@@ -72,8 +70,8 @@ const AboutUs: NextPageWithLayout = () => {
         og_image={OgImage}
       />
       <div className="relative mx-auto w-full max-w-[1920px] overflow-hidden">
-        <div className="bg-careerBg bg-fixed bg-cover h-[300px] xs:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] 2xl:h-[850px] flex justify-center items-center w-full text-white">
-          <div className="max-w-xl 2xl:max-w-5xl w-full flex flex-col md:gap-4 lg:gap-5 xl:gap-10 2xl:gap-20">
+        <div className="bg-aboutBg bg-fixed bg-no-repeat bg-cover bg-[100%_100%] h-[300px] xs:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] 2xl:h-[850px] before:h-[300px] xs:before:h-[350px] md:before:h-[450px] lg:before:h-[550px] xl:before:h-[600px] 2xl:before:h-[850px] before:w-full before:max-w-[1920px] before:bg-[#0000007A] before:absolute  flex justify-center items-center w-full text-white">
+          <div className="max-w-xl z-10 2xl:max-w-5xl w-full flex flex-col md:gap-4 lg:gap-5 xl:gap-10 2xl:gap-20">
             <h1 className="px-[16px] text-3xl md:text-5xl 2xl:text-8xl md:max-w-5xl font-semibold xl:leading-[65px] leading-snug text-center">
               Who We <br /> Are
             </h1>

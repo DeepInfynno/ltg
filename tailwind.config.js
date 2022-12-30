@@ -19,7 +19,10 @@ module.exports = {
         helvetica: ["Helvetica Neue", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
-        careerBg: "url('../assets/images/careerbg.svg')",
+        careerBg: "url('../assets/images/careers/careerbg.svg')",
+        affiliateBg: "url('../assets/images/affiliate/affiliatebg.svg')",
+        sellerBg: "url('../assets/images/seller/sellerbg.svg')",
+        aboutBg: "url('../assets/images/about-us/aboutbg.svg')",
         pieroHuerto: "url('../assets/images/piero-huerto.svg')",
         pieroHuertoResponsive:
           "url('../assets/images/piero-huerto-responsive.svg.svg')",
