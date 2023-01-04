@@ -21,10 +21,14 @@ const Home: NextPageWithLayout = () => {
   return (
     <>
       <Meta
-        title={"Home"}
-        description={"Lorem, ipsum dolor sit amet consectetur"}
-        og_title={"Home"}
-        og_description={"Lorem, ipsum dolor sit amet consectetur"}
+        title={"LiveTicketGroup - Experience it Live."}
+        description={
+          "LiveTicketGroup is a live entertainment platform that’s making it easier for fans to purchase tickets to live matches and events."
+        }
+        og_title={"LiveTicketGroup - Experience it Live."}
+        og_description={
+          "LiveTicketGroup is a live entertainment platform that’s making it easier for fans to purchase tickets to live matches and events."
+        }
         og_image={OgImage}
       />
       <div className="mt-[45px] xl:-mt-[108px] max-w-[1920px] mx-auto w-full overflow-hidden relative">

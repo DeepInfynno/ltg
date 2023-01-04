@@ -168,10 +168,14 @@ const Careers: NextPageWithLayout = () => {
   return (
     <>
       <Meta
-        title={"Careers"}
-        description={"Lorem, ipsum dolor sit amet consectetur"}
-        og_title={"Careers"}
-        og_description={"Lorem, ipsum dolor sit amet consectetur"}
+        title={"Come create live experiences with us - Careers"}
+        description={
+          "We are a growing company and would love for you to join us on our journey! View openings."
+        }
+        og_title={"Come create live experiences with us - Careers"}
+        og_description={
+          "We are a growing company and would love for you to join us on our journey! View openings."
+        }
         og_image={OgImage}
       />
       <div className="relative w-full max-w-[1920px] mx-auto overflow-hidden scroll-smooth">

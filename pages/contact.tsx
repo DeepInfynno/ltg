@@ -9,19 +9,23 @@ const Contact: NextPageWithLayout = () => {
   return (
     <>
       <Meta
-        title={"Contact"}
-        description={"Lorem, ipsum dolor sit amet consectetur"}
-        og_title={"Contact"}
-        og_description={"Lorem, ipsum dolor sit amet consectetur"}
+        title={"Get in touch with LiveTicketGroup - Contact"}
+        description={
+          "Looking for information or need help with your ticket purchase? Our team is available to answer your questions and provide assistance."
+        }
+        og_title={"Get in touch with LiveTicketGroup - Contact"}
+        og_description={
+          "Looking for information or need help with your ticket purchase? Our team is available to answer your questions and provide assistance."
+        }
         og_image={OgImage}
       />
       <div className="relative mt-[84px] w-full max-w-[1920px] mx-auto overflow-hidden flex flex-col gap-4">
-        <div className="mb-10" >
+        <div className="mb-10">
           <Offices />
         </div>
         <ContactForm />
         <div className="-mt-[88px] 2xl:-mt-[56px]">
-          <Newsletter />  
+          <Newsletter />
         </div>
       </div>
     </>

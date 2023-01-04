@@ -58,10 +58,16 @@ const Affiliate: NextPageWithLayout = () => {
   return (
     <>
       <Meta
-        title={"Become an Affiliate"}
-        description={"Lorem, ipsum dolor sit amet consectetur"}
-        og_title={"Affiliate"}
-        og_description={"Lorem, ipsum dolor sit amet consectetur"}
+        title={"When you market more, you’ll earn more - Become an Affiliate"}
+        description={
+          "Are you interested in a media or branded partnership? Connect with more users worldwide and drive your revenue through our LIVE Affiliate Program."
+        }
+        og_title={
+          "When you market more, you’ll earn more - Become an Affiliate"
+        }
+        og_description={
+          "Are you interested in a media or branded partnership? Connect with more users worldwide and drive your revenue through our LIVE Affiliate Program."
+        }
         og_image={OgImage}
       />
       <div className="relative">
