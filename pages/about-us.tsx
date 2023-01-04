@@ -63,10 +63,16 @@ const AboutUs: NextPageWithLayout = () => {
   return (
     <>
       <Meta
-        title={"About-Us"}
-        description={"Lorem, ipsum dolor sit amet consectetur"}
-        og_title={"About-Us"}
-        og_description={"Lorem, ipsum dolor sit amet consectetur"}
+        title={"Curating unforgettable moments for fans worldwide - About Us"}
+        description={
+          "We are passionate fans, just like you. We believe in the magic of live events and the power they have to unite us."
+        }
+        og_title={
+          "Curating unforgettable moments for fans worldwide - About Us"
+        }
+        og_description={
+          "We are passionate fans, just like you. We believe in the magic of live events and the power they have to unite us."
+        }
         og_image={OgImage}
       />
       <div className="relative mx-auto w-full max-w-[1920px] overflow-hidden">

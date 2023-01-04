@@ -14,7 +14,6 @@ define([
   "chunk8",
   "chunk9",
   "chunk10",
-  "chunk11",
 ], () => {});
 
 tailwind.config = {

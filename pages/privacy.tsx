@@ -1,0 +1,77 @@
+import { Layout } from "@components/layouts";
+import Meta from "@components/Meta";
+import React from "react";
+import { NextPageWithLayout } from "./_app";
+import OgImage from "../assets/images/logo-1.svg";
+
+const pricyDetails = [
+  {
+    title: "Our use of your Personal Information",
+    description:
+      "When using ¨the Site¨ you may be required to provide contact information (such as name, company name, email, and shipping address) and financial information (such as credit card number, expiration date and security codes). We use this information for billing purposes and to fill your orders. If we have trouble processing an order, we will use this information to contact you.",
+  },
+  {
+    title: "Fraud Prevention",
+    description:
+      "In order to avoid fraudulent transactions, we use a Fraud Prevention Agency called Experian. Experian may check the information you provide, against any particulars on any database (public or otherwise) to which Experian has access in order to carry out the relevant verification service.\nIf you wish to find out more about Experian's operations in the identity and fraud space, please visit this link.",
+  },
+  {
+    title: "Security",
+    description:
+      "When you enter sensitive information into our webs forms we use the highest level of security to ensure it is secure with Secure Sockets Layer (SSL) 256-bit encryption protocol. The SSL protects all the information of our customers during the connection between your computer and our server. You will recognize that you are browsing in a secure environment if you see an “s” after the “http” at the beginning of the web address.",
+  },
+  {
+    title: "Cookies",
+    description:
+      "A cookie is a small text file which asks permission to be placed on your computer's hard drive. Cookies in no way give us access to your computer or any information about you, other than the data you choose to share with us. We use traffic log cookies to identify which pages are being used and browsed by visitors enabling us to overtime provide you with a better service. You can choose to accept or decline cookies in you internet options/settings. Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer. This may prevent you from taking full advantage of the website.",
+  },
+  {
+    title: "IP Addresses",
+    description:
+      "An IP address is a number designated for your computer by your Internet service provider to provide access to the Internet. We may use your IP address to gather information on use. We study visitor - what pages were explored and the length of your visit. Analysis software is used to generate reports, which helps us to learn more about how we can improve your use of the website. This information is not used to develop a personal profile of you. The log files are regularly deleted.",
+  },
+  {
+    title: "Controlling your personal information",
+    description:
+      "We will not sell, distribute or lease your personal information to third parties unless we have your permission or are required by law.\nYou may request details of personal information which we hold about you under the Data Protection Act 1998. If you would like a copy of the information held on you please write to security@livefootballtickets.com.\nIf you believe that any information we are holding on you is incorrect or incomplete, please write to or email us as soon as possible, at the above address. We will promptly correct any information found to be incorrect.",
+  },
+  {
+    title: "Changes to this Privacy Policy",
+    description:
+      "If we decide to change our Privacy Policy, we will post those changes to this Privacy Policy on our home page, and other places we deem appropriate so that you are aware of the changes.\nWe reserve the right to modify this Privacy Policy at any time, so please review it frequently. If we make material changes to this policy, we will notify you here. If you have any queries about this Privacy Policy please email security@livefootballtickets.com.",
+  },
+];
+
+const Privacy: NextPageWithLayout = () => {
+  return (
+    <div className="flex flex-col gap-6 max-w-[280px] xs:max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-[1364px] mx-auto w-full my-10">
+      <Meta
+        title={"LiveTicketGroup - Privacy"}
+        description={
+          "Find out how LiveTicketGroup protects your personal data with our privacy policy. Learn about your rights and our commitment to keeping your information safe."
+        }
+        og_title={"LiveTicketGroup - Privacy"}
+        og_description={
+          "Find out how LiveTicketGroup protects your personal data with our privacy policy. Learn about your rights and our commitment to keeping your information safe."
+        }
+        og_image={OgImage}
+      />
+      {pricyDetails.map((privacy, index) => {
+        return (
+          <div key={index} className="flex flex-col gap-3 ">
+            <h2 className="text-lg text-black font-bold">{privacy.title}</h2>{" "}
+            <div className="flex flex-col gap-3 text-base">
+              {privacy.description.split("\n").map((i, key) => {
+                return <p key={key}>{i}</p>;
+              })}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+Privacy.getLayout = (page) => <Layout hideContact>{page}</Layout>;
+
+export default Privacy;

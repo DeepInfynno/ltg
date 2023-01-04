@@ -42,10 +42,14 @@ const Sellers: NextPageWithLayout = () => {
   return (
     <div className="max-w-[1920px] mx-auto">
       <Meta
-        title={"Become a Seller"}
-        description={"Lorem, ipsum dolor sit amet consectetur"}
-        og_title={"Sellers"}
-        og_description={"Lorem, ipsum dolor sit amet consectetur"}
+        title={"Sell tickets on LiveTicketGroup - Become a Seller"}
+        description={
+          "We are the world's largest sports ticket marketplace providing superior ticketing, marketing and service solutions for buyers and sellers."
+        }
+        og_title={"Sell tickets on LiveTicketGroup - Become a Seller"}
+        og_description={
+          "We are the world's largest sports ticket marketplace providing superior ticketing, marketing and service solutions for buyers and sellers."
+        }
         og_image={OgImage}
       />
       <div className="bg-sellerBg bg-cover h-[300px] xs:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] 2xl:h-[850px] before:h-[300px] xs:before:h-[350px] md:before:h-[450px] lg:before:h-[550px] xl:before:h-[600px] 2xl:before:h-[850px] before:w-full before:max-w-[1920px] before:bg-[#0000007A] before:absolute flex items-center bg-fixed bg-no-repeat sm:bg-[95%] md:bg-[90%_30%] lg:bg-[30%_30%] xl:bg-[30%_30%] 2xl:bg-[10%_10%] 3xl:bg-[-15vh_40%] 4xl:bg-[-25vh_30%]">

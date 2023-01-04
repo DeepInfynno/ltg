@@ -1,10 +1,23 @@
 import Button from "@components/form/Button";
 import { Layout } from "@components/layouts";
+import Meta from "@components/Meta";
 import { NextPageWithLayout } from "./_app";
+import OgImage from "../assets/images/logo-1.svg";
 
 const Login: NextPageWithLayout = () => {
   return (
     <div className="relative">
+      <Meta
+        title={"LiveTicketGroup - Login"}
+        description={
+          "Access your LiveTicketGroup account by logging in. View and manage your tickets and account settings. Don't have an account yet? Sign up now to get started"
+        }
+        og_title={"LiveTicketGroup - Login"}
+        og_description={
+          "Access your LiveTicketGroup account by logging in. View and manage your tickets and account settings. Don't have an account yet? Sign up now to get started"
+        }
+        og_image={OgImage}
+      />
       <div className="bg-black">
         <div className="bg-pieroHuerto bg-no-repeat bg-cover h-[600px] w-full opacity-20"></div>
       </div>
@@ -42,7 +55,9 @@ const Login: NextPageWithLayout = () => {
                   type={"checkbox"}
                   className="text-xl cursor-pointer p-3 rounded-md text-red-500"
                 />
-                <p className="text-sm md:text-lg leading-9 lg:leading-8">Remember me</p>
+                <p className="text-sm md:text-lg leading-9 lg:leading-8">
+                  Remember me
+                </p>
               </label>
             </div>
           </div>
